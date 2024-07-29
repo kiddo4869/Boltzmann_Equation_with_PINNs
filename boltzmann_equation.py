@@ -18,7 +18,6 @@ from models.network import *
 
 def main(args: argparse.ArgumentParser):
 
-    args.name = "l-bfgs"
     args.checkpoint = os.path.join(args.checkpoint_path, args.name)
     mkdirs([args.checkpoint])
 
@@ -131,11 +130,15 @@ def main(args: argparse.ArgumentParser):
         total_loss = model.compute_loss().item()
         print(f"total loss: {total_loss}")
 
-        model.train()
+        if args.optimizer == "adam":
+            model.train_with_adam()
+        elif args.optimizer == "l-bfgs":
+            model.train_with_lbfgs()
+        
         print(f"training time elapsed: {(time.time() - start):02f}s")
     
         #plotting losses
-        plot_losses(args.checkpoint, model.iter_list, model.loss_list)
+        plot_losses(args.checkpoint, model.iter_list, model.train_loss_list)
     
         # saving model
         torch.save(model.net.state_dict(), path)
@@ -225,10 +228,11 @@ if __name__=="__main__":
 
     # Training parameters
     parser.add_argument("--layers", type=json.loads, default=[3,20,20,20,20,1])
+    parser.add_argument("--optimizer", type=str, default="l-bfgs", help="adam or l-bfgs")
     parser.add_argument("--learning_rate", type=float, default=1e-2)
     parser.add_argument("--epochs", type=int, default=1000)
-    parser.add_argument("--log_epoch_freq", type=int, default=100)
-    parser.add_argument("--save_epoch_freq", type=int, default=1000)
+    parser.add_argument("--log_freq", type=int, default=100)
+    parser.add_argument("--save_freq", type=int, default=1000)
     parser.add_argument("--early_stopping", action="store_true")
     parser.add_argument("--patience", type=int, default=10)
     parser.add_argument("--tolerance", type=float, default=1e-5)

@@ -24,11 +24,6 @@ def data_processing_with_time(X: np.array,
                                       Y[:, :, initial_condition_index].reshape(-1),
                                       T[:, :, initial_condition_index].reshape(-1)))
     
-    """
-    coordinate_points = np.column_stack((X[:, :, initial_condition_index].reshape(-1),
-                                         Y[:, :, initial_condition_index].reshape(-1)))
-    """
-    
     initial_phi = phi.reshape(-1)
     
     print(initial_points.shape, initial_phi.shape)
