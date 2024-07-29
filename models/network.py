@@ -26,16 +26,22 @@ class PINN(nn.Module):
         # fully connected layers
         self.net = nn.ModuleList([nn.Linear(self.layers[i], self.layers[i+1]) for i in range(len(self.layers)-1)])
         self.init_weights()
-        
-        self.optimizer = torch.optim.LBFGS(self.net.parameters(), lr=0.01, max_iter=2000, max_eval=5000,
-                                           history_size=100, tolerance_grad=1e-05, tolerance_change=1e-09,
-                                           line_search_fn="strong_wolfe")
+
+        if args.optimizer == "adam":
+            self.optimizer = torch.optim.Adam(self.net.parameters(), lr=args.learning_rate)
+        elif args.optimizer == "l-bfgs":
+            self.optimizer = torch.optim.LBFGS(self.net.parameters(), lr=args.learning_rate, max_iter=2000, max_eval=5000,
+                                               history_size=100, tolerance_grad=1e-05, tolerance_change=1e-09,
+                                               line_search_fn="strong_wolfe")
+        else:
+            raise ValueError("Unknown optimizer")
 
         self.iter = 0
         self.loss = 0.0
         
         self.iter_list = []
-        self.loss_list = []
+        self.train_loss_list = []
+        self.valid_loss_list = []
 
         # feature scaling
         self.q_min, self.q_max = args.q_min_max
@@ -119,13 +125,36 @@ class PINN(nn.Module):
         
         self.iter += 1
         
-        if self.iter % 100 == 0:
+        if self.iter % self.args.log_freq == 0:
             print(f"Iteration: {self.iter}, Loss = {self.loss:06f}")
             self.iter_list.append(int(self.iter+1))
-            self.loss_list.append(float(self.loss))
+            self.train_loss_list.append(float(self.loss))
         
         return self.loss
     
-    def train(self):
+    def train_with_lbfgs(self):
         self.net.train()
         self.optimizer.step(self.closure)
+
+    def train_with_adam(self):
+        epochs = self.args.epochs
+        for epoch in range(1, self.args.epochs + 1):
+
+            if epoch % self.args.log_freq == 0:
+                self.iter_list.append(epoch)
+
+            # Training phase
+            self.net.train()
+            self.optimizer.zero_grad()
+            train_loss = self.compute_loss()
+            train_loss.backward()
+            self.optimizer.step()
+
+            if self.args.log_loss:
+                if epoch % self.args.log_freq == 0:
+                    self.net.eval()
+                    val_loss = self.compute_loss()
+
+                    print(f"Epoch {epoch}/{epochs}, train loss: {train_loss.item():.9f}, valid loss: {val_loss.item():.9f}")
+                    self.train_loss_list.append(train_loss.item())
+                    self.valid_loss_list.append(val_loss.item())
