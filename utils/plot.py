@@ -1,6 +1,7 @@
 import os
 import matplotlib.pyplot as plt
 import numpy as np
+from numpy import trapz
 import torch
 import torch.nn as nn
 from PIL import Image
@@ -27,9 +28,22 @@ def plot_initial_collocation_points(args, sampled_initial_points, collocation_po
     
     path = os.path.join(args.checkpoint, f"{title.replace(' ', '_').lower()}.png")
     plt.savefig(path)
+
+def plot_losses(save_to_dir: str,
+                iter_list: list,
+                train_loss_list: list,
+                valid_loss_list: list):    
     
-    # show plot
-    #plt.show()
+    plt.close()
+    plt.plot(iter_list, train_loss_list, label="training loss")
+    plt.plot(iter_list, valid_loss_list, label="validation loss")
+    plt.xlabel("epoch")
+    plt.ylabel("losses")
+    plt.title("losses against epoch graph")
+    plt.legend()
+    
+    path = os.path.join(save_to_dir, f"losses.png")
+    plt.savefig(path)
 
 def plot_data(ax, q_arr, p_arr, data, title_text):
     im = ax.pcolor(q_arr, p_arr, data)
@@ -39,19 +53,6 @@ def plot_data(ax, q_arr, p_arr, data, title_text):
     ax.set_aspect("equal", adjustable="box")
     ax.ticklabel_format(style="sci", axis="both", scilimits=(0,0))
     plt.colorbar(im, ax=ax, label="Probability Density")
-
-def plot_losses(save_to_dir: str, iter_list: list, loss_list: list):    
-    plt.close()
-    plt.plot(iter_list, loss_list, label="training loss")
-    #plt.plot(iter_list, loss_list, label="validation loss")
-    plt.xlabel("epoch")
-    plt.ylabel("losses")
-    plt.title("losses against epoch graph")
-    plt.legend()
-    
-    path = os.path.join(save_to_dir, f"losses.png")
-    plt.savefig(path)
-    #plt.show()
 
 def plot_solution(args,
                   scaled_q_arr: np.array,
@@ -88,8 +89,49 @@ def plot_solution(args,
     
     path = os.path.join(args.checkpoint, f"evluation_at_t={scaled_t}.png")
     plt.savefig(path)
+
+def plot_q_p_distributions(args, scaled_q_arr, scaled_p_arr, scaled_t, model):
+
+    q_trial, p_trial, t_trial = create_inputs(scaled_q_arr, scaled_p_arr, scaled_t)
     
-    #plt.show()
+    N_q = len(scaled_q_arr)
+    N_p = len(scaled_p_arr)
+    f_distrib = model(q_trial, p_trial, t_trial).reshape(N_q, N_p).cpu().detach().numpy()
+
+    # Simplified scaling of q_arr and p_arr
+    q_arr = scaled_q_arr / np.sqrt(args.m * args.w0**2 / (args.k * args.T))
+    p_arr = scaled_p_arr / np.sqrt(1 / (args.m * args.k * args.T))
+    t = scaled_t / (args.w0**2 / (args.k * args.T))
+
+    # Directly compute momentum and position distributions using vectorized operations
+    momentum_distribution = trapz(f_distrib, q_arr)
+    position_distribution = trapz(f_distrib.T, p_arr)
+
+    fig, axs = plt.subplots(2, 2, figsize=(10, 10), constrained_layout=True)
+
+    ax = axs[1, 1]
+    plt.contourf(q_arr, p_arr, f_distrib, levels=100)
+    ax.set_title(f"Exact Solution at t = {t * 1000: 02f} (ms)")
+    ax.set_xlabel("q (m)")
+    ax.set_ylabel("p (kg ms^-1)")
+    plt.colorbar(label="Probability Density")
+    plt.ticklabel_format(style="sci", axis="both", scilimits=(0,0))
+
+    # Second subplot: Distribution of q
+    ax = axs[0, 1]
+    ax.plot(q_arr, position_distribution)
+    ax.set_title('Distribution of Position q')
+
+    # Third subplot: Distribution of p
+    ax = axs[1, 0]
+    ax.plot(p_arr, momentum_distribution)
+    ax.set_title('Distribution of Momentum p')
+
+    # Hide the top-right subplot
+    axs[0, 0].set_axis_off()
+
+    path = os.path.join(args.checkpoint, f"q_p_distributions_at_t={scaled_t}.png")
+    plt.savefig(path)
 
 def save_gif_PIL(outfile, files, fps=10, loop=0):
     "Helper function for saving GIFs"

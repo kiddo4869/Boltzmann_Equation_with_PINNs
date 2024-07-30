@@ -15,3 +15,10 @@ def mkdir(path: str):
 def mkdirs(list_of_paths: list[str]):
     for path in list_of_paths:
         mkdir(path)
+
+def write_args(args: argparse.Namespace) -> str:
+    # return a string of the arguments
+    text = ""
+    for k, v in sorted(vars(args).items()):
+       text += f"{k}: {v}\n"
+    return text
