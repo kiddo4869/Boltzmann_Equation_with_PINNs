@@ -5,20 +5,24 @@ import torch.autograd as autograd
 import numpy as np
 
 class PINN(nn.Module):
-    def __init__(self, args, X_train, y_train, X_train_with_col):
+    def __init__(self, args, X_train, y_train, X_train_with_col,
+                             X_valid, y_valid, X_valid_with_col):
         super().__init__()
 
         # Inputs
         self.X_train = X_train
         self.y_train = y_train
         self.X_train_with_col = X_train_with_col
+        self.X_valid = X_valid
+        self.y_valid = y_valid
+        self.X_valid_with_col = X_valid_with_col
 
         self.args = args
         self.layers = np.array(args.layers)
         self.pinn = args.pinn
         self.device = args.device
+        self.PDE_weight = args.PDE_weight
         self.activation = nn.Tanh()
-        self.weight = 0.25
 
         # loss function
         self.loss_function = nn.MSELoss(reduction="mean")
@@ -30,14 +34,15 @@ class PINN(nn.Module):
         if args.optimizer == "adam":
             self.optimizer = torch.optim.Adam(self.net.parameters(), lr=args.learning_rate)
         elif args.optimizer == "l-bfgs":
-            self.optimizer = torch.optim.LBFGS(self.net.parameters(), lr=args.learning_rate, max_iter=2000, max_eval=5000,
+            self.optimizer = torch.optim.LBFGS(self.net.parameters(), lr=args.learning_rate, max_iter=args.epochs, max_eval=5000,
                                                history_size=100, tolerance_grad=1e-05, tolerance_change=1e-09,
                                                line_search_fn="strong_wolfe")
         else:
             raise ValueError("Unknown optimizer")
 
         self.iter = 0
-        self.loss = 0.0
+        self.train_loss = 0.0
+        self.valid_loss = 0.0
         
         self.iter_list = []
         self.train_loss_list = []
@@ -97,64 +102,82 @@ class PINN(nn.Module):
 
         return self.loss_function(LHS, torch.zeros(f.shape).to(self.device))
 
-    def compute_loss(self):
-        q = self.X_train[:, 0].reshape(-1, 1)
-        p = self.X_train[:, 1].reshape(-1, 1)
-        t = self.X_train[:, 2].reshape(-1, 1)
-        f = self.y_train.reshape(-1, 1)
+    def compute_loss(self, valid=False):
+
+        if not valid:
+            q = self.X_train[:, 0].reshape(-1, 1)
+            p = self.X_train[:, 1].reshape(-1, 1)
+            t = self.X_train[:, 2].reshape(-1, 1)
+            f = self.y_train.reshape(-1, 1)
+        else:
+            q = self.X_valid[:, 0].reshape(-1, 1)
+            p = self.X_valid[:, 1].reshape(-1, 1)
+            t = self.X_valid[:, 2].reshape(-1, 1)
+            f = self.y_valid.reshape(-1, 1)
 
         if not self.pinn:
             return self.loss_IC(q, p, t, f)
         else:
-            q_col = self.X_train_with_col[:, 0].reshape(-1, 1)
-            p_col = self.X_train_with_col[:, 1].reshape(-1, 1)
-            t_col = self.X_train_with_col[:, 2].reshape(-1, 1)
+            if not valid:
+                q_col = self.X_train_with_col[:, 0].reshape(-1, 1)
+                p_col = self.X_train_with_col[:, 1].reshape(-1, 1)
+                t_col = self.X_train_with_col[:, 2].reshape(-1, 1)
+            else:
+                q_col = self.X_valid_with_col[:, 0].reshape(-1, 1)
+                p_col = self.X_valid_with_col[:, 1].reshape(-1, 1)
+                t_col = self.X_valid_with_col[:, 2].reshape(-1, 1)
 
-            return (1 - self.weight) * self.loss_IC(q, p, t, f) + self.weight * self.loss_PDE(q_col, p_col, t_col)
+            return (1 - self.PDE_weight) * self.loss_IC(q, p, t, f) + self.PDE_weight * self.loss_PDE(q_col, p_col, t_col)
     
     def closure(self):
-        
+
         # reset gradients to zero:
         self.optimizer.zero_grad()
         
         # compute loss
-        self.loss = self.compute_loss()
+        self.train_loss = self.compute_loss()
         
         # derivative with respect to model's weights:
-        self.loss.backward()
+        self.train_loss.backward()
         
         self.iter += 1
         
         if self.iter % self.args.log_freq == 0:
-            print(f"Iteration: {self.iter}, Loss = {self.loss:06f}")
-            self.iter_list.append(int(self.iter+1))
-            self.train_loss_list.append(float(self.loss))
+
+            self.net.eval()
+            self.valid_loss = self.compute_loss(valid=True)
+
+            print(f"Epoch {self.iter}, train loss: {self.train_loss.item():.9f}, valid loss: {self.valid_loss.item():.9f}")
+            self.iter_list.append(self.iter)
+            self.train_loss_list.append(self.train_loss.item())
+            self.valid_loss_list.append(self.valid_loss.item())
+
+            self.net.train()
         
-        return self.loss
+        return self.train_loss
     
     def train_with_lbfgs(self):
         self.net.train()
         self.optimizer.step(self.closure)
 
     def train_with_adam(self):
-        epochs = self.args.epochs
-        for epoch in range(1, self.args.epochs + 1):
+        for iter in range(1, self.args.epochs + 1):
 
-            if epoch % self.args.log_freq == 0:
-                self.iter_list.append(epoch)
+            self.iter = iter
 
             # Training phase
             self.net.train()
             self.optimizer.zero_grad()
-            train_loss = self.compute_loss()
-            train_loss.backward()
+            self.train_loss = self.compute_loss()
+            self.train_loss.backward()
             self.optimizer.step()
 
             if self.args.log_loss:
-                if epoch % self.args.log_freq == 0:
+                if iter % self.args.log_freq == 0:
                     self.net.eval()
-                    val_loss = self.compute_loss()
+                    self.valid_loss = self.compute_loss(valid=True)
 
-                    print(f"Epoch {epoch}/{epochs}, train loss: {train_loss.item():.9f}, valid loss: {val_loss.item():.9f}")
-                    self.train_loss_list.append(train_loss.item())
-                    self.valid_loss_list.append(val_loss.item())
+                    print(f"Epoch {iter}/{self.args.epochs}, train loss: {self.train_loss.item():.9f}, valid loss: {self.valid_loss.item():.9f}")
+                    self.iter_list.append(self.iter)
+                    self.train_loss_list.append(self.train_loss.item())
+                    self.valid_loss_list.append(self.valid_loss.item())

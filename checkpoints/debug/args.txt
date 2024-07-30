@@ -1,0 +1,37 @@
+N0: 4.493077990280913
+N_boundary: 200
+N_boundary_val: 100
+N_collocation: 600
+N_collocation_val: 300
+PDE_weight: 0.25
+T: 1.7e-07
+checkpoint: ./checkpoints\debug
+checkpoint_path: ./checkpoints
+debug: True
+device: cpu
+early_stopping: False
+epochs: 100
+grid_size: 100
+k: 20836619120.0
+layers: [3, 20, 20, 20, 20, 1]
+learning_rate: 0.01
+log_freq: 10
+log_loss: True
+log_path: ./logs
+log_sol: False
+m: 1.4431609444805812e-25
+model_path: ./models
+name: debug
+noise_level: 0.0
+optimizer: l-bfgs
+output_path: ./outputs
+p_min_max: [-5, 5]
+patience: 10
+phase: test
+pinn: False
+q_min_max: [-5, 5]
+save_freq: 1000
+seed: 0
+t_min_max: [0, 10]
+tolerance: 1e-05
+w0: 100000.0

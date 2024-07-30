@@ -4,6 +4,7 @@ import argparse
 from typing import List, Optional, Tuple, Dict, Union
 import logging
 import time
+from datetime import datetime
 import random
 
 import numpy as np
@@ -17,19 +18,17 @@ from utils.plot import *
 from models.network import *
 
 def main(args: argparse.ArgumentParser):
-
-    args.checkpoint = os.path.join(args.checkpoint_path, args.name)
-    mkdirs([args.checkpoint])
-
-    # Device setup
-    args.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    print("device:", args.device)
-
-    args.N0 = args.w0 / (2 * np.pi * args.k * args.T)
-    print_parameters(args)
-
     random.seed(args.seed)
     start = time.perf_counter()
+
+    initialize_logging(args)
+    
+    args_text = write_args(args)
+    logging.info(args_text)
+    with open(os.path.join(args.checkpoint, "args.txt"), "w") as file:
+        file.write(args_text)
+
+    print_parameters(args)
 
     q_min, q_max = args.q_min_max
     p_min, p_max = args.p_min_max
@@ -49,7 +48,6 @@ def main(args: argparse.ArgumentParser):
     # Exact solution
     f_exact = np.array([[prob_den(args, q, p, 0.0) for q in q_arr] for p in p_arr])
 
-    start = time.time()
     path = os.path.join(args.checkpoint, "state_dict_model.pth")
     
     if args.phase == "train":
@@ -71,9 +69,9 @@ def main(args: argparse.ArgumentParser):
         y_train = torch.from_numpy(train_init_phi).float().to(args.device)
         X_train_with_col = torch.from_numpy(train_inputs).float().to(args.device)
 
-        X_val = torch.from_numpy(val_init_pts).float().to(args.device)
-        y_val = torch.from_numpy(val_init_phi).float().to(args.device)
-        X_val_with_col = torch.from_numpy(val_inputs).float().to(args.device)
+        X_valid = torch.from_numpy(val_init_pts).float().to(args.device)
+        y_valid = torch.from_numpy(val_init_phi).float().to(args.device)
+        X_valid_with_col = torch.from_numpy(val_inputs).float().to(args.device)
 
         X_flatten = torch.from_numpy(qv.reshape(-1, 1)).to(args.device)
         Y_flatten = torch.from_numpy(pv.reshape(-1, 1)).to(args.device)
@@ -82,11 +80,12 @@ def main(args: argparse.ArgumentParser):
         f_exact_gpu = torch.from_numpy(f_exact).to(args.device)
 
         # Print shapes
-        print_shapes(X_train, y_train, X_train_with_col, X_val, y_val, X_val_with_col, X_flatten, Y_flatten, T_flatten)
+        print_shapes(X_train, y_train, X_train_with_col, X_valid, y_valid, X_valid_with_col, X_flatten, Y_flatten, T_flatten)
 
         # Model creation
         args.pinn = True
-        model = PINN(args, X_train, y_train, X_train_with_col)
+        model = PINN(args, X_train, y_train, X_train_with_col,
+                           X_valid, y_valid, X_valid_with_col)
         model.to(args.device)
 
         # Print number of parameters
@@ -124,7 +123,7 @@ def main(args: argparse.ArgumentParser):
         print(f"PDE loss: {PDE_loss}")
 
         # sum of the loss with weight
-        print(f"sum of the loss with weight: {(1 - model.weight) * IC_loss + model.weight * PDE_loss}")
+        print(f"sum of the loss with weight: {(1 - model.PDE_weight) * IC_loss + model.PDE_weight * PDE_loss}")
 
         # total loss
         total_loss = model.compute_loss().item()
@@ -135,16 +134,18 @@ def main(args: argparse.ArgumentParser):
         elif args.optimizer == "l-bfgs":
             model.train_with_lbfgs()
         
-        print(f"training time elapsed: {(time.time() - start):02f}s")
+        print(f"training time elapsed: {(time.perf_counter() - start):02f}s")
     
         #plotting losses
-        plot_losses(args.checkpoint, model.iter_list, model.train_loss_list)
+        if args.log_loss:
+            plot_losses(args.checkpoint, model.iter_list, model.train_loss_list, model.valid_loss_list)
     
         # saving model
         torch.save(model.net.state_dict(), path)
     else:
         # loading model
-        model = PINN(args, torch.empty(0), torch.empty(0), torch.empty(0))
+        model = PINN(args, torch.empty(0), torch.empty(0), torch.empty(0),
+                           torch.empty(0), torch.empty(0), torch.empty(0))
         model.net.load_state_dict(torch.load(path))
         model.net.eval()
 
@@ -158,6 +159,23 @@ def main(args: argparse.ArgumentParser):
         plot_solution(args, q_arr, p_arr, 50, prob_den, model)
         plot_solution(args, q_arr, p_arr, 100, prob_den, model)
 
+        plot_q_p_distributions(args, q_arr, p_arr, 0, model)
+        plot_q_p_distributions(args, q_arr, p_arr, 5, model)
+        plot_q_p_distributions(args, q_arr, p_arr, 10, model)
+        plot_q_p_distributions(args, q_arr, p_arr, 15, model)
+        plot_q_p_distributions(args, q_arr, p_arr, 20, model)
+        plot_q_p_distributions(args, q_arr, p_arr, 25, model)
+        plot_q_p_distributions(args, q_arr, p_arr, 30, model)
+        plot_q_p_distributions(args, q_arr, p_arr, 50, model)
+        plot_q_p_distributions(args, q_arr, p_arr, 100, model)
+
+def initialize_logging(args):
+    current_date = datetime.now().strftime("%Y-%m-%d")
+    log_file = os.path.join(args.log_path, f"{current_date}.log")
+    logging.basicConfig(filename=log_file,
+                        level=logging.INFO,
+                        format="%(asctime)s - %(levelname)s - %(message)s")
+
 def print_parameters(args):
     print(f"Temperature: {args.T} K")
     print(f"Trapping Frequency: {args.w0} Hz")
@@ -165,14 +183,14 @@ def print_parameters(args):
     print(f"Mass of the atom: {args.m} kg")
     print(f"Nomalization Constant: {args.N0} (no unit)")
 
-def print_shapes(X_train, y_train, X_train_with_col, X_val, y_val, X_val_with_col, X_flatten, Y_flatten, T_flatten):
+def print_shapes(X_train, y_train, X_train_with_col, X_valid, y_valid, X_valid_with_col, X_flatten, Y_flatten, T_flatten):
     print(f"X_train shape: {X_train.shape}")
     print(f"y_train shape: {y_train.shape}")
     print(f"X_train_with_cal shape: {X_train_with_col.shape}\n")
 
-    print(f"X_val shape: {X_val.shape}")
-    print(f"y_val shape: {X_val.shape}")
-    print(f"X_val_with_cal shape: {X_val_with_col.shape}\n")
+    print(f"X_val shape: {X_valid.shape}")
+    print(f"y_val shape: {y_valid.shape}")
+    print(f"X_val_with_cal shape: {X_valid_with_col.shape}\n")
 
     print(f"X_flatten shape: {X_flatten.shape}")
     print(f"Y_flatten shape: {Y_flatten.shape}")
@@ -207,7 +225,7 @@ if __name__=="__main__":
     parser.add_argument("--m", type=float, default=sc.m_u * 86.9091835)
     parser.add_argument("--q_min_max", type=json.loads, default=[-5, 5])
     parser.add_argument("--p_min_max", type=json.loads, default=[-5, 5])
-    parser.add_argument("--t_min_max", type=json.loads, default=[0, 10])
+    parser.add_argument("--t_min_max", type=json.loads, default=[0, 50])
     parser.add_argument("--N_boundary", type=int, default=200, help="Number of training data")
     parser.add_argument("--N_collocation", type=int, default=600, help="Number of training collocation points")
     parser.add_argument("--N_boundary_val", type=int, default=100, help="Number of validation data")
@@ -219,23 +237,43 @@ if __name__=="__main__":
     parser.add_argument("--model_path", type=str, default="./models")
     parser.add_argument("--checkpoint_path", type=str, default="./checkpoints")
     parser.add_argument("--output_path", type=str, default="./outputs")
+    parser.add_argument("--log_path", type=str, default="./logs")
     parser.add_argument("--debug", action="store_true")
     parser.add_argument("--pinn", action="store_true")
     parser.add_argument("--phase", type=str, default="train")
     parser.add_argument("--log_loss", action="store_true")
     parser.add_argument("--log_sol", action="store_true")
     parser.add_argument("--noise_level", type=float, default=0.0)
+    parser.add_argument("--PDE_weight", type=float, default=0.25)
 
     # Training parameters
     parser.add_argument("--layers", type=json.loads, default=[3,20,20,20,20,1])
     parser.add_argument("--optimizer", type=str, default="l-bfgs", help="adam or l-bfgs")
     parser.add_argument("--learning_rate", type=float, default=1e-2)
     parser.add_argument("--epochs", type=int, default=1000)
-    parser.add_argument("--log_freq", type=int, default=100)
+    parser.add_argument("--log_freq", type=int, default=10)
     parser.add_argument("--save_freq", type=int, default=1000)
     parser.add_argument("--early_stopping", action="store_true")
     parser.add_argument("--patience", type=int, default=10)
     parser.add_argument("--tolerance", type=float, default=1e-5)
 
     args = parser.parse_args()
+
+    if args.debug:
+        args.name = "debug"
+        args.epochs = 100
+        args.log_loss = True
+        args.log_freq = 10
+
+    # Device setup
+    args.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print("device:", args.device)
+
+    # Normalization Constant
+    args.N0 = args.w0 / (2 * np.pi * args.k * args.T)
+
+    # Model Checkpoint
+    args.checkpoint = os.path.join(args.checkpoint_path, args.name)
+    mkdirs([args.checkpoint])
+    
     main(args)
