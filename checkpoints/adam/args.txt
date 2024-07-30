@@ -5,7 +5,7 @@ N_collocation: 600
 N_collocation_val: 300
 PDE_weight: 0.25
 T: 1.7e-07
-checkpoint: ./checkpoints\adam
+checkpoint: ./checkpoints/adam
 checkpoint_path: ./checkpoints
 debug: False
 device: cpu
@@ -16,14 +16,14 @@ k: 20836619120.0
 layers: [3, 20, 20, 20, 20, 1]
 learning_rate: 0.01
 log_freq: 10
-log_loss: False
+log_loss: True
 log_path: ./logs
 log_sol: False
 m: 1.4431609444805812e-25
 model_path: ./models
 name: adam
 noise_level: 0.0
-optimizer: l-bfgs
+optimizer: adam
 output_path: ./outputs
 p_min_max: [-5, 5]
 patience: 10

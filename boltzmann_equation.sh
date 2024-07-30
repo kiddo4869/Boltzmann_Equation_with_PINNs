@@ -1,5 +1,8 @@
 #! bash
 
+# Debugging
+#python boltzmann_equation.py --debug --phase test
+
 # Adam Optimizer
 python boltzmann_equation.py --name adam --phase test --optimizer adam --log_loss
 

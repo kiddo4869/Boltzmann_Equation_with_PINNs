@@ -149,25 +149,20 @@ def main(args: argparse.ArgumentParser):
         model.net.load_state_dict(torch.load(path))
         model.net.eval()
 
-        plot_solution(args, q_arr, p_arr, 0, prob_den, model)
-        plot_solution(args, q_arr, p_arr, 5, prob_den, model)
-        plot_solution(args, q_arr, p_arr, 10, prob_den, model)
-        plot_solution(args, q_arr, p_arr, 15, prob_den, model)
-        plot_solution(args, q_arr, p_arr, 20, prob_den, model)
-        plot_solution(args, q_arr, p_arr, 25, prob_den, model)
-        plot_solution(args, q_arr, p_arr, 30, prob_den, model)
-        plot_solution(args, q_arr, p_arr, 50, prob_den, model)
-        plot_solution(args, q_arr, p_arr, 100, prob_den, model)
+        # plotting solutions and distributions
+        sol_files = []
+        dis_files = []
 
-        plot_q_p_distributions(args, q_arr, p_arr, 0, model)
-        plot_q_p_distributions(args, q_arr, p_arr, 5, model)
-        plot_q_p_distributions(args, q_arr, p_arr, 10, model)
-        plot_q_p_distributions(args, q_arr, p_arr, 15, model)
-        plot_q_p_distributions(args, q_arr, p_arr, 20, model)
-        plot_q_p_distributions(args, q_arr, p_arr, 25, model)
-        plot_q_p_distributions(args, q_arr, p_arr, 30, model)
-        plot_q_p_distributions(args, q_arr, p_arr, 50, model)
-        plot_q_p_distributions(args, q_arr, p_arr, 100, model)
+        if args.debug:  
+            t_arr = np.linspace(0, 50, 6)
+        else:
+            t_arr = np.linspace(0, 100, 21)
+        for t in t_arr:
+            sol_files.append(plot_solution(args, q_arr, p_arr, t, prob_den, model))
+            dis_files.append(plot_q_p_distributions(args, q_arr, p_arr, t, model))
+
+        save_gif_PIL(os.path.join(args.checkpoint, "solutions.gif"), sol_files, fps=5, loop=0)
+        save_gif_PIL(os.path.join(args.checkpoint, "q_p_distributions.gif"), dis_files, fps=5, loop=0)
 
 def initialize_logging(args):
     current_date = datetime.now().strftime("%Y-%m-%d")
@@ -274,6 +269,8 @@ if __name__=="__main__":
 
     # Model Checkpoint
     args.checkpoint = os.path.join(args.checkpoint_path, args.name)
-    mkdirs([args.checkpoint])
+    mkdirs([args.checkpoint,
+            os.path.join(args.checkpoint, "q_p_distributions"),
+            os.path.join(args.checkpoint, "solutions")])
     
     main(args)

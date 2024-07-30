@@ -63,6 +63,8 @@ def plot_solution(args,
     plt.close()
     
     fig = plt.figure(1, figsize=(20, 6))
+
+    plt.suptitle(f"Solution at t' = {scaled_t}", fontsize=16)
     
     # Ground truth
     ax1 = plt.subplot(1, 3, 1)
@@ -87,10 +89,14 @@ def plot_solution(args,
     mse_loss = mse_loss_instance(torch.from_numpy(f_exact), torch.from_numpy(f_pred)).item()
     ax3.text(-2, -7, f"MSE = {mse_loss:05f}", fontsize=13)
     
-    path = os.path.join(args.checkpoint, f"evluation_at_t={scaled_t}.png")
+    path = os.path.join(args.checkpoint, "solutions", f"solution_at_t={scaled_t}.png")
     plt.savefig(path)
 
+    return path
+
 def plot_q_p_distributions(args, scaled_q_arr, scaled_p_arr, scaled_t, model):
+
+    plt.close()
 
     q_trial, p_trial, t_trial = create_inputs(scaled_q_arr, scaled_p_arr, scaled_t)
     
@@ -111,7 +117,7 @@ def plot_q_p_distributions(args, scaled_q_arr, scaled_p_arr, scaled_t, model):
 
     ax = axs[1, 1]
     plt.contourf(q_arr, p_arr, f_distrib, levels=100)
-    ax.set_title(f"Exact Solution at t = {t * 1000: 02f} (ms)")
+    ax.set_title(f"Prediction at t = {t * 1000: 02f} (ms)")
     ax.set_xlabel("q (m)")
     ax.set_ylabel("p (kg ms^-1)")
     plt.colorbar(label="Probability Density")
@@ -130,8 +136,10 @@ def plot_q_p_distributions(args, scaled_q_arr, scaled_p_arr, scaled_t, model):
     # Hide the top-right subplot
     axs[0, 0].set_axis_off()
 
-    path = os.path.join(args.checkpoint, f"q_p_distributions_at_t={scaled_t}.png")
+    path = os.path.join(args.checkpoint, "q_p_distributions", f"q_p_distributions_at_t={scaled_t}.png")
     plt.savefig(path)
+
+    return path
 
 def save_gif_PIL(outfile, files, fps=10, loop=0):
     "Helper function for saving GIFs"
