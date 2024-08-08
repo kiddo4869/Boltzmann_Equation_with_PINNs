@@ -24,11 +24,10 @@ def main(args: argparse.ArgumentParser):
     initialize_logging(args)
     
     args_text = write_args(args)
-    logging.info(args_text)
     with open(os.path.join(args.checkpoint, "args.txt"), "w") as file:
         file.write(args_text)
 
-    print_parameters(args)
+    log_parameters(args)
 
     q_min, q_max = args.q_min_max
     p_min, p_max = args.p_min_max
@@ -80,7 +79,7 @@ def main(args: argparse.ArgumentParser):
         f_exact_gpu = torch.from_numpy(f_exact).to(args.device)
 
         # Print shapes
-        print_shapes(X_train, y_train, X_train_with_col, X_valid, y_valid, X_valid_with_col, X_flatten, Y_flatten, T_flatten)
+        log_shapes(X_train, y_train, X_train_with_col, X_valid, y_valid, X_valid_with_col, X_flatten, Y_flatten, T_flatten)
 
         # Model creation
         args.pinn = True
@@ -91,10 +90,9 @@ def main(args: argparse.ArgumentParser):
         # Print number of parameters
         params = list(model.parameters())
         num_of_params = int(sum(p.numel() for p in model.parameters() if p.requires_grad))
-        print(params)
-        print(f"Number of parameters: {num_of_params}")
 
-        print(f"Input shape: {X_train.shape}")
+        logging.info(f"Number of parameters: {num_of_params}")
+        logging.info(f"Input shape: {X_train.shape}")
 
         # Trial before training
         q_trial = X_train[:, 0].reshape(-1, 1)
@@ -134,7 +132,9 @@ def main(args: argparse.ArgumentParser):
         elif args.optimizer == "l-bfgs":
             model.train_with_lbfgs()
         
-        print(f"training time elapsed: {(time.perf_counter() - start):02f}s")
+        end = time.perf_counter()
+        print(f"training time elapsed: {(end - start):02f}s")
+        logging.info(f"training time elapsed: {(end - start):02f}s")
     
         #plotting losses
         if args.log_loss:
@@ -171,25 +171,27 @@ def initialize_logging(args):
                         level=logging.INFO,
                         format="%(asctime)s - %(levelname)s - %(message)s")
 
-def print_parameters(args):
-    print(f"Temperature: {args.T} K")
-    print(f"Trapping Frequency: {args.w0} Hz")
-    print(f"Boltzmann constant: {args.k} Hz/K")
-    print(f"Mass of the atom: {args.m} kg")
-    print(f"Nomalization Constant: {args.N0} (no unit)")
+def log_parameters(args):
+    string = "\n--------------Physical Parameters--------------\n"
+    string += f"\nTemperature: {args.T} K"
+    string += f"\nTrapping Frequency: {args.w0} Hz"
+    string += f"\nBoltzmann constant: {args.k} Hz/K"
+    string += f"\nMass of the atom: {args.m} kg"
+    string += f"\nNormalization Constant: {args.N0} (no unit)"
+    logging.info(string)
 
-def print_shapes(X_train, y_train, X_train_with_col, X_valid, y_valid, X_valid_with_col, X_flatten, Y_flatten, T_flatten):
-    print(f"X_train shape: {X_train.shape}")
-    print(f"y_train shape: {y_train.shape}")
-    print(f"X_train_with_cal shape: {X_train_with_col.shape}\n")
+def log_shapes(X_train, y_train, X_train_with_col, X_valid, y_valid, X_valid_with_col, X_flatten, Y_flatten, T_flatten):
+    logging.info(f"X_train shape: {X_train.shape}")
+    logging.info(f"y_train shape: {y_train.shape}")
+    logging.info(f"X_train_with_cal shape: {X_train_with_col.shape}\n")
 
-    print(f"X_val shape: {X_valid.shape}")
-    print(f"y_val shape: {y_valid.shape}")
-    print(f"X_val_with_cal shape: {X_valid_with_col.shape}\n")
+    logging.info(f"X_val shape: {X_valid.shape}")
+    logging.info(f"y_val shape: {y_valid.shape}")
+    logging.info(f"X_val_with_cal shape: {X_valid_with_col.shape}\n")
 
-    print(f"X_flatten shape: {X_flatten.shape}")
-    print(f"Y_flatten shape: {Y_flatten.shape}")
-    print(f"T_flatten shape: {T_flatten.shape}")
+    logging.info(f"X_flatten shape: {X_flatten.shape}")
+    logging.info(f"Y_flatten shape: {Y_flatten.shape}")
+    logging.info(f"T_flatten shape: {T_flatten.shape}")
 
 def scale_back(args, scaled_q: float, scaled_p: float, scaled_t: float):
     q = scaled_q / np.sqrt(args.m * args.w0 ** 2 / (args.k * args.T))
