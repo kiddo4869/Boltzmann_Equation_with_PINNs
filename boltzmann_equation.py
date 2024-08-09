@@ -29,6 +29,10 @@ def main(args: argparse.ArgumentParser):
 
     log_parameters(args)
 
+    # Initialize data
+    print("initialize data points...")
+    logging.info("initialize data points...")
+
     q_min, q_max = args.q_min_max
     p_min, p_max = args.p_min_max
     t_min, t_max = args.t_min_max
@@ -46,6 +50,9 @@ def main(args: argparse.ArgumentParser):
     
     # Exact solution
     f_exact = np.array([[prob_den(args, q, p, 0.0) for q in q_arr] for p in p_arr])
+    plot_init_solution(args, q_arr, p_arr, f_exact)
+
+    exit()
 
     path = os.path.join(args.checkpoint, "state_dict_model.pth")
     
@@ -127,6 +134,9 @@ def main(args: argparse.ArgumentParser):
         total_loss = model.compute_loss().item()
         print(f"total loss: {total_loss}")
 
+        print("start training...")
+        logging.info("start training...")
+
         if args.optimizer == "adam":
             model.train_with_adam()
         elif args.optimizer == "l-bfgs":
@@ -143,11 +153,17 @@ def main(args: argparse.ArgumentParser):
         # saving model
         torch.save(model.net.state_dict(), path)
     else:
+        print("load saved model...")
+        logging.info("load saved model...")
+
         # loading model
         model = PINN(args, torch.empty(0), torch.empty(0), torch.empty(0),
                            torch.empty(0), torch.empty(0), torch.empty(0))
         model.net.load_state_dict(torch.load(path))
         model.net.eval()
+
+        print("start testing...")
+        logging.info("start testing...")
 
         # plotting solutions and distributions
         sol_files = []
@@ -178,6 +194,10 @@ def log_parameters(args):
     string += f"\nBoltzmann constant: {args.k} Hz/K"
     string += f"\nMass of the atom: {args.m} kg"
     string += f"\nNormalization Constant: {args.N0} (no unit)"
+    string += f"\nN: {args.N} (no unit)"
+    string += f"\nhbar: {args.hbar} kg m^2 s^-2"
+    string += f"\nq_F: {args.q_F} m"
+    string += f"\np_F: {args.p_F} kg m s^-1"
     logging.info(string)
 
 def log_shapes(X_train, y_train, X_train_with_col, X_valid, y_valid, X_valid_with_col, X_flatten, Y_flatten, T_flatten):
@@ -200,8 +220,18 @@ def scale_back(args, scaled_q: float, scaled_p: float, scaled_t: float):
 
     return q, p, t
 
+def scale_back_fermi(args, scaled_q: float, scaled_p: float, scaled_t: float):
+    q = scaled_q * args.q_F
+    p = scaled_p * args.p_F
+    t = scaled_t / args.w0
+
+    return q, p, t
+
 def prob_den(args, scaled_q: float, scaled_p: float, scaled_t: float) -> float:
-    q, p, t = scale_back(args, scaled_q, scaled_p, scaled_t)
+    if args.fermi_scaling:
+        q, p, t = scale_back_fermi(args, scaled_q, scaled_p, scaled_t)
+    else:
+        q, p, t = scale_back(args, scaled_q, scaled_p, scaled_t)
     A = np.array([q, p])
     alpha = (1 + (args.w0 * t) ** 2) / args.w0 ** 2
     beta = args.m * t
@@ -210,16 +240,23 @@ def prob_den(args, scaled_q: float, scaled_p: float, scaled_t: float) -> float:
     Phi = (args.k * args.T / args.m) * np.array([[alpha, beta], [beta, gamma]])
     Phi_inv = inv(Phi)
 
-    return args.N0 * np.exp(-0.5 * A.T @ Phi_inv @ A)
+    if args.fermi_scaling:
+        #return args.N * args.N0 * np.exp(-0.5 * A.T @ Phi_inv @ A)
+        return args.N * args.N0 * np.exp(-args.N * args.N0 * args.hbar * (2 * np.pi) * (scaled_q ** 2 + scaled_p ** 2))
+    else:
+        return args.N0 * np.exp(-0.5 * A.T @ Phi_inv @ A)
 
 if __name__=="__main__":
     parser = argparse.ArgumentParser(description="Physics Informed Neural Networks")
     # Physical Conditions
     parser.add_argument("--grid_size", type=int, default=100)
-    parser.add_argument("--T", type=float, default=170e-9)
+    parser.add_argument("--T", type=float, default=11e-9)
     parser.add_argument("--w0", type=float, default=1e5)
     parser.add_argument("--k", type=float, default=sc.physical_constants['Boltzmann constant in Hz/K'][0])
     parser.add_argument("--m", type=float, default=sc.m_u * 86.9091835)
+    parser.add_argument("--fermi_scaling", action="store_true")
+
+    # Data Sampling
     parser.add_argument("--q_min_max", type=json.loads, default=[-5, 5])
     parser.add_argument("--p_min_max", type=json.loads, default=[-5, 5])
     parser.add_argument("--t_min_max", type=json.loads, default=[0, 50])
@@ -257,10 +294,21 @@ if __name__=="__main__":
     args = parser.parse_args()
 
     if args.debug:
-        args.name = "debug"
+        args.name = "debug_fermi"
         args.epochs = 100
         args.log_loss = True
+        args.fermi_scaling = True
         args.log_freq = 10
+
+    if args.fermi_scaling:
+        args.N=10e5
+        args.hbar=1
+        #args.k=1
+        args.T=1e-6
+        args.w0=3800
+        args.m=sc.m_u*6.04
+        args.q_min_max=[-1, 1]
+        args.p_min_max=[-1, 1]
 
     # Device setup
     args.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -268,6 +316,8 @@ if __name__=="__main__":
 
     # Normalization Constant
     args.N0 = args.w0 / (2 * np.pi * args.k * args.T)
+    args.q_F = np.sqrt(2 * args.N * args.hbar / (args.m * args.w0))
+    args.p_F = np.sqrt(2 * args.N * args.hbar * (args.m * args.w0))
 
     # Model Checkpoint
     args.checkpoint = os.path.join(args.checkpoint_path, args.name)
