@@ -1,5 +1,5 @@
-# Boltzmann_Equation_with_PINNs
+## Boltzmann_Equation_with_PINNs
 
-# Data Collection
+### Data Collection
 
-# PINNs
+### PINNs
