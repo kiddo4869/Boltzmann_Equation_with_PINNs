@@ -54,6 +54,19 @@ def plot_data(ax, q_arr, p_arr, data, title_text):
     ax.ticklabel_format(style="sci", axis="both", scilimits=(0,0))
     plt.colorbar(im, ax=ax, label="Probability Density")
 
+def plot_init_solution(args,
+                       scaled_q_arr: np.array,
+                       scaled_p_arr: np.array,
+                       f_exact):
+    
+    fig = plt.figure(1, figsize=(8, 8))
+    ax = plt.subplot(1, 1, 1)
+    plot_data(ax, scaled_q_arr, scaled_p_arr, f_exact, "Initial Condition")
+    path = os.path.join(args.checkpoint, f"initial_condition.png")
+    plt.savefig(path)
+
+    return path
+
 def plot_solution(args,
                   scaled_q_arr: np.array,
                   scaled_p_arr: np.array,
