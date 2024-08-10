@@ -46,7 +46,7 @@ def plot_losses(save_to_dir: str,
     plt.savefig(path)
 
 def plot_data(ax, q_arr, p_arr, data, title_text):
-    im = ax.pcolor(q_arr, p_arr, data)
+    im = ax.contourf(q_arr, p_arr, data, levels=100)
     ax.set_title(title_text)
     ax.set_xlabel("q' (no unit)")
     ax.set_ylabel("p' (no unit)")
@@ -91,7 +91,7 @@ def plot_solution(args,
     
     # Prediction
     ax2 = plt.subplot(1, 3, 2)
-    f_pred = model(q_trial, p_trial, t_trial).reshape(N_q, N_p).cpu().detach().numpy()
+    f_pred = model(q_trial, p_trial, t_trial).reshape(N_p, N_q).cpu().detach().numpy()
     plot_data(ax2, scaled_q_arr, scaled_p_arr, f_pred, "Prediction")
     
     # Error
@@ -103,13 +103,15 @@ def plot_solution(args,
     ax3.text(-2, -7, f"MSE = {mse_loss:05f}", fontsize=13)
 
     # tight layout
-    plt.tight_layout()
+    #plt.tight_layout()
 
     if args.dynamic_scaling:
         path = os.path.join(args.checkpoint, "solutions_ds", f"solution_at_t={scaled_t}.png")
     else:
         path = os.path.join(args.checkpoint, "solutions", f"solution_at_t={scaled_t}.png")
     plt.savefig(path)
+
+    print(f"Saved solution at t' = {scaled_t} to {path}")
 
     return path
 
@@ -121,7 +123,7 @@ def plot_q_p_distributions(args, scaled_q_arr, scaled_p_arr, scaled_t, model):
     
     N_q = len(scaled_q_arr)
     N_p = len(scaled_p_arr)
-    f_distrib = model(q_trial, p_trial, t_trial).reshape(N_q, N_p).cpu().detach().numpy()
+    f_distrib = model(q_trial, p_trial, t_trial).reshape(N_p, N_q).cpu().detach().numpy()
 
     # Simplified scaling of q_arr and p_arr
     q_arr = scaled_q_arr / np.sqrt(args.m * args.w0**2 / (args.k * args.T))
@@ -132,7 +134,7 @@ def plot_q_p_distributions(args, scaled_q_arr, scaled_p_arr, scaled_t, model):
     momentum_distribution = trapz(f_distrib, q_arr)
     position_distribution = trapz(f_distrib.T, p_arr)
 
-    fig, axs = plt.subplots(2, 2, figsize=(10, 10), constrained_layout=True)
+    fig, axs = plt.subplots(2, 2, figsize=(10, 10))
 
     ax = axs[1, 1]
     plt.contourf(q_arr, p_arr, f_distrib, levels=100)
@@ -155,11 +157,16 @@ def plot_q_p_distributions(args, scaled_q_arr, scaled_p_arr, scaled_t, model):
     # Hide the top-right subplot
     axs[0, 0].set_axis_off()
 
+    # prevent the subplots moving over animations
+    plt.tight_layout()
+
     if args.dynamic_scaling:
         path = os.path.join(args.checkpoint, "q_p_distributions_ds", f"q_p_distributions_at_t={scaled_t}.png")
     else:
         path = os.path.join(args.checkpoint, "q_p_distributions", f"q_p_distributions_at_t={scaled_t}.png")
     plt.savefig(path)
+
+    print(f"Saved q and p distributions at t' = {scaled_t} to {path}")
 
     return path
 

@@ -141,14 +141,23 @@ def main(args: argparse.ArgumentParser):
         sol_files = []
         dis_files = []
 
+        spacing = (q_max - q_min) / args.grid_size
+
         if args.debug:  
             t_arr = np.linspace(0, 50, 6)
         else:
             t_arr = np.linspace(0, 100, 21)
         for i, t in enumerate(t_arr):
-            if i % 2 == 0:
+            if i % args.ds_freq == 0:# and i != 0:
                 if args.dynamic_scaling:
-                    q_arr = q_arr * 1.2
+                    # method 1: multiply original grid by a factor of ds_ratio (different spacing)
+                    #q_arr = q_arr * args.ds_ratio
+                    # method 2: extend the grid with the same spacing
+                    # (q_max-q_min)/args.grid_size: original spacing
+                    #q_arr = np.arange(q_arr[0]*args.ds_ratio, q_arr[-1]*args.ds_ratio, (q_max-q_min)/args.grid_size)
+                    # method 3: extend the grid with the same spacing
+                    q_arr = np.arange(q_arr[0]-spacing*args.ds_grid_add, q_arr[-1]+spacing*(args.ds_grid_add+1), spacing)
+
             sol_files.append(plot_solution(args, q_arr, p_arr, t, prob_den, model))
             dis_files.append(plot_q_p_distributions(args, q_arr, p_arr, t, model))
 
@@ -286,6 +295,9 @@ if __name__=="__main__":
 
     # Visualization
     parser.add_argument("--dynamic_scaling", action="store_true")
+    parser.add_argument("--ds_freq", type=int, default=1)
+    parser.add_argument("--ds_ratio", type=float, default=1.05)
+    parser.add_argument("--ds_grid_add", type=int, default=3)
 
     args = parser.parse_args()
 
