@@ -9,6 +9,9 @@ checkpoint: ./checkpoints/l-bfgs
 checkpoint_path: ./checkpoints
 debug: False
 device: cpu
+ds_freq: 1
+ds_grid_add: 5
+ds_ratio: 1.05
 dynamic_scaling: True
 early_stopping: False
 epochs: 1000
