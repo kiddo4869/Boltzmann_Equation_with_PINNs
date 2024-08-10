@@ -6,13 +6,13 @@ Current progress: we have built a toy model to predict the probability density $
 
 ### Boltzmann Equation
 
-$$\begin{align*}
+$$\begin{aligned}
 \frac{df}{dt} 
 &=
-\Big[ -\frac{\hbar\textbf{k}}{m}\nabla_{\textbf{r}} + \frac{\nabla_{\textbf{r}}U_{ext}\cdot\nabla_{\textbf{k}}}{\hbar}\Big]f + \frac{\mathcal{I}_{inel}[f]}{V} + \frac{\mathcal{I}_{el}[f]}{V^3} \\\\
+\Big[ -\frac{\hbar\textbf{k}}{m}\nabla_{\textbf{r}} + \frac{\nabla_{\textbf{r}}U_{ext}\cdot\nabla_{\textbf{k}}}{\hbar}\Big]f + \frac{I_{inel}[f]}{V} + \frac{I_{el}[f]}{V^3} \\\\
 &=
 -\frac{\hbar\textbf{k}}{m}\nabla_{\textbf{r}}f \\\\
-\end{align*}$$
+\end{aligned}$$
 
 ### PINNs
 
@@ -37,7 +37,7 @@ $$\frac{df}{dt} = -\frac{p}{m}\frac{\partial f}{\partial q}$$
 
 #### Situation IV: Include Collisions (Adding more terms)
 
-$$\frac{df}{dt} = \Big[ -\frac{\hbar\textbf{k}}{m}\nabla_{\textbf{r}} + \frac{\nabla_{\textbf{r}}U_{ext}\cdot\nabla_{\textbf{k}}}{\hbar}\Big]f + \frac{\mathcal{I}_{inel}[f]}{V} + \frac{\mathcal{I}_{el}[f]}{V^3}$$
+$$\frac{df}{dt} = \Big[ -\frac{\hbar\textbf{k}}{m}\nabla_{\textbf{r}} + \frac{\nabla_{\textbf{r}}U_{ext}\cdot\nabla_{\textbf{k}}}{\hbar}\Big]f + \frac{I_{inel}[f]}{V} + \frac{I_{el}[f]}{V^3}$$
 
 #### Situation V: High Dimensional Case (2D and 3D)
 
