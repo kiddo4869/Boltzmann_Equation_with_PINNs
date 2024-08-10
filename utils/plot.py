@@ -50,7 +50,7 @@ def plot_data(ax, q_arr, p_arr, data, title_text):
     ax.set_title(title_text)
     ax.set_xlabel("q' (no unit)")
     ax.set_ylabel("p' (no unit)")
-    ax.set_aspect("equal", adjustable="box")
+    #ax.set_aspect("equal", adjustable="box")
     ax.ticklabel_format(style="sci", axis="both", scilimits=(0,0))
     plt.colorbar(im, ax=ax, label="Probability Density")
 
@@ -101,8 +101,14 @@ def plot_solution(args,
     mse_loss_instance = nn.MSELoss()
     mse_loss = mse_loss_instance(torch.from_numpy(f_exact), torch.from_numpy(f_pred)).item()
     ax3.text(-2, -7, f"MSE = {mse_loss:05f}", fontsize=13)
-    
-    path = os.path.join(args.checkpoint, "solutions", f"solution_at_t={scaled_t}.png")
+
+    # tight layout
+    plt.tight_layout()
+
+    if args.dynamic_scaling:
+        path = os.path.join(args.checkpoint, "solutions_ds", f"solution_at_t={scaled_t}.png")
+    else:
+        path = os.path.join(args.checkpoint, "solutions", f"solution_at_t={scaled_t}.png")
     plt.savefig(path)
 
     return path
@@ -149,7 +155,10 @@ def plot_q_p_distributions(args, scaled_q_arr, scaled_p_arr, scaled_t, model):
     # Hide the top-right subplot
     axs[0, 0].set_axis_off()
 
-    path = os.path.join(args.checkpoint, "q_p_distributions", f"q_p_distributions_at_t={scaled_t}.png")
+    if args.dynamic_scaling:
+        path = os.path.join(args.checkpoint, "q_p_distributions_ds", f"q_p_distributions_at_t={scaled_t}.png")
+    else:
+        path = os.path.join(args.checkpoint, "q_p_distributions", f"q_p_distributions_at_t={scaled_t}.png")
     plt.savefig(path)
 
     return path

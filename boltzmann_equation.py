@@ -16,6 +16,7 @@ from data.data_processing import *
 from utils.util import *
 from utils.plot import *
 from models.network import *
+from pde.pde import *
 
 def main(args: argparse.ArgumentParser):
     random.seed(args.seed)
@@ -51,8 +52,6 @@ def main(args: argparse.ArgumentParser):
     # Exact solution
     f_exact = np.array([[prob_den(args, q, p, 0.0) for q in q_arr] for p in p_arr])
     plot_init_solution(args, q_arr, p_arr, f_exact)
-
-    exit()
 
     path = os.path.join(args.checkpoint, "state_dict_model.pth")
     
@@ -102,49 +101,21 @@ def main(args: argparse.ArgumentParser):
         logging.info(f"Input shape: {X_train.shape}")
 
         # Trial before training
-        q_trial = X_train[:, 0].reshape(-1, 1)
-        p_trial = X_train[:, 1].reshape(-1, 1)
-        t_trial = X_train[:, 2].reshape(-1, 1)
-
-        q_trial_with_col = X_train_with_col[:, 0].reshape(-1, 1)
-        p_trial_with_col = X_train_with_col[:, 1].reshape(-1, 1)
-        t_trial_with_col = X_train_with_col[:, 2].reshape(-1, 1)
-
-        print(f"q_trial shape: {q_trial.shape}")
-        print(f"p_trial shape: {p_trial.shape}")
-        print(f"t_trial shape: {t_trial.shape}")
-
-        f_trial = model(q_trial, p_trial, t_trial)
-
-        print(f"f_trial shape: {f_trial.shape}")
-        print(f"y_train shape: {y_train.shape}")
-
-        # IC loss
-        IC_loss = model.loss_IC(q_trial, p_trial, t_trial, y_train.reshape(-1, 1)).item()
-        print(f"IC loss: {IC_loss}")
-
-        # PDE loss
-        PDE_loss = model.loss_PDE(q_trial_with_col, p_trial_with_col, t_trial_with_col).item()
-        print(f"PDE loss: {PDE_loss}")
-
-        # sum of the loss with weight
-        print(f"sum of the loss with weight: {(1 - model.PDE_weight) * IC_loss + model.PDE_weight * PDE_loss}")
-
-        # total loss
-        total_loss = model.compute_loss().item()
-        print(f"total loss: {total_loss}")
+        trial_test(X_train, y_train, X_train_with_col, model)
 
         print("start training...")
         logging.info("start training...")
+
+        training_start = time.perf_counter()
 
         if args.optimizer == "adam":
             model.train_with_adam()
         elif args.optimizer == "l-bfgs":
             model.train_with_lbfgs()
         
-        end = time.perf_counter()
-        print(f"training time elapsed: {(end - start):02f}s")
-        logging.info(f"training time elapsed: {(end - start):02f}s")
+        training_end = time.perf_counter()
+        print(f"training time elapsed: {(training_end - training_start):02f}s")
+        logging.info(f"training time elapsed: {(training_end - training_start):02f}s")
     
         #plotting losses
         if args.log_loss:
@@ -152,7 +123,7 @@ def main(args: argparse.ArgumentParser):
     
         # saving model
         torch.save(model.net.state_dict(), path)
-    else:
+    elif args.phase == "test":
         print("load saved model...")
         logging.info("load saved model...")
 
@@ -164,6 +135,7 @@ def main(args: argparse.ArgumentParser):
 
         print("start testing...")
         logging.info("start testing...")
+        testing_start = time.perf_counter()
 
         # plotting solutions and distributions
         sol_files = []
@@ -173,12 +145,30 @@ def main(args: argparse.ArgumentParser):
             t_arr = np.linspace(0, 50, 6)
         else:
             t_arr = np.linspace(0, 100, 21)
-        for t in t_arr:
+        for i, t in enumerate(t_arr):
+            if i % 2 == 0:
+                if args.dynamic_scaling:
+                    q_arr = q_arr * 1.2
             sol_files.append(plot_solution(args, q_arr, p_arr, t, prob_den, model))
             dis_files.append(plot_q_p_distributions(args, q_arr, p_arr, t, model))
 
-        save_gif_PIL(os.path.join(args.checkpoint, "solutions.gif"), sol_files, fps=5, loop=0)
-        save_gif_PIL(os.path.join(args.checkpoint, "q_p_distributions.gif"), dis_files, fps=5, loop=0)
+        if args.dynamic_scaling:
+            save_gif_PIL(os.path.join(args.checkpoint, "solutions_ds.gif"), sol_files, fps=5, loop=0)
+            save_gif_PIL(os.path.join(args.checkpoint, "q_p_distributions_ds.gif"), dis_files, fps=5, loop=0)
+        else:
+            save_gif_PIL(os.path.join(args.checkpoint, "solutions.gif"), sol_files, fps=5, loop=0)
+            save_gif_PIL(os.path.join(args.checkpoint, "q_p_distributions.gif"), dis_files, fps=5, loop=0)
+
+        testing_end = time.perf_counter()
+        print(f"testing time elapsed: {(testing_end - testing_start):02f}s")
+        logging.info(f"testing time elapsed: {(testing_end - testing_start):02f}s")
+    else:
+        pass
+
+    end = time.perf_counter()
+    print(f"program time elapsed: {(end - start):02f}s")
+    logging.info(f"program time elapsed: {(end - start):02f}s")
+    
 
 def initialize_logging(args):
     current_date = datetime.now().strftime("%Y-%m-%d")
@@ -194,10 +184,13 @@ def log_parameters(args):
     string += f"\nBoltzmann constant: {args.k} Hz/K"
     string += f"\nMass of the atom: {args.m} kg"
     string += f"\nNormalization Constant: {args.N0} (no unit)"
-    string += f"\nN: {args.N} (no unit)"
-    string += f"\nhbar: {args.hbar} kg m^2 s^-2"
-    string += f"\nq_F: {args.q_F} m"
-    string += f"\np_F: {args.p_F} kg m s^-1"
+
+    if args.fermi_scaling:
+        string += f"\nN: {args.N} (no unit)"
+        string += f"\nhbar: {args.hbar} kg m^2 s^-2"
+        string += f"\nq_F: {args.q_F} m"
+        string += f"\np_F: {args.p_F} kg m s^-1"
+    
     logging.info(string)
 
 def log_shapes(X_train, y_train, X_train_with_col, X_valid, y_valid, X_valid_with_col, X_flatten, Y_flatten, T_flatten):
@@ -213,44 +206,44 @@ def log_shapes(X_train, y_train, X_train_with_col, X_valid, y_valid, X_valid_wit
     logging.info(f"Y_flatten shape: {Y_flatten.shape}")
     logging.info(f"T_flatten shape: {T_flatten.shape}")
 
-def scale_back(args, scaled_q: float, scaled_p: float, scaled_t: float):
-    q = scaled_q / np.sqrt(args.m * args.w0 ** 2 / (args.k * args.T))
-    p = scaled_p / np.sqrt(1 / (args.m * args.k * args.T))
-    t = scaled_t / (args.w0 ** 2 / (args.k * args.T))
+def trial_test(X_train, y_train, X_train_with_col, model):
+    q_trial = X_train[:, 0].reshape(-1, 1)
+    p_trial = X_train[:, 1].reshape(-1, 1)
+    t_trial = X_train[:, 2].reshape(-1, 1)
 
-    return q, p, t
+    q_trial_with_col = X_train_with_col[:, 0].reshape(-1, 1)
+    p_trial_with_col = X_train_with_col[:, 1].reshape(-1, 1)
+    t_trial_with_col = X_train_with_col[:, 2].reshape(-1, 1)
 
-def scale_back_fermi(args, scaled_q: float, scaled_p: float, scaled_t: float):
-    q = scaled_q * args.q_F
-    p = scaled_p * args.p_F
-    t = scaled_t / args.w0
+    print(f"q_trial shape: {q_trial.shape}")
+    print(f"p_trial shape: {p_trial.shape}")
+    print(f"t_trial shape: {t_trial.shape}")
 
-    return q, p, t
+    f_trial = model(q_trial, p_trial, t_trial)
 
-def prob_den(args, scaled_q: float, scaled_p: float, scaled_t: float) -> float:
-    if args.fermi_scaling:
-        q, p, t = scale_back_fermi(args, scaled_q, scaled_p, scaled_t)
-    else:
-        q, p, t = scale_back(args, scaled_q, scaled_p, scaled_t)
-    A = np.array([q, p])
-    alpha = (1 + (args.w0 * t) ** 2) / args.w0 ** 2
-    beta = args.m * t
-    gamma = args.m ** 2
-    
-    Phi = (args.k * args.T / args.m) * np.array([[alpha, beta], [beta, gamma]])
-    Phi_inv = inv(Phi)
+    print(f"f_trial shape: {f_trial.shape}")
+    print(f"y_train shape: {y_train.shape}")
 
-    if args.fermi_scaling:
-        #return args.N * args.N0 * np.exp(-0.5 * A.T @ Phi_inv @ A)
-        return args.N * args.N0 * np.exp(-args.N * args.N0 * args.hbar * (2 * np.pi) * (scaled_q ** 2 + scaled_p ** 2))
-    else:
-        return args.N0 * np.exp(-0.5 * A.T @ Phi_inv @ A)
+    # IC loss
+    IC_loss = model.loss_IC(q_trial, p_trial, t_trial, y_train.reshape(-1, 1)).item()
+    print(f"IC loss: {IC_loss}")
+
+    # PDE loss
+    PDE_loss = model.loss_PDE(q_trial_with_col, p_trial_with_col, t_trial_with_col).item()
+    print(f"PDE loss: {PDE_loss}")
+
+    # sum of the loss with weight
+    print(f"sum of the loss with weight: {(1 - model.PDE_weight) * IC_loss + model.PDE_weight * PDE_loss}")
+
+    # total loss
+    total_loss = model.compute_loss().item()
+    print(f"total loss: {total_loss}")
 
 if __name__=="__main__":
     parser = argparse.ArgumentParser(description="Physics Informed Neural Networks")
     # Physical Conditions
     parser.add_argument("--grid_size", type=int, default=100)
-    parser.add_argument("--T", type=float, default=11e-9)
+    parser.add_argument("--T", type=float, default=1.7e-07)
     parser.add_argument("--w0", type=float, default=1e5)
     parser.add_argument("--k", type=float, default=sc.physical_constants['Boltzmann constant in Hz/K'][0])
     parser.add_argument("--m", type=float, default=sc.m_u * 86.9091835)
@@ -291,13 +284,14 @@ if __name__=="__main__":
     parser.add_argument("--patience", type=int, default=10)
     parser.add_argument("--tolerance", type=float, default=1e-5)
 
+    # Visualization
+    parser.add_argument("--dynamic_scaling", action="store_true")
+
     args = parser.parse_args()
 
     if args.debug:
-        args.name = "debug_fermi"
         args.epochs = 100
         args.log_loss = True
-        args.fermi_scaling = True
         args.log_freq = 10
 
     if args.fermi_scaling:
@@ -316,13 +310,16 @@ if __name__=="__main__":
 
     # Normalization Constant
     args.N0 = args.w0 / (2 * np.pi * args.k * args.T)
-    args.q_F = np.sqrt(2 * args.N * args.hbar / (args.m * args.w0))
-    args.p_F = np.sqrt(2 * args.N * args.hbar * (args.m * args.w0))
+    if args.fermi_scaling:
+        args.q_F = np.sqrt(2 * args.N * args.hbar / (args.m * args.w0))
+        args.p_F = np.sqrt(2 * args.N * args.hbar * (args.m * args.w0))
 
     # Model Checkpoint
     args.checkpoint = os.path.join(args.checkpoint_path, args.name)
     mkdirs([args.checkpoint,
             os.path.join(args.checkpoint, "q_p_distributions"),
-            os.path.join(args.checkpoint, "solutions")])
+            os.path.join(args.checkpoint, "q_p_distributions_ds"),
+            os.path.join(args.checkpoint, "solutions"),
+            os.path.join(args.checkpoint, "solutions_ds")])
     
     main(args)
