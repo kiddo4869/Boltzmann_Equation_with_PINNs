@@ -1,12 +1,12 @@
 N: 1000000.0
-N0: 604788783.7492024
+N0: 0.029025283817214698
 N_boundary: 200
 N_boundary_val: 100
 N_collocation: 600
 N_collocation_val: 300
 PDE_weight: 0.25
 T: 1e-06
-checkpoint: ./checkpoints\debug_fermi
+checkpoint: ./checkpoints/debug_fermi
 checkpoint_path: ./checkpoints
 debug: True
 device: cpu
@@ -15,7 +15,7 @@ epochs: 100
 fermi_scaling: True
 grid_size: 100
 hbar: 1
-k: 1
+k: 20836619120.0
 layers: [3, 20, 20, 20, 20, 1]
 learning_rate: 0.01
 log_freq: 10
@@ -31,7 +31,7 @@ output_path: ./outputs
 p_F: 8.730715051655643e-09
 p_min_max: [-1, 1]
 patience: 10
-phase: train
+phase: test
 pinn: False
 q_F: 229076311409422.47
 q_min_max: [-1, 1]

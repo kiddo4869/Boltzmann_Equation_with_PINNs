@@ -9,8 +9,10 @@ checkpoint: ./checkpoints/l-bfgs
 checkpoint_path: ./checkpoints
 debug: False
 device: cpu
+dynamic_scaling: True
 early_stopping: False
 epochs: 1000
+fermi_scaling: False
 grid_size: 100
 k: 20836619120.0
 layers: [3, 20, 20, 20, 20, 1]
