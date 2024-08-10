@@ -8,6 +8,7 @@ Current progress: we have built a toy model to predict the probability density $
 
 Input of the model: a set of variables ($q$, $p$, $t$)
 Output of the model: probability density $f$
+
 PDE loss: Boltzmann’s equations
 
 ### Data Collection
@@ -23,5 +24,3 @@ To train the model, we collected the data points in the dimension of (no. of sam
 #### Situation III: Collision (Adding more terms)
 
 #### Situation IV: High Dimensional Case (2D and 3D)
-
-
