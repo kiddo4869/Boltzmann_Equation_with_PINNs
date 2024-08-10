@@ -2,11 +2,11 @@
 
 Objectives: Solving some of Boltzmann’s equations in phase space using Physics-Informed Neural Networks (PINNs)
 
-Current progress: we have built a toy model to predict the probability density f of non-interacting particles on phase space (q, p) at certain time t (after release from a 1D harmonic trap)
+Current progress: we have built a toy model to predict the probability density f of non-interacting particles on phase space (q, p) at a certain time $t$ (after release from a 1D harmonic trap)
 
 ### PINNs
 
-Input of the model: a set of variables (q, p, t)
+Input of the model: a set of variables ($q$, p, t)
 Output of the model: probability density f
 PDE loss: Boltzmann’s equations
 
