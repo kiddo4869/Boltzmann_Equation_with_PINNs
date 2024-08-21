@@ -33,6 +33,12 @@ $$\frac{df}{dt} = -\frac{p}{m}\frac{\partial f}{\partial q}$$
 
 #### Situation II: Shifted Particle Cloud
 
+why not using the equation here?
+$$H - \frac{p^2}{2m} + \frac{1}{2}m\omega q^2 = 0$$
+
+* hard constraint
+* cannot handle the case with the cloud (relatively, the potential well) is shifted
+
 #### Situation III: Changing Trapping Potential
 
 #### Situation IV: Include Collisions (Adding more terms)

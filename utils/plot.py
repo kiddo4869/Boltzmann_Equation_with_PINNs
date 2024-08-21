@@ -29,18 +29,34 @@ def plot_initial_collocation_points(args, sampled_initial_points, collocation_po
     path = os.path.join(args.checkpoint, f"{title.replace(' ', '_').lower()}.png")
     plt.savefig(path)
 
-def plot_losses(save_to_dir: str,
-                iter_list: list,
-                train_loss_list: list,
-                valid_loss_list: list):    
-    
+def plot_loss(ax, iter_list, train_loss_list, valid_loss_list, title_text):
+    ax.set_title(title_text)
+    ax.set_xlabel("epoch")
+    ax.set_ylabel("losses")
+    ax.plot(iter_list, train_loss_list, label="training loss")
+    ax.plot(iter_list, valid_loss_list, label="validation loss")
+    ax.legend()
+
+def plot_losses(save_to_dir: str, model):
+
     plt.close()
-    plt.plot(iter_list, train_loss_list, label="training loss")
-    plt.plot(iter_list, valid_loss_list, label="validation loss")
-    plt.xlabel("epoch")
-    plt.ylabel("losses")
-    plt.title("losses against epoch graph")
-    plt.legend()
+    fig = plt.figure(1, figsize=(20, 6))
+    plt.suptitle(f"losses against epoch", fontsize=16)
+
+    # IC Loss
+    ax1 = plt.subplot(1, 3, 1)
+    plot_loss(ax1, model.iter_list, model.train_ic_ll, model.valid_ic_ll, "Initial Condition Loss")
+    
+    # PDE Loss
+    ax2 = plt.subplot(1, 3, 2)
+    plot_loss(ax2, model.iter_list, model.train_pde_ll, model.valid_pde_ll, "PDE Loss")
+    
+    # Total Loss
+    ax3 = plt.subplot(1, 3, 3)
+    plot_loss(ax3, model.iter_list, model.train_loss_list, model.valid_loss_list, "Total Loss")
+
+    # tight layout
+    plt.tight_layout()
     
     path = os.path.join(save_to_dir, f"losses.png")
     plt.savefig(path)
@@ -101,9 +117,6 @@ def plot_solution(args,
     mse_loss_instance = nn.MSELoss()
     mse_loss = mse_loss_instance(torch.from_numpy(f_exact), torch.from_numpy(f_pred)).item()
     ax3.text(-2, -7, f"MSE = {mse_loss:05f}", fontsize=13)
-
-    # tight layout
-    #plt.tight_layout()
 
     if args.dynamic_scaling:
         path = os.path.join(args.checkpoint, "solutions_ds", f"solution_at_t={scaled_t}.png")

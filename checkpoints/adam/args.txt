@@ -9,8 +9,13 @@ checkpoint: ./checkpoints/adam
 checkpoint_path: ./checkpoints
 debug: False
 device: cpu
+ds_freq: 1
+ds_grid_add: 3
+ds_ratio: 1.05
+dynamic_scaling: False
 early_stopping: False
 epochs: 1000
+fermi_scaling: False
 grid_size: 100
 k: 20836619120.0
 layers: [3, 20, 20, 20, 20, 1]
@@ -27,7 +32,7 @@ optimizer: adam
 output_path: ./outputs
 p_min_max: [-5, 5]
 patience: 10
-phase: test
+phase: train
 pinn: False
 q_min_max: [-5, 5]
 save_freq: 1000

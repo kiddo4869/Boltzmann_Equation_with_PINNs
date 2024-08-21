@@ -54,7 +54,7 @@ def main(args: argparse.ArgumentParser):
     plot_init_solution(args, q_arr, p_arr, f_exact)
 
     path = os.path.join(args.checkpoint, "state_dict_model.pth")
-    
+
     if args.phase == "train":
 
         # Data processing
@@ -119,7 +119,7 @@ def main(args: argparse.ArgumentParser):
     
         #plotting losses
         if args.log_loss:
-            plot_losses(args.checkpoint, model.iter_list, model.train_loss_list, model.valid_loss_list)
+            plot_losses(args.checkpoint, model)
     
         # saving model
         torch.save(model.net.state_dict(), path)
@@ -245,7 +245,7 @@ def trial_test(X_train, y_train, X_train_with_col, model):
     print(f"sum of the loss with weight: {(1 - model.PDE_weight) * IC_loss + model.PDE_weight * PDE_loss}")
 
     # total loss
-    total_loss = model.compute_loss().item()
+    total_loss = model.compute_loss()[0].item()
     print(f"total loss: {total_loss}")
 
 if __name__=="__main__":
@@ -279,11 +279,14 @@ if __name__=="__main__":
     parser.add_argument("--phase", type=str, default="train")
     parser.add_argument("--log_loss", action="store_true")
     parser.add_argument("--log_sol", action="store_true")
+
+    # PINNs parameters
+    parser.add_argument("--layers", type=json.loads, default=[3,20,20,20,20,1])
     parser.add_argument("--noise_level", type=float, default=0.0)
-    parser.add_argument("--PDE_weight", type=float, default=0.25)
+    parser.add_argument("--hamiltonian", action="store_true")
 
     # Training parameters
-    parser.add_argument("--layers", type=json.loads, default=[3,20,20,20,20,1])
+    parser.add_argument("--PDE_weight", type=float, default=0.25)
     parser.add_argument("--optimizer", type=str, default="l-bfgs", help="adam or l-bfgs")
     parser.add_argument("--learning_rate", type=float, default=1e-2)
     parser.add_argument("--epochs", type=int, default=1000)
@@ -315,6 +318,9 @@ if __name__=="__main__":
         args.m=sc.m_u*6.04
         args.q_min_max=[-1, 1]
         args.p_min_max=[-1, 1]
+
+    if args.hamiltonian:
+        args.layers[-1] = 2
 
     # Device setup
     args.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

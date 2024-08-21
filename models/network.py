@@ -43,10 +43,18 @@ class PINN(nn.Module):
         self.iter = 0
         self.train_loss = 0.0
         self.valid_loss = 0.0
+        self.train_ic_loss = 0.0
+        self.valid_ic_loss = 0.0
+        self.train_pde_loss = 0.0
+        self.valid_pde_loss = 0.0
         
         self.iter_list = []
         self.train_loss_list = []
         self.valid_loss_list = []
+        self.train_ic_ll = []
+        self.valid_ic_ll = []
+        self.train_pde_ll = []
+        self.valid_pde_ll = []
 
         # feature scaling
         self.q_min, self.q_max = args.q_min_max
@@ -116,7 +124,8 @@ class PINN(nn.Module):
             f = self.y_valid.reshape(-1, 1)
 
         if not self.pinn:
-            return self.loss_IC(q, p, t, f)
+            IC_loss = self.loss_IC(q, p, t, f)
+            return IC_loss, IC_loss, 0.0
         else:
             if not valid:
                 q_col = self.X_train_with_col[:, 0].reshape(-1, 1)
@@ -127,32 +136,27 @@ class PINN(nn.Module):
                 p_col = self.X_valid_with_col[:, 1].reshape(-1, 1)
                 t_col = self.X_valid_with_col[:, 2].reshape(-1, 1)
 
-            return (1 - self.PDE_weight) * self.loss_IC(q, p, t, f) + self.PDE_weight * self.loss_PDE(q_col, p_col, t_col)
+            # Compute losses
+            PDE_loss = self.loss_PDE(q_col, p_col, t_col)
+            IC_loss = self.loss_IC(q, p, t, f)
+            total_loss = (1 - self.PDE_weight) * IC_loss + self.PDE_weight * PDE_loss
+
+            return total_loss, IC_loss, PDE_loss
     
     def closure(self):
 
-        # reset gradients to zero:
         self.optimizer.zero_grad()
-        
-        # compute loss
-        self.train_loss = self.compute_loss()
-        
-        # derivative with respect to model's weights:
-        self.train_loss.backward()
-        
-        self.iter += 1
-        
+        self.train_loss, self.train_ic_loss, self.train_pde_loss = self.compute_loss()
+
         if self.iter % self.args.log_freq == 0:
-
             self.net.eval()
-            self.valid_loss = self.compute_loss(valid=True)
-
-            print(f"Epoch {self.iter}, train loss: {self.train_loss.item():.9f}, valid loss: {self.valid_loss.item():.9f}")
-            self.iter_list.append(self.iter)
-            self.train_loss_list.append(self.train_loss.item())
-            self.valid_loss_list.append(self.valid_loss.item())
+            self.valid_loss, self.valid_ic_loss, self.valid_pde_loss = self.compute_loss(valid=True)
+            self.log_losses()
 
             self.net.train()
+        
+        self.train_loss.backward()
+        self.iter += 1
         
         return self.train_loss
     
@@ -168,16 +172,23 @@ class PINN(nn.Module):
             # Training phase
             self.net.train()
             self.optimizer.zero_grad()
-            self.train_loss = self.compute_loss()
+            self.train_loss, self.train_ic_loss, self.train_pde_loss = self.compute_loss()
+
+            if self.args.log_loss:
+                if self.iter % self.args.log_freq == 0:
+                    self.net.eval()
+                    self.valid_loss, self.valid_ic_loss, self.valid_pde_loss = self.compute_loss(valid=True)
+                    self.log_losses()
+
             self.train_loss.backward()
             self.optimizer.step()
 
-            if self.args.log_loss:
-                if iter % self.args.log_freq == 0:
-                    self.net.eval()
-                    self.valid_loss = self.compute_loss(valid=True)
-
-                    print(f"Epoch {iter}/{self.args.epochs}, train loss: {self.train_loss.item():.9f}, valid loss: {self.valid_loss.item():.9f}")
-                    self.iter_list.append(self.iter)
-                    self.train_loss_list.append(self.train_loss.item())
-                    self.valid_loss_list.append(self.valid_loss.item())
+    def log_losses(self):
+        print(f"Epoch {self.iter}/{self.args.epochs}, train loss: {self.train_loss.item():.9f}, valid loss: {self.valid_loss.item():.9f}")
+        self.iter_list.append(self.iter)
+        self.train_loss_list.append(self.train_loss.item())
+        self.valid_loss_list.append(self.valid_loss.item())
+        self.train_ic_ll.append(self.train_ic_loss.item())
+        self.valid_ic_ll.append(self.valid_ic_loss.item())
+        self.train_pde_ll.append(self.train_pde_loss.item())
+        self.valid_pde_ll.append(self.valid_pde_loss.item())
