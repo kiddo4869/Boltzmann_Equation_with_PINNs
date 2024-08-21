@@ -61,25 +61,29 @@ def plot_losses(save_to_dir: str, model):
     path = os.path.join(save_to_dir, f"losses.png")
     plt.savefig(path)
 
-def plot_data(ax, q_arr, p_arr, data, title_text):
+def plot_data(ax, q_arr, p_arr, data, title_text, set_aspect=False):
     im = ax.contourf(q_arr, p_arr, data, levels=100)
     ax.set_title(title_text)
     ax.set_xlabel("q' (no unit)")
     ax.set_ylabel("p' (no unit)")
-    #ax.set_aspect("equal", adjustable="box")
+    if set_aspect:
+        ax.set_aspect("equal", adjustable="box")
     ax.ticklabel_format(style="sci", axis="both", scilimits=(0,0))
     plt.colorbar(im, ax=ax, label="Probability Density")
 
 def plot_init_solution(args,
                        scaled_q_arr: np.array,
                        scaled_p_arr: np.array,
-                       f_exact):
-    
+                       exact_solution: np.array,
+                       title_text):
+
+    plt.close()
     fig = plt.figure(1, figsize=(8, 8))
     ax = plt.subplot(1, 1, 1)
-    plot_data(ax, scaled_q_arr, scaled_p_arr, f_exact, "Initial Condition")
-    path = os.path.join(args.checkpoint, f"initial_condition.png")
+    plot_data(ax, scaled_q_arr, scaled_p_arr, exact_solution, title_text, set_aspect=True)
+    path = os.path.join(args.checkpoint, f"{title_text.replace(' ', '_').lower()}.png")
     plt.savefig(path)
+    plt.tight_layout()
 
     return path
 
@@ -107,7 +111,9 @@ def plot_solution(args,
     
     # Prediction
     ax2 = plt.subplot(1, 3, 2)
-    f_pred = model(q_trial, p_trial, t_trial).reshape(N_p, N_q).cpu().detach().numpy()
+    f_pred = model(q_trial, p_trial, t_trial) #.reshape(N_p, N_q).cpu().detach().numpy()
+    print(f_pred.shape)
+    exit()
     plot_data(ax2, scaled_q_arr, scaled_p_arr, f_pred, "Prediction")
     
     # Error

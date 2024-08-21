@@ -51,19 +51,26 @@ def main(args: argparse.ArgumentParser):
     
     # Exact solution
     f_exact = np.array([[prob_den(args, q, p, 0.0) for q in q_arr] for p in p_arr])
-    plot_init_solution(args, q_arr, p_arr, f_exact)
+    h_exact = np.array([[hamiltonian(args, q, p, 0.0) for q in q_arr] for p in p_arr])
+
+    plot_init_solution(args, q_arr, p_arr, f_exact, "Initial Probability Density")
+    plot_init_solution(args, q_arr, p_arr, h_exact, "Initial Hamiltonian ln(H+1)")
 
     path = os.path.join(args.checkpoint, "state_dict_model.pth")
 
     if args.phase == "train":
 
         # Data processing
-        train_inputs, train_init_pts, train_init_phi, train_col_pts = data_processing_with_time(qv, pv, tv, f_exact,
-                                                                                                args.N_boundary, args.N_collocation,
+        if not args.hamiltonian:
+            train_inputs, train_init_pts, train_init_phi, train_col_pts = data_processing_with_time(args, qv, pv, tv, f_exact, h_exact,
                                                                                                 ub, lb, t_range)
-        val_inputs, val_init_pts, val_init_phi, val_col_pts = data_processing_with_time(qv, pv, tv, f_exact,
-                                                                                        args.N_boundary_val, args.N_collocation_val,
+            val_inputs, val_init_pts, val_init_phi, val_col_pts = data_processing_with_time(args, qv, pv, tv, f_exact, h_exact,
                                                                                         ub, lb, t_range)
+        else:
+            train_inputs, train_init_pts, train_init_phi, train_init_ham, train_col_pts = data_processing_with_time(args, qv, pv, tv, f_exact, h_exact,
+                                                                                                            ub, lb, t_range)
+            val_inputs, val_init_pts, val_init_phi, val_init_ham, val_col_pts = data_processing_with_time(args, qv, pv, tv, f_exact, h_exact,
+                                                                                                    ub, lb, t_range)
 
         # Plotting data inputs
         plot_initial_collocation_points(args, train_init_pts, train_col_pts, "Training Initial and Collocation Points")
@@ -71,18 +78,21 @@ def main(args: argparse.ArgumentParser):
 
         # Data conversion
         X_train = torch.from_numpy(train_init_pts).float().to(args.device)
-        y_train = torch.from_numpy(train_init_phi).float().to(args.device)
-        X_train_with_col = torch.from_numpy(train_inputs).float().to(args.device)
-
         X_valid = torch.from_numpy(val_init_pts).float().to(args.device)
-        y_valid = torch.from_numpy(val_init_phi).float().to(args.device)
+
+        X_train_with_col = torch.from_numpy(train_inputs).float().to(args.device)
         X_valid_with_col = torch.from_numpy(val_inputs).float().to(args.device)
+
+        if not args.hamiltonian:
+            y_train = torch.from_numpy(train_init_phi).float().to(args.device)
+            y_valid = torch.from_numpy(val_init_phi).float().to(args.device)
+        else:
+            y_train = torch.from_numpy(np.column_stack((train_init_phi, train_init_ham))).float().to(args.device)
+            y_valid = torch.from_numpy(np.column_stack((val_init_phi, val_init_ham))).float().to(args.device)
 
         X_flatten = torch.from_numpy(qv.reshape(-1, 1)).to(args.device)
         Y_flatten = torch.from_numpy(pv.reshape(-1, 1)).to(args.device)
         T_flatten = torch.from_numpy(tv.reshape(-1, 1)).to(args.device)
-
-        f_exact_gpu = torch.from_numpy(f_exact).to(args.device)
 
         # Print shapes
         log_shapes(X_train, y_train, X_train_with_col, X_valid, y_valid, X_valid_with_col, X_flatten, Y_flatten, T_flatten)
@@ -101,7 +111,7 @@ def main(args: argparse.ArgumentParser):
         logging.info(f"Input shape: {X_train.shape}")
 
         # Trial before training
-        trial_test(X_train, y_train, X_train_with_col, model)
+        trial_test(args, X_train, y_train, X_train_with_col, model)
 
         print("start training...")
         logging.info("start training...")
@@ -215,7 +225,7 @@ def log_shapes(X_train, y_train, X_train_with_col, X_valid, y_valid, X_valid_wit
     logging.info(f"Y_flatten shape: {Y_flatten.shape}")
     logging.info(f"T_flatten shape: {T_flatten.shape}")
 
-def trial_test(X_train, y_train, X_train_with_col, model):
+def trial_test(args, X_train, y_train, X_train_with_col, model):
     q_trial = X_train[:, 0].reshape(-1, 1)
     p_trial = X_train[:, 1].reshape(-1, 1)
     t_trial = X_train[:, 2].reshape(-1, 1)
@@ -234,7 +244,11 @@ def trial_test(X_train, y_train, X_train_with_col, model):
     print(f"y_train shape: {y_train.shape}")
 
     # IC loss
-    IC_loss = model.loss_IC(q_trial, p_trial, t_trial, y_train.reshape(-1, 1)).item()
+    if not args.hamiltonian:
+        IC_loss = model.loss_IC(q_trial, p_trial, t_trial, y_train.reshape(-1, 1)).item()
+    else:
+        IC_loss = model.loss_IC(q_trial, p_trial, t_trial, y_train.reshape(-1, 2)).item()
+
     print(f"IC loss: {IC_loss}")
 
     # PDE loss
@@ -262,9 +276,9 @@ if __name__=="__main__":
     parser.add_argument("--q_min_max", type=json.loads, default=[-5, 5])
     parser.add_argument("--p_min_max", type=json.loads, default=[-5, 5])
     parser.add_argument("--t_min_max", type=json.loads, default=[0, 50])
-    parser.add_argument("--N_boundary", type=int, default=200, help="Number of training data")
+    parser.add_argument("--N_initial", type=int, default=200, help="Number of training data")
     parser.add_argument("--N_collocation", type=int, default=600, help="Number of training collocation points")
-    parser.add_argument("--N_boundary_val", type=int, default=100, help="Number of validation data")
+    parser.add_argument("--N_initial_val", type=int, default=100, help="Number of validation data")
     parser.add_argument("--N_collocation_val", type=int, default=300, help="Number of validation collocation points")
 
     # General parameters

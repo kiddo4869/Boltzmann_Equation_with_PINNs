@@ -5,16 +5,16 @@ N_initial: 200
 N_initial_val: 100
 PDE_weight: 0.25
 T: 1.7e-07
-checkpoint: ./checkpoints/debug
+checkpoint: ./checkpoints/adam_h
 checkpoint_path: ./checkpoints
-debug: True
+debug: False
 device: cpu
 ds_freq: 1
 ds_grid_add: 3
 ds_ratio: 1.05
 dynamic_scaling: False
 early_stopping: False
-epochs: 100
+epochs: 1000
 fermi_scaling: False
 grid_size: 100
 hamiltonian: True
@@ -27,9 +27,9 @@ log_path: ./logs
 log_sol: False
 m: 1.4431609444805812e-25
 model_path: ./models
-name: debug
+name: adam_h
 noise_level: 0.0
-optimizer: l-bfgs
+optimizer: adam
 output_path: ./outputs
 p_min_max: [-5, 5]
 patience: 10

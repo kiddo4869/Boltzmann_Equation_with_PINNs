@@ -15,6 +15,22 @@ def scale_back_fermi(args, scaled_q: float, scaled_p: float, scaled_t: float):
 
     return q, p, t
 
+def omega(args, t: float) -> float:
+    if t > 0.0:
+        return 0.0
+    else:
+        return args.w0
+
+def hamiltonian(args, scaled_q: float, scaled_p: float, scaled_t: float) -> float:
+    if args.fermi_scaling:
+        q, p, t = scale_back_fermi(args, scaled_q, scaled_p, scaled_t)
+    else:
+        q, p, t = scale_back(args, scaled_q, scaled_p, scaled_t)
+
+    w = omega(args, t)
+    h = p ** 2 / (2 * args.m) + 0.5 * args.m * w ** 2 * q ** 2
+    return np.log(h + 1)
+
 def prob_den(args, scaled_q: float, scaled_p: float, scaled_t: float) -> float:
     if args.fermi_scaling:
         q, p, t = scale_back_fermi(args, scaled_q, scaled_p, scaled_t)
@@ -30,6 +46,6 @@ def prob_den(args, scaled_q: float, scaled_p: float, scaled_t: float) -> float:
 
     if args.fermi_scaling:
         #return args.N * args.N0 * np.exp(-0.5 * A.T @ Phi_inv @ A)
-        return args.N * args.N0 * np.exp(-args.N * args.N0 * args.hbar * (2 * np.pi) * (scaled_q ** 2 + scaled_p ** 2))
+        return args.N * args.N0 * np.exp(-args.N * args.N0 * args.hbar * (2 * np.pi) * (q ** 2 + p ** 2))
     else:
         return args.N0 * np.exp(-0.5 * A.T @ Phi_inv @ A)

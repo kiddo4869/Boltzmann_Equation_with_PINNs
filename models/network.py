@@ -19,6 +19,7 @@ class PINN(nn.Module):
 
         self.args = args
         self.layers = np.array(args.layers)
+        self.n_output = self.layers[-1]
         self.pinn = args.pinn
         self.device = args.device
         self.PDE_weight = args.PDE_weight
@@ -62,7 +63,6 @@ class PINN(nn.Module):
         self.t_min, self.t_max = args.t_min_max
         self.lb = torch.Tensor([self.q_min, self.p_min, self.t_min]).to(self.device)
         self.ub = torch.Tensor([self.q_max, self.p_max, self.t_max]).to(self.device)
-
     
     def init_weights(self):
         # Xavier Normal Initialization
@@ -83,8 +83,8 @@ class PINN(nn.Module):
 
         return self.net[-1](a)
 
-    def loss_IC(self, q, p, t, phi):
-        return self.loss_function(self.forward(q, p, t), phi)
+    def loss_IC(self, q, p, t, exact_sol):
+        return self.loss_function(self.forward(q, p, t), exact_sol)
     
     def loss_PDE(self, q_col, p_col, t_col):
         q = q_col.clone().detach()
@@ -95,7 +95,11 @@ class PINN(nn.Module):
         p.requires_grad = True
         t.requires_grad = True
 
-        f = self.forward(q, p, t)
+        if not self.args.hamiltonian:
+            f = self.forward(q, p, t)
+        else:
+            pred = self.forward(q, p, t)
+            f, h = pred[:, 0].reshape(-1, 1), pred[:, 1].reshape(-1, 1)
         
         # Construct the PDE loss using torch.autograd (THIS IS THE KEY)
         f_q = autograd.grad(f, q,
@@ -106,7 +110,22 @@ class PINN(nn.Module):
                             create_graph = True,
                             grad_outputs = torch.ones_like(f).to(self.device),
                             allow_unused = True)[0]
+
         LHS = 2 * np.pi * self.args.N0 * f_t + p * f_q
+
+        if self.args.hamiltonian:
+            h_q = autograd.grad(h, q,
+                                create_graph = True,
+                                grad_outputs = torch.ones_like(h).to(self.device),
+                                allow_unused = True)[0]
+            h_p = autograd.grad(h, p,
+                                create_graph = True,
+                                grad_outputs = torch.ones_like(h).to(self.device),
+                                allow_unused = True)[0]
+
+            LHS_1 = h_q * (h + 1) - q * self.args.k * self.args.T * 0.0 / self.args.w0
+            LHS_2 = h_p * (h + 1) - p * self.args.k * self.args.T
+            LHS += LHS_1 + LHS_2
 
         return self.loss_function(LHS, torch.zeros(f.shape).to(self.device))
 
@@ -116,15 +135,15 @@ class PINN(nn.Module):
             q = self.X_train[:, 0].reshape(-1, 1)
             p = self.X_train[:, 1].reshape(-1, 1)
             t = self.X_train[:, 2].reshape(-1, 1)
-            f = self.y_train.reshape(-1, 1)
+            exact_sol = self.y_train.reshape(-1, self.n_output)
         else:
             q = self.X_valid[:, 0].reshape(-1, 1)
             p = self.X_valid[:, 1].reshape(-1, 1)
             t = self.X_valid[:, 2].reshape(-1, 1)
-            f = self.y_valid.reshape(-1, 1)
+            exact_sol = self.y_valid.reshape(-1, self.n_output)
 
         if not self.pinn:
-            IC_loss = self.loss_IC(q, p, t, f)
+            IC_loss = self.loss_IC(q, p, t, exact_sol)
             return IC_loss, IC_loss, 0.0
         else:
             if not valid:
@@ -138,7 +157,7 @@ class PINN(nn.Module):
 
             # Compute losses
             PDE_loss = self.loss_PDE(q_col, p_col, t_col)
-            IC_loss = self.loss_IC(q, p, t, f)
+            IC_loss = self.loss_IC(q, p, t, exact_sol)
             total_loss = (1 - self.PDE_weight) * IC_loss + self.PDE_weight * PDE_loss
 
             return total_loss, IC_loss, PDE_loss
