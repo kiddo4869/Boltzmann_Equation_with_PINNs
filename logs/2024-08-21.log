@@ -1,0 +1,408 @@
+2024-08-21 09:40:52,348 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-21 09:40:52,348 - INFO - initialize data points...
+2024-08-21 09:40:53,144 - INFO - load saved model...
+2024-08-21 09:40:54,292 - INFO - start testing...
+2024-08-21 09:41:03,386 - INFO - testing time elapsed: 9.093962s
+2024-08-21 09:41:03,387 - INFO - program time elapsed: 11.039511s
+2024-08-21 10:08:04,528 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-21 10:08:04,528 - INFO - initialize data points...
+2024-08-21 10:08:05,661 - INFO - X_train shape: torch.Size([200, 3])
+2024-08-21 10:08:05,661 - INFO - y_train shape: torch.Size([200])
+2024-08-21 10:08:05,661 - INFO - X_train_with_cal shape: torch.Size([800, 3])
+
+2024-08-21 10:08:05,661 - INFO - X_val shape: torch.Size([100, 3])
+2024-08-21 10:08:05,661 - INFO - y_val shape: torch.Size([100])
+2024-08-21 10:08:05,661 - INFO - X_val_with_cal shape: torch.Size([400, 3])
+
+2024-08-21 10:08:05,661 - INFO - X_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:08:05,661 - INFO - Y_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:08:05,661 - INFO - T_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:08:06,260 - INFO - Number of parameters: 1361
+2024-08-21 10:08:06,260 - INFO - Input shape: torch.Size([200, 3])
+2024-08-21 10:08:42,317 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-21 10:08:42,317 - INFO - initialize data points...
+2024-08-21 10:08:43,274 - INFO - X_train shape: torch.Size([200, 3])
+2024-08-21 10:08:43,274 - INFO - y_train shape: torch.Size([200])
+2024-08-21 10:08:43,275 - INFO - X_train_with_cal shape: torch.Size([800, 3])
+
+2024-08-21 10:08:43,275 - INFO - X_val shape: torch.Size([100, 3])
+2024-08-21 10:08:43,275 - INFO - y_val shape: torch.Size([100])
+2024-08-21 10:08:43,275 - INFO - X_val_with_cal shape: torch.Size([400, 3])
+
+2024-08-21 10:08:43,275 - INFO - X_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:08:43,275 - INFO - Y_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:08:43,275 - INFO - T_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:08:43,799 - INFO - Number of parameters: 1361
+2024-08-21 10:08:43,799 - INFO - Input shape: torch.Size([200, 3])
+2024-08-21 10:08:43,807 - INFO - start training...
+2024-08-21 10:08:45,518 - INFO - training time elapsed: 1.710055s
+2024-08-21 10:08:45,658 - INFO - program time elapsed: 3.341895s
+2024-08-21 10:12:09,415 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-21 10:12:09,416 - INFO - initialize data points...
+2024-08-21 10:12:10,369 - INFO - X_train shape: torch.Size([200, 3])
+2024-08-21 10:12:10,369 - INFO - y_train shape: torch.Size([200])
+2024-08-21 10:12:10,369 - INFO - X_train_with_cal shape: torch.Size([800, 3])
+
+2024-08-21 10:12:10,369 - INFO - X_val shape: torch.Size([100, 3])
+2024-08-21 10:12:10,369 - INFO - y_val shape: torch.Size([100])
+2024-08-21 10:12:10,369 - INFO - X_val_with_cal shape: torch.Size([400, 3])
+
+2024-08-21 10:12:10,369 - INFO - X_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:12:10,369 - INFO - Y_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:12:10,369 - INFO - T_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:12:10,905 - INFO - Number of parameters: 1361
+2024-08-21 10:12:10,905 - INFO - Input shape: torch.Size([200, 3])
+2024-08-21 10:12:10,911 - INFO - start training...
+2024-08-21 10:12:12,554 - INFO - training time elapsed: 1.642805s
+2024-08-21 10:12:12,693 - INFO - program time elapsed: 3.278371s
+2024-08-21 10:14:01,985 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-21 10:14:01,985 - INFO - initialize data points...
+2024-08-21 10:14:02,981 - INFO - X_train shape: torch.Size([200, 3])
+2024-08-21 10:14:02,981 - INFO - y_train shape: torch.Size([200])
+2024-08-21 10:14:02,981 - INFO - X_train_with_cal shape: torch.Size([800, 3])
+
+2024-08-21 10:14:02,981 - INFO - X_val shape: torch.Size([100, 3])
+2024-08-21 10:14:02,981 - INFO - y_val shape: torch.Size([100])
+2024-08-21 10:14:02,981 - INFO - X_val_with_cal shape: torch.Size([400, 3])
+
+2024-08-21 10:14:02,981 - INFO - X_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:14:02,981 - INFO - Y_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:14:02,981 - INFO - T_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:14:03,576 - INFO - Number of parameters: 1361
+2024-08-21 10:14:03,576 - INFO - Input shape: torch.Size([200, 3])
+2024-08-21 10:14:03,583 - INFO - start training...
+2024-08-21 10:14:05,338 - INFO - training time elapsed: 1.754212s
+2024-08-21 10:14:05,480 - INFO - program time elapsed: 3.495879s
+2024-08-21 10:14:13,486 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-21 10:14:13,486 - INFO - initialize data points...
+2024-08-21 10:14:14,456 - INFO - X_train shape: torch.Size([200, 3])
+2024-08-21 10:14:14,457 - INFO - y_train shape: torch.Size([200])
+2024-08-21 10:14:14,457 - INFO - X_train_with_cal shape: torch.Size([800, 3])
+
+2024-08-21 10:14:14,457 - INFO - X_val shape: torch.Size([100, 3])
+2024-08-21 10:14:14,457 - INFO - y_val shape: torch.Size([100])
+2024-08-21 10:14:14,457 - INFO - X_val_with_cal shape: torch.Size([400, 3])
+
+2024-08-21 10:14:14,457 - INFO - X_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:14:14,457 - INFO - Y_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:14:14,457 - INFO - T_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:14:15,008 - INFO - Number of parameters: 1361
+2024-08-21 10:14:15,008 - INFO - Input shape: torch.Size([200, 3])
+2024-08-21 10:14:15,016 - INFO - start training...
+2024-08-21 10:14:16,655 - INFO - training time elapsed: 1.637465s
+2024-08-21 10:14:16,787 - INFO - program time elapsed: 3.301602s
+2024-08-21 10:15:11,432 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-21 10:15:11,432 - INFO - initialize data points...
+2024-08-21 10:15:12,432 - INFO - X_train shape: torch.Size([200, 3])
+2024-08-21 10:15:12,432 - INFO - y_train shape: torch.Size([200])
+2024-08-21 10:15:12,433 - INFO - X_train_with_cal shape: torch.Size([800, 3])
+
+2024-08-21 10:15:12,433 - INFO - X_val shape: torch.Size([100, 3])
+2024-08-21 10:15:12,433 - INFO - y_val shape: torch.Size([100])
+2024-08-21 10:15:12,433 - INFO - X_val_with_cal shape: torch.Size([400, 3])
+
+2024-08-21 10:15:12,433 - INFO - X_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:15:12,433 - INFO - Y_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:15:12,433 - INFO - T_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:15:13,006 - INFO - Number of parameters: 1361
+2024-08-21 10:15:13,007 - INFO - Input shape: torch.Size([200, 3])
+2024-08-21 10:15:13,017 - INFO - start training...
+2024-08-21 10:15:14,641 - INFO - training time elapsed: 1.624246s
+2024-08-21 10:15:14,773 - INFO - program time elapsed: 3.341488s
+2024-08-21 10:15:34,883 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-21 10:15:34,883 - INFO - initialize data points...
+2024-08-21 10:15:35,901 - INFO - X_train shape: torch.Size([200, 3])
+2024-08-21 10:15:35,902 - INFO - y_train shape: torch.Size([200])
+2024-08-21 10:15:35,902 - INFO - X_train_with_cal shape: torch.Size([800, 3])
+
+2024-08-21 10:15:35,902 - INFO - X_val shape: torch.Size([100, 3])
+2024-08-21 10:15:35,902 - INFO - y_val shape: torch.Size([100])
+2024-08-21 10:15:35,902 - INFO - X_val_with_cal shape: torch.Size([400, 3])
+
+2024-08-21 10:15:35,902 - INFO - X_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:15:35,902 - INFO - Y_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:15:35,902 - INFO - T_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:15:36,464 - INFO - Number of parameters: 1361
+2024-08-21 10:15:36,464 - INFO - Input shape: torch.Size([200, 3])
+2024-08-21 10:15:36,470 - INFO - start training...
+2024-08-21 10:15:38,155 - INFO - training time elapsed: 1.684793s
+2024-08-21 10:15:38,300 - INFO - program time elapsed: 3.417326s
+2024-08-21 10:16:00,872 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-21 10:16:00,872 - INFO - initialize data points...
+2024-08-21 10:16:01,860 - INFO - X_train shape: torch.Size([200, 3])
+2024-08-21 10:16:01,860 - INFO - y_train shape: torch.Size([200])
+2024-08-21 10:16:01,860 - INFO - X_train_with_cal shape: torch.Size([800, 3])
+
+2024-08-21 10:16:01,860 - INFO - X_val shape: torch.Size([100, 3])
+2024-08-21 10:16:01,860 - INFO - y_val shape: torch.Size([100])
+2024-08-21 10:16:01,860 - INFO - X_val_with_cal shape: torch.Size([400, 3])
+
+2024-08-21 10:16:01,860 - INFO - X_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:16:01,860 - INFO - Y_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:16:01,860 - INFO - T_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:16:02,429 - INFO - Number of parameters: 1361
+2024-08-21 10:16:02,429 - INFO - Input shape: torch.Size([200, 3])
+2024-08-21 10:16:02,435 - INFO - start training...
+2024-08-21 10:16:04,233 - INFO - training time elapsed: 1.797662s
+2024-08-21 10:16:04,381 - INFO - program time elapsed: 3.509202s
+2024-08-21 10:24:14,532 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-21 10:24:14,532 - INFO - initialize data points...
+2024-08-21 10:24:15,513 - INFO - X_train shape: torch.Size([200, 3])
+2024-08-21 10:24:15,513 - INFO - y_train shape: torch.Size([200])
+2024-08-21 10:24:15,513 - INFO - X_train_with_cal shape: torch.Size([800, 3])
+
+2024-08-21 10:24:15,513 - INFO - X_val shape: torch.Size([100, 3])
+2024-08-21 10:24:15,513 - INFO - y_val shape: torch.Size([100])
+2024-08-21 10:24:15,513 - INFO - X_val_with_cal shape: torch.Size([400, 3])
+
+2024-08-21 10:24:15,513 - INFO - X_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:24:15,513 - INFO - Y_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:24:15,513 - INFO - T_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:24:16,044 - INFO - Number of parameters: 1361
+2024-08-21 10:24:16,044 - INFO - Input shape: torch.Size([200, 3])
+2024-08-21 10:24:16,051 - INFO - start training...
+2024-08-21 10:24:17,746 - INFO - training time elapsed: 1.694983s
+2024-08-21 10:24:47,444 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-21 10:24:47,444 - INFO - initialize data points...
+2024-08-21 10:24:48,460 - INFO - X_train shape: torch.Size([200, 3])
+2024-08-21 10:24:48,460 - INFO - y_train shape: torch.Size([200])
+2024-08-21 10:24:48,460 - INFO - X_train_with_cal shape: torch.Size([800, 3])
+
+2024-08-21 10:24:48,460 - INFO - X_val shape: torch.Size([100, 3])
+2024-08-21 10:24:48,460 - INFO - y_val shape: torch.Size([100])
+2024-08-21 10:24:48,460 - INFO - X_val_with_cal shape: torch.Size([400, 3])
+
+2024-08-21 10:24:48,461 - INFO - X_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:24:48,461 - INFO - Y_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:24:48,461 - INFO - T_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:24:49,043 - INFO - Number of parameters: 1361
+2024-08-21 10:24:49,043 - INFO - Input shape: torch.Size([200, 3])
+2024-08-21 10:24:49,050 - INFO - start training...
+2024-08-21 10:24:50,839 - INFO - training time elapsed: 1.789516s
+2024-08-21 10:25:51,339 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-21 10:25:51,339 - INFO - initialize data points...
+2024-08-21 10:25:52,285 - INFO - X_train shape: torch.Size([200, 3])
+2024-08-21 10:25:52,285 - INFO - y_train shape: torch.Size([200])
+2024-08-21 10:25:52,285 - INFO - X_train_with_cal shape: torch.Size([800, 3])
+
+2024-08-21 10:25:52,285 - INFO - X_val shape: torch.Size([100, 3])
+2024-08-21 10:25:52,285 - INFO - y_val shape: torch.Size([100])
+2024-08-21 10:25:52,285 - INFO - X_val_with_cal shape: torch.Size([400, 3])
+
+2024-08-21 10:25:52,285 - INFO - X_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:25:52,285 - INFO - Y_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:25:52,285 - INFO - T_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:25:52,813 - INFO - Number of parameters: 1361
+2024-08-21 10:25:52,813 - INFO - Input shape: torch.Size([200, 3])
+2024-08-21 10:25:52,820 - INFO - start training...
+2024-08-21 10:25:54,463 - INFO - training time elapsed: 1.642054s
+2024-08-21 10:25:54,877 - INFO - program time elapsed: 3.538260s
+2024-08-21 10:28:14,389 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-21 10:28:14,390 - INFO - initialize data points...
+2024-08-21 10:28:15,372 - INFO - X_train shape: torch.Size([200, 3])
+2024-08-21 10:28:15,373 - INFO - y_train shape: torch.Size([200])
+2024-08-21 10:28:15,373 - INFO - X_train_with_cal shape: torch.Size([800, 3])
+
+2024-08-21 10:28:15,373 - INFO - X_val shape: torch.Size([100, 3])
+2024-08-21 10:28:15,373 - INFO - y_val shape: torch.Size([100])
+2024-08-21 10:28:15,373 - INFO - X_val_with_cal shape: torch.Size([400, 3])
+
+2024-08-21 10:28:15,373 - INFO - X_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:28:15,373 - INFO - Y_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:28:15,373 - INFO - T_flatten shape: torch.Size([1000000, 1])
+2024-08-21 10:28:15,936 - INFO - Number of parameters: 1361
+2024-08-21 10:28:15,936 - INFO - Input shape: torch.Size([200, 3])
+2024-08-21 10:28:15,942 - INFO - start training...
+2024-08-21 10:28:17,632 - INFO - training time elapsed: 1.689001s
+2024-08-21 10:28:18,181 - INFO - program time elapsed: 3.791773s
+2024-08-21 11:34:44,816 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-21 11:34:44,817 - INFO - initialize data points...
+2024-08-21 11:34:46,079 - INFO - X_train shape: torch.Size([200, 3])
+2024-08-21 11:34:46,079 - INFO - y_train shape: torch.Size([200])
+2024-08-21 11:34:46,079 - INFO - X_train_with_cal shape: torch.Size([800, 3])
+
+2024-08-21 11:34:46,079 - INFO - X_val shape: torch.Size([100, 3])
+2024-08-21 11:34:46,079 - INFO - y_val shape: torch.Size([100])
+2024-08-21 11:34:46,079 - INFO - X_val_with_cal shape: torch.Size([400, 3])
+
+2024-08-21 11:34:46,079 - INFO - X_flatten shape: torch.Size([1000000, 1])
+2024-08-21 11:34:46,079 - INFO - Y_flatten shape: torch.Size([1000000, 1])
+2024-08-21 11:34:46,079 - INFO - T_flatten shape: torch.Size([1000000, 1])
+2024-08-21 11:34:47,319 - INFO - Number of parameters: 1361
+2024-08-21 11:34:47,319 - INFO - Input shape: torch.Size([200, 3])
+2024-08-21 11:34:47,392 - INFO - start training...
+2024-08-21 11:34:53,340 - INFO - training time elapsed: 5.947165s
+2024-08-21 11:34:53,868 - INFO - program time elapsed: 9.052225s
+2024-08-21 11:36:02,808 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-21 11:36:02,809 - INFO - initialize data points...
+2024-08-21 11:36:03,410 - INFO - load saved model...
+2024-08-21 11:36:04,065 - INFO - start testing...
+2024-08-21 11:36:16,789 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-21 11:36:16,789 - INFO - initialize data points...
+2024-08-21 11:36:17,770 - INFO - X_train shape: torch.Size([200, 3])
+2024-08-21 11:36:17,770 - INFO - y_train shape: torch.Size([200])
+2024-08-21 11:36:17,770 - INFO - X_train_with_cal shape: torch.Size([800, 3])
+
+2024-08-21 11:36:17,770 - INFO - X_val shape: torch.Size([100, 3])
+2024-08-21 11:36:17,770 - INFO - y_val shape: torch.Size([100])
+2024-08-21 11:36:17,770 - INFO - X_val_with_cal shape: torch.Size([400, 3])
+
+2024-08-21 11:36:17,770 - INFO - X_flatten shape: torch.Size([1000000, 1])
+2024-08-21 11:36:17,770 - INFO - Y_flatten shape: torch.Size([1000000, 1])
+2024-08-21 11:36:17,770 - INFO - T_flatten shape: torch.Size([1000000, 1])
+2024-08-21 11:36:18,417 - INFO - Number of parameters: 1361
+2024-08-21 11:36:18,417 - INFO - Input shape: torch.Size([200, 3])
+2024-08-21 11:36:18,425 - INFO - start training...
+2024-08-21 11:36:31,899 - INFO - training time elapsed: 13.474136s
+2024-08-21 11:36:32,451 - INFO - program time elapsed: 15.662548s
+2024-08-21 11:37:33,194 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-21 11:37:33,194 - INFO - initialize data points...
+2024-08-21 11:37:33,778 - INFO - load saved model...
+2024-08-21 11:37:34,355 - INFO - start testing...
+2024-08-21 11:38:07,266 - INFO - testing time elapsed: 32.911083s
+2024-08-21 11:38:07,267 - INFO - program time elapsed: 34.072800s
+2024-08-21 11:39:31,509 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-21 11:39:31,509 - INFO - initialize data points...
+2024-08-21 11:39:32,108 - INFO - load saved model...
+2024-08-21 11:39:32,676 - INFO - start testing...
+2024-08-21 11:40:05,790 - INFO - testing time elapsed: 33.113822s
+2024-08-21 11:40:05,791 - INFO - program time elapsed: 34.282271s
+2024-08-21 11:43:03,130 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-21 11:43:03,130 - INFO - initialize data points...
+2024-08-21 11:43:03,853 - INFO - load saved model...
+2024-08-21 11:43:04,448 - INFO - start testing...
+2024-08-21 11:43:36,488 - INFO - testing time elapsed: 32.039825s
+2024-08-21 11:43:36,488 - INFO - program time elapsed: 33.358813s
