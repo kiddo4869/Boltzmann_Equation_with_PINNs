@@ -5,17 +5,17 @@ import torch.autograd as autograd
 import numpy as np
 
 class PINN(nn.Module):
-    def __init__(self, args, X_train, y_train, X_train_with_col,
-                             X_valid, y_valid, X_valid_with_col):
+    def __init__(self, args, train_init_pts, train_init_phi, train_col_pts,
+                             valid_init_pts, valid_init_phi, valid_col_pts):
         super().__init__()
 
         # Inputs
-        self.X_train = X_train
-        self.y_train = y_train
-        self.X_train_with_col = X_train_with_col
-        self.X_valid = X_valid
-        self.y_valid = y_valid
-        self.X_valid_with_col = X_valid_with_col
+        self.train_init_pts = train_init_pts
+        self.train_init_phi = train_init_phi
+        self.train_col_pts = train_col_pts
+        self.valid_init_pts = valid_init_pts
+        self.valid_init_phi = valid_init_phi
+        self.valid_col_pts = valid_col_pts
 
         self.args = args
         self.layers = np.array(args.layers)
@@ -83,8 +83,11 @@ class PINN(nn.Module):
 
         return self.net[-1](a)
 
-    def loss_IC(self, q, p, t, exact_sol):
-        return self.loss_function(self.forward(q, p, t), exact_sol)
+    def loss_IC(self, q, p, t, IC):
+        return self.loss_function(self.forward(q, p, t), IC)
+
+    def loss_BC(self, q, p, t, BC):
+        return self.loss_function(self.forward(q, p, t), BC)
     
     def loss_PDE(self, q_col, p_col, t_col):
         q = q_col.clone().detach()
@@ -112,6 +115,7 @@ class PINN(nn.Module):
                             allow_unused = True)[0]
 
         LHS = 2 * np.pi * self.args.N0 * f_t + p * f_q
+        loss = self.loss_function(LHS, torch.zeros(f.shape).to(self.device))
 
         if self.args.hamiltonian:
             h_q = autograd.grad(h, q,
@@ -123,41 +127,45 @@ class PINN(nn.Module):
                                 grad_outputs = torch.ones_like(h).to(self.device),
                                 allow_unused = True)[0]
 
-            LHS_1 = h_q * (h + 1) - q * self.args.k * self.args.T * 0.0 / self.args.w0
-            LHS_2 = h_p * (h + 1) - p * self.args.k * self.args.T
-            LHS += LHS_1 + LHS_2
+            #LHS_1 = h_q - q * 0.0 / self.args.w0 ** 2
+            #LHS_2 = h_p - p
+            #loss1 = self.loss_function(LHS_1, torch.zeros(h.shape).to(self.device))
+            #loss2 = self.loss_function(LHS_2, torch.zeros(h.shape).to(self.device))
 
-        return self.loss_function(LHS, torch.zeros(f.shape).to(self.device))
+            return loss #+ loss1 + loss2
+        else:
+            return loss
 
     def compute_loss(self, valid=False):
 
         if not valid:
-            q = self.X_train[:, 0].reshape(-1, 1)
-            p = self.X_train[:, 1].reshape(-1, 1)
-            t = self.X_train[:, 2].reshape(-1, 1)
-            exact_sol = self.y_train.reshape(-1, self.n_output)
+            q = self.train_init_pts[:, 0].reshape(-1, 1)
+            p = self.train_init_pts[:, 1].reshape(-1, 1)
+            t = self.train_init_pts[:, 2].reshape(-1, 1)
+            exact_sol = self.train_init_phi.reshape(-1, self.n_output)
         else:
-            q = self.X_valid[:, 0].reshape(-1, 1)
-            p = self.X_valid[:, 1].reshape(-1, 1)
-            t = self.X_valid[:, 2].reshape(-1, 1)
-            exact_sol = self.y_valid.reshape(-1, self.n_output)
+            q = self.valid_init_pts[:, 0].reshape(-1, 1)
+            p = self.valid_init_pts[:, 1].reshape(-1, 1)
+            t = self.valid_init_pts[:, 2].reshape(-1, 1)
+            exact_sol = self.valid_init_phi.reshape(-1, self.n_output)
 
         if not self.pinn:
             IC_loss = self.loss_IC(q, p, t, exact_sol)
             return IC_loss, IC_loss, 0.0
         else:
             if not valid:
-                q_col = self.X_train_with_col[:, 0].reshape(-1, 1)
-                p_col = self.X_train_with_col[:, 1].reshape(-1, 1)
-                t_col = self.X_train_with_col[:, 2].reshape(-1, 1)
+                q_col = self.train_col_pts[:, 0].reshape(-1, 1)
+                p_col = self.train_col_pts[:, 1].reshape(-1, 1)
+                t_col = self.train_col_pts[:, 2].reshape(-1, 1)
             else:
-                q_col = self.X_valid_with_col[:, 0].reshape(-1, 1)
-                p_col = self.X_valid_with_col[:, 1].reshape(-1, 1)
-                t_col = self.X_valid_with_col[:, 2].reshape(-1, 1)
+                q_col = self.valid_col_pts[:, 0].reshape(-1, 1)
+                p_col = self.valid_col_pts[:, 1].reshape(-1, 1)
+                t_col = self.valid_col_pts[:, 2].reshape(-1, 1)
 
             # Compute losses
             PDE_loss = self.loss_PDE(q_col, p_col, t_col)
             IC_loss = self.loss_IC(q, p, t, exact_sol)
+            #BC_loss = self.loss_BC(q, p, t, exact_sol)
             total_loss = (1 - self.PDE_weight) * IC_loss + self.PDE_weight * PDE_loss
 
             return total_loss, IC_loss, PDE_loss
