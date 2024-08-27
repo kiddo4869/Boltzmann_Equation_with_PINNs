@@ -36,40 +36,42 @@ def select_points(idx: np.array, points: np.array) -> np.array:
     sampled_points = points[idx, :].copy()
     return sampled_points
 
-def data_processing_with_time(args,
-                              X: np.array,
-                              Y: np.array,
-                              T: np.array,
-                              phi: np.array,
-                              ham: np.array,
-                              ub: np.array,
-                              lb: np.array,
-                              t_range: np.array) -> Tuple[np.array, np.array, np.array, np.array]:
+def preprocess_data(args,
+                    X: np.array,
+                    Y: np.array,
+                    T: np.array,
+                    phi: np.array,
+                    ham: np.array,
+                    ub: np.array,
+                    lb: np.array,
+                    t_range: np.array) -> Tuple[np.array, np.array, np.array, np.array]:
 
     # Get initial points
     initial_points = get_initial_points([X, Y, T])
     initial_phi = phi.reshape(-1, 1)
     initial_ham = ham.reshape(-1, 1)
 
-    # Get boundary points
-    boundary_points = get_boundary_points([X, Y, T])
-    #boundary_ham = ham[0, :, :].reshape(-1, 1)
-
     # Sample random points in initial condition
     idx = np.random.choice(initial_points.shape[0], args.N_initial, replace=False)
     sampled_initial_points = select_points(idx, initial_points)
     sampled_initial_phi = select_points(idx, initial_phi)
     sampled_initial_ham = select_points(idx, initial_ham)
+
+    # Get boundary points
+    boundary_points = get_boundary_points([X, Y, T])
+    
+    # Sample random points in boundary condition
+    idx = np.random.choice(boundary_points.shape[0], args.N_boundary, replace=False)
+    sampled_boundary_points = select_points(idx, boundary_points)
+    #sampled_boundary_ham = select_points(idx, initial_ham)
     
     # Sample collocation points in the domain
     collocation_points = select_collocation_points(args.N_collocation, ub, lb, t_range)
 
-    train_inputs = np.vstack((sampled_initial_points, collocation_points))
-
     if not args.hamiltonian:
-        return train_inputs, sampled_initial_points, sampled_initial_phi, collocation_points
+        return sampled_initial_points, sampled_initial_phi, sampled_boundary_points, collocation_points
     else:
-        return train_inputs, sampled_initial_points, sampled_initial_phi, sampled_initial_ham, collocation_points
+        return sampled_initial_points, sampled_initial_phi, sampled_initial_ham, sampled_boundary_points, collocation_points
 
 def create_inputs(q_arr: np.array, p_arr: np.array, t: float):
     pv, qv = np.meshgrid(p_arr, q_arr, indexing="ij")
@@ -79,3 +81,6 @@ def create_inputs(q_arr: np.array, p_arr: np.array, t: float):
     t_trial = t * torch.ones(q_trial.shape[0]).reshape(-1, 1)
     
     return q_trial, p_trial, t_trial
+
+def convert_data(args, data: np.array):
+    return torch.from_numpy(data).float().to(args.device)

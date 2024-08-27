@@ -1,4 +1,6 @@
 N0: 4.493077990280913
+N_boundary: 200
+N_boundary_val: 100
 N_collocation: 600
 N_collocation_val: 300
 N_initial: 200
