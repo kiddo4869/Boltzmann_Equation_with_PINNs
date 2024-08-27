@@ -49,29 +49,28 @@ def preprocess_data(args,
     # Get initial points
     initial_points = get_initial_points([X, Y, T])
     initial_phi = phi.reshape(-1, 1)
-    initial_ham = ham.reshape(-1, 1)
 
     # Sample random points in initial condition
     idx = np.random.choice(initial_points.shape[0], args.N_initial, replace=False)
     sampled_initial_points = select_points(idx, initial_points)
     sampled_initial_phi = select_points(idx, initial_phi)
-    sampled_initial_ham = select_points(idx, initial_ham)
 
     # Get boundary points
     boundary_points = get_boundary_points([X, Y, T])
+    boundary_ham = get_boundary_points([ham])
     
     # Sample random points in boundary condition
     idx = np.random.choice(boundary_points.shape[0], args.N_boundary, replace=False)
     sampled_boundary_points = select_points(idx, boundary_points)
-    #sampled_boundary_ham = select_points(idx, initial_ham)
+    sampled_boundary_ham = select_points(idx, boundary_ham)
     
     # Sample collocation points in the domain
     collocation_points = select_collocation_points(args.N_collocation, ub, lb, t_range)
 
     if not args.hamiltonian:
-        return sampled_initial_points, sampled_initial_phi, sampled_boundary_points, collocation_points
+        return [sampled_initial_points, collocation_points], [sampled_initial_phi]
     else:
-        return sampled_initial_points, sampled_initial_phi, sampled_initial_ham, sampled_boundary_points, collocation_points
+        return [sampled_initial_points, sampled_boundary_points, collocation_points], [sampled_initial_phi, sampled_boundary_ham]
 
 def create_inputs(q_arr: np.array, p_arr: np.array, t: float):
     pv, qv = np.meshgrid(p_arr, q_arr, indexing="ij")
@@ -82,5 +81,5 @@ def create_inputs(q_arr: np.array, p_arr: np.array, t: float):
     
     return q_trial, p_trial, t_trial
 
-def convert_data(args, data: np.array):
-    return torch.from_numpy(data).float().to(args.device)
+def convert_data(args, data_list: np.array):
+    return [torch.from_numpy(data).float().to(args.device) for data in data_list]

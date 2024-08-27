@@ -7,7 +7,12 @@ import torch.nn as nn
 from PIL import Image
 from data.data_processing import create_inputs
 
-def plot_data_inputs(args, sampled_initial_points, sampled_boundary_points, collocation_points, title):
+def plot_data_inputs(args, data_list, title):
+    if not args.hamiltonian:
+        sampled_initial_points, collocation_points = data_list
+    else:
+        sampled_initial_points, sampled_boundary_points, collocation_points = data_list
+
     plt.close()
 
     # Creating figure
@@ -16,8 +21,10 @@ def plot_data_inputs(args, sampled_initial_points, sampled_boundary_points, coll
 
     # Creating plot
     ax.scatter3D(sampled_initial_points[:, 0], sampled_initial_points[:, 1], sampled_initial_points[:, 2], color="blue", label="Initial Points")
-    ax.scatter3D(sampled_boundary_points[:, 0], sampled_boundary_points[:, 1], sampled_boundary_points[:, 2], color="green", label="Boundary Points")
     ax.scatter3D(collocation_points[:, 0], collocation_points[:, 1], collocation_points[:, 2], color="red", label="Collocation Points")
+
+    if args.hamiltonian:
+        ax.scatter3D(sampled_boundary_points[:, 0], sampled_boundary_points[:, 1], sampled_boundary_points[:, 2], color="green", label="Boundary Points")
     
     ax.set_xlabel("q")
     ax.set_ylabel("p")

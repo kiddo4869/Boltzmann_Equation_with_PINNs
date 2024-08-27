@@ -52,6 +52,7 @@ def main(args: argparse.ArgumentParser):
     # Exact solution
     f_exact = np.array([[prob_den(args, q, p, 0.0) for q in q_arr] for p in p_arr])
     h_exact = np.array([[hamiltonian(args, q, p, 0.0) for q in q_arr] for p in p_arr])
+    h_exact_over_time = np.array([[[hamiltonian(args, q, p, t) for q in q_arr] for p in p_arr] for t in t_arr])
 
     plot_init_solution(args, q_arr, p_arr, f_exact, "Initial Probability Density")
     plot_init_solution(args, q_arr, p_arr, h_exact, "Initial Hamiltonian H'")
@@ -61,45 +62,32 @@ def main(args: argparse.ArgumentParser):
     if args.phase == "train":
 
         # Data processing
-        if not args.hamiltonian:
-            train_init_pts, train_init_phi, train_bound_pts, train_col_pts = preprocess_data(args, qv, pv, tv, f_exact, h_exact,
-                                                                                             ub, lb, t_range)
-            val_init_pts, val_init_phi, val_bound_pts, val_col_pts = preprocess_data(args, qv, pv, tv, f_exact, h_exact,
-                                                                                     ub, lb, t_range)
-        else:
-            train_init_pts, train_init_phi, train_init_ham, train_col_pts = preprocess_data(args, qv, pv, tv, f_exact, h_exact,
-                                                                                            ub, lb, t_range)
-            val_init_pts, val_init_phi, val_init_ham, val_col_pts = preprocess_data(args, qv, pv, tv, f_exact, h_exact,
-                                                                                    ub, lb, t_range)
+        train_inputs, train_labels = preprocess_data(args, qv, pv, tv, f_exact, h_exact_over_time,
+                                                     ub, lb, t_range)
+        val_inputs, val_labels = preprocess_data(args, qv, pv, tv, f_exact, h_exact_over_time,
+                                                 ub, lb, t_range)
 
         # Plotting data inputs
-        plot_data_inputs(args, train_init_pts, train_bound_pts, train_col_pts, "Training Inputs")
-        plot_data_inputs(args, val_init_pts, val_bound_pts, val_col_pts, "Validation Inputs")
+        plot_data_inputs(args, train_inputs, "Training Inputs")
+        plot_data_inputs(args, val_inputs, "Validation Inputs")
 
         # Data conversion
-        train_init_pts = convert_data(args, train_init_pts)
-        val_init_pts = convert_data(args, val_init_pts)
-        train_col_pts = convert_data(args, train_col_pts)
-        val_col_pts = convert_data(args, val_col_pts)
-
-        if not args.hamiltonian:
-            train_init_phi = convert_data(args, train_init_phi)
-            val_init_phi = convert_data(args, val_init_phi)
-        else:
-            y_train = torch.from_numpy(np.column_stack((train_init_phi, train_init_ham))).float().to(args.device)
-            y_valid = torch.from_numpy(np.column_stack((val_init_phi, val_init_ham))).float().to(args.device)
+        train_inputs = convert_data(args, train_inputs)
+        train_labels = convert_data(args, train_labels)
+        val_inputs = convert_data(args, val_inputs)
+        val_labels = convert_data(args, val_labels)
 
         X_flatten = torch.from_numpy(qv.reshape(-1, 1)).to(args.device)
         Y_flatten = torch.from_numpy(pv.reshape(-1, 1)).to(args.device)
         T_flatten = torch.from_numpy(tv.reshape(-1, 1)).to(args.device)
 
         # Print shapes
-        log_shapes(train_init_pts, train_init_phi, train_col_pts, val_init_pts, val_init_phi, val_col_pts, X_flatten, Y_flatten, T_flatten)
+        #log_shapes(train_ic_pts, train_init_phi, train_col_pts, val_ic_pts, val_init_phi, val_col_pts, X_flatten, Y_flatten, T_flatten)
 
         # Model creation
         args.pinn = True
-        model = PINN(args, train_init_pts, train_init_phi, train_col_pts,
-                           val_init_pts, val_init_phi, val_col_pts)
+        model = PINN(args, train_inputs, train_labels,
+                           val_inputs, val_labels)
         model.to(args.device)
 
         # Print number of parameters
@@ -109,7 +97,7 @@ def main(args: argparse.ArgumentParser):
         logging.info(f"Number of parameters: {num_of_params}")
 
         # Trial before training
-        trial_test(args, train_init_pts, train_init_phi, train_col_pts, model)
+        trial_test(args, train_inputs, train_labels, model)
 
         print("start training...")
         logging.info("start training...")
@@ -210,12 +198,12 @@ def log_parameters(args):
     
     logging.info(string)
 
-def log_shapes(train_init_pts, train_init_phi, train_col_pts, val_init_pts, val_init_phi, val_col_pts, X_flatten, Y_flatten, T_flatten):
-    logging.info(f"train_init_pts shape: {train_init_pts.shape}")
+def log_shapes(train_ic_pts, train_init_phi, train_col_pts, val_ic_pts, val_init_phi, val_col_pts, X_flatten, Y_flatten, T_flatten):
+    logging.info(f"train_ic_pts shape: {train_ic_pts.shape}")
     logging.info(f"train_init_phi shape: {train_init_phi.shape}")
     logging.info(f"train_col_pts shape: {train_col_pts.shape}\n")
 
-    logging.info(f"val_init_pts shape: {val_init_pts.shape}")
+    logging.info(f"val_ic_pts shape: {val_ic_pts.shape}")
     logging.info(f"val_init_phi shape: {val_init_phi.shape}")
     logging.info(f"val_col_pts shape: {val_col_pts.shape}\n")
 
@@ -223,42 +211,44 @@ def log_shapes(train_init_pts, train_init_phi, train_col_pts, val_init_pts, val_
     logging.info(f"Y_flatten shape: {Y_flatten.shape}")
     logging.info(f"T_flatten shape: {T_flatten.shape}")
 
-def trial_test(args, X_train, y_train, X_train_with_col, model):
-    q_trial = X_train[:, 0].reshape(-1, 1)
-    p_trial = X_train[:, 1].reshape(-1, 1)
-    t_trial = X_train[:, 2].reshape(-1, 1)
+def compute_loss(model, inputs, labels, loss_type="IC"):
 
-    q_trial_with_col = X_train_with_col[:, 0].reshape(-1, 1)
-    p_trial_with_col = X_train_with_col[:, 1].reshape(-1, 1)
-    t_trial_with_col = X_train_with_col[:, 2].reshape(-1, 1)
+    q_trial = inputs[:, 0].reshape(-1, 1)
+    p_trial = inputs[:, 1].reshape(-1, 1)
+    t_trial = inputs[:, 2].reshape(-1, 1)
 
     print(f"q_trial shape: {q_trial.shape}")
     print(f"p_trial shape: {p_trial.shape}")
     print(f"t_trial shape: {t_trial.shape}")
+    print(f"labels shape: {labels.shape}")
 
-    f_trial = model(q_trial, p_trial, t_trial)
-
-    print(f"f_trial shape: {f_trial.shape}")
-    print(f"y_train shape: {y_train.shape}")
-
-    # IC loss
-    if not args.hamiltonian:
-        IC_loss = model.loss_IC(q_trial, p_trial, t_trial, y_train.reshape(-1, 1)).item()
+    if loss_type == "IC":
+        loss = model.loss_IC(q_trial, p_trial, t_trial, labels).item()
+    elif loss_type == "BC":
+        loss = model.loss_BC(q_trial, p_trial, t_trial, labels).item()
+    elif loss_type == "PDE":
+        loss = model.loss_PDE(q_trial, p_trial, t_trial).item()
     else:
-        IC_loss = model.loss_IC(q_trial, p_trial, t_trial, y_train.reshape(-1, 2)).item()
+        raise ValueError("Invalid loss type")
 
-    print(f"IC loss: {IC_loss}")
+    print(f"{loss_type} loss: {loss}")
+    return loss
 
-    # PDE loss
-    PDE_loss = model.loss_PDE(q_trial_with_col, p_trial_with_col, t_trial_with_col).item()
-    print(f"PDE loss: {PDE_loss}")
+def trial_test(args, inputs_list, labels_list, model):
+
+    IC_loss = compute_loss(model, inputs_list[0], labels_list[0], "IC")
+    BC_loss = compute_loss(model, inputs_list[1], labels_list[1], "BC") if args.hamiltonian else 0.0
+    PDE_loss = compute_loss(model, inputs_list[-1], np.empty(0), "PDE")
 
     # sum of the loss with weight
-    print(f"sum of the loss with weight: {(1 - model.PDE_weight) * IC_loss + model.PDE_weight * PDE_loss}")
+    sum_loss = model.IC_weight * IC_loss + model.BC_weight * BC_loss + model.PDE_weight * PDE_loss
+    print(f"sum of the loss with weight: {sum_loss}, type: {type(sum_loss)}")
 
     # total loss
     total_loss = model.compute_loss()[0].item()
-    print(f"total loss: {total_loss}")
+    print(f"total loss: {total_loss}, type: {type(total_loss)}")
+
+    print(f"diff: {sum_loss - total_loss}, type: {type(sum_loss - total_loss)}")
 
 if __name__=="__main__":
     parser = argparse.ArgumentParser(description="Physics Informed Neural Networks")
@@ -275,7 +265,7 @@ if __name__=="__main__":
     parser.add_argument("--p_min_max", type=json.loads, default=[-5, 5])
     parser.add_argument("--t_min_max", type=json.loads, default=[0, 50])
     parser.add_argument("--N_initial", type=int, default=200, help="Number of training data")
-    parser.add_argument("--N_boundary", type=int, default=200, help="Number of training boundary points")
+    parser.add_argument("--N_boundary", type=int, default=100, help="Number of training boundary points")
     parser.add_argument("--N_collocation", type=int, default=600, help="Number of training collocation points")
     parser.add_argument("--N_initial_val", type=int, default=100, help="Number of validation data")
     parser.add_argument("--N_boundary_val", type=int, default=100, help="Number of validation boundary points")
@@ -300,7 +290,9 @@ if __name__=="__main__":
     parser.add_argument("--hamiltonian", action="store_true")
 
     # Training parameters
-    parser.add_argument("--PDE_weight", type=float, default=0.25)
+    parser.add_argument("--IC_weight", type=float, default=1.0)
+    parser.add_argument("--BC_weight", type=float, default=1.0)
+    parser.add_argument("--PDE_weight", type=float, default=1.0)
     parser.add_argument("--optimizer", type=str, default="l-bfgs", help="adam or l-bfgs")
     parser.add_argument("--learning_rate", type=float, default=1e-2)
     parser.add_argument("--epochs", type=int, default=1000)

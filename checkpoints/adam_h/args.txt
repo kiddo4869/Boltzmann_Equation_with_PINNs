@@ -1,9 +1,13 @@
+BC_weight: 0.1
+IC_weight: 1.0
 N0: 4.493077990280913
-N_collocation: 3000
-N_collocation_val: 300
-N_initial: 1000
-N_initial_val: 100
-PDE_weight: 0.15
+N_boundary: 100
+N_boundary_val: 150
+N_collocation: 600
+N_collocation_val: 600
+N_initial: 200
+N_initial_val: 150
+PDE_weight: 0.25
 T: 1.7e-07
 checkpoint: ./checkpoints/adam_h
 checkpoint_path: ./checkpoints
@@ -14,12 +18,12 @@ ds_grid_add: 3
 ds_ratio: 1.05
 dynamic_scaling: False
 early_stopping: False
-epochs: 1000
+epochs: 10000
 fermi_scaling: False
 grid_size: 100
 hamiltonian: False
 k: 20836619120.0
-layers: [3, 20, 20, 20, 20, 20, 20, 1]
+layers: [3, 20, 20, 20, 20, 20, 20, 20, 20, 1]
 learning_rate: 0.01
 log_freq: 10
 log_loss: True
@@ -33,7 +37,7 @@ optimizer: adam
 output_path: ./outputs
 p_min_max: [-5, 5]
 patience: 10
-phase: test
+phase: train
 pinn: False
 q_min_max: [-5, 5]
 save_freq: 1000
