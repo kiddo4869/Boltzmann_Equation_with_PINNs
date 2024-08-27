@@ -54,7 +54,7 @@ def main(args: argparse.ArgumentParser):
     h_exact = np.array([[hamiltonian(args, q, p, 0.0) for q in q_arr] for p in p_arr])
 
     plot_init_solution(args, q_arr, p_arr, f_exact, "Initial Probability Density")
-    plot_init_solution(args, q_arr, p_arr, h_exact, "Initial Hamiltonian ln(H+1)")
+    plot_init_solution(args, q_arr, p_arr, h_exact, "Initial Hamiltonian H'")
 
     path = os.path.join(args.checkpoint, "state_dict_model.pth")
 
@@ -71,6 +71,8 @@ def main(args: argparse.ArgumentParser):
                                                                                                             ub, lb, t_range)
             val_inputs, val_init_pts, val_init_phi, val_init_ham, val_col_pts = data_processing_with_time(args, qv, pv, tv, f_exact, h_exact,
                                                                                                     ub, lb, t_range)
+
+        exit()
 
         # Plotting data inputs
         plot_initial_collocation_points(args, train_init_pts, train_col_pts, "Training Initial and Collocation Points")
@@ -93,6 +95,8 @@ def main(args: argparse.ArgumentParser):
         X_flatten = torch.from_numpy(qv.reshape(-1, 1)).to(args.device)
         Y_flatten = torch.from_numpy(pv.reshape(-1, 1)).to(args.device)
         T_flatten = torch.from_numpy(tv.reshape(-1, 1)).to(args.device)
+
+        exit()
 
         # Print shapes
         log_shapes(X_train, y_train, X_train_with_col, X_valid, y_valid, X_valid_with_col, X_flatten, Y_flatten, T_flatten)
@@ -295,7 +299,7 @@ if __name__=="__main__":
     parser.add_argument("--log_sol", action="store_true")
 
     # PINNs parameters
-    parser.add_argument("--layers", type=json.loads, default=[3,20,20,20,20,1])
+    parser.add_argument("--layers", type=json.loads, default=[3,20,20,20,20,20,20,20,20,1])
     parser.add_argument("--noise_level", type=float, default=0.0)
     parser.add_argument("--hamiltonian", action="store_true")
 

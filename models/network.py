@@ -83,8 +83,11 @@ class PINN(nn.Module):
 
         return self.net[-1](a)
 
-    def loss_IC(self, q, p, t, exact_sol):
-        return self.loss_function(self.forward(q, p, t), exact_sol)
+    def loss_IC(self, q, p, t, IC):
+        return self.loss_function(self.forward(q, p, t), IC)
+
+    def loss_BC(self, q, p, t, BC):
+        return self.loss_function(self.forward(q, p, t), BC)
     
     def loss_PDE(self, q_col, p_col, t_col):
         q = q_col.clone().detach()
@@ -112,6 +115,7 @@ class PINN(nn.Module):
                             allow_unused = True)[0]
 
         LHS = 2 * np.pi * self.args.N0 * f_t + p * f_q
+        loss = self.loss_function(LHS, torch.zeros(f.shape).to(self.device))
 
         if self.args.hamiltonian:
             h_q = autograd.grad(h, q,
@@ -123,11 +127,14 @@ class PINN(nn.Module):
                                 grad_outputs = torch.ones_like(h).to(self.device),
                                 allow_unused = True)[0]
 
-            LHS_1 = h_q * (h + 1) - q * self.args.k * self.args.T * 0.0 / self.args.w0
-            LHS_2 = h_p * (h + 1) - p * self.args.k * self.args.T
-            LHS += LHS_1 + LHS_2
+            #LHS_1 = h_q - q * 0.0 / self.args.w0 ** 2
+            #LHS_2 = h_p - p
+            #loss1 = self.loss_function(LHS_1, torch.zeros(h.shape).to(self.device))
+            #loss2 = self.loss_function(LHS_2, torch.zeros(h.shape).to(self.device))
 
-        return self.loss_function(LHS, torch.zeros(f.shape).to(self.device))
+            return loss #+ loss1 + loss2
+        else:
+            return loss
 
     def compute_loss(self, valid=False):
 
@@ -158,6 +165,7 @@ class PINN(nn.Module):
             # Compute losses
             PDE_loss = self.loss_PDE(q_col, p_col, t_col)
             IC_loss = self.loss_IC(q, p, t, exact_sol)
+            #BC_loss = self.loss_BC(q, p, t, exact_sol)
             total_loss = (1 - self.PDE_weight) * IC_loss + self.PDE_weight * PDE_loss
 
             return total_loss, IC_loss, PDE_loss

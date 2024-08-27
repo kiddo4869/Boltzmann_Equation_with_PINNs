@@ -111,9 +111,10 @@ def plot_solution(args,
     
     # Prediction
     ax2 = plt.subplot(1, 3, 2)
-    f_pred = model(q_trial, p_trial, t_trial) #.reshape(N_p, N_q).cpu().detach().numpy()
-    print(f_pred.shape)
-    exit()
+    if not args.hamiltonian:
+        f_pred = model(q_trial, p_trial, t_trial).reshape(N_p, N_q).cpu().detach().numpy()
+    else:
+        f_pred = model(q_trial, p_trial, t_trial)[:, 0].reshape(N_p, N_q).cpu().detach().numpy()
     plot_data(ax2, scaled_q_arr, scaled_p_arr, f_pred, "Prediction")
     
     # Error
@@ -142,7 +143,10 @@ def plot_q_p_distributions(args, scaled_q_arr, scaled_p_arr, scaled_t, model):
     
     N_q = len(scaled_q_arr)
     N_p = len(scaled_p_arr)
-    f_distrib = model(q_trial, p_trial, t_trial).reshape(N_p, N_q).cpu().detach().numpy()
+    if not args.hamiltonian:
+        f_distrib = model(q_trial, p_trial, t_trial).reshape(N_p, N_q).cpu().detach().numpy()
+    else:
+        f_distrib = model(q_trial, p_trial, t_trial)[:, 0].reshape(N_p, N_q).cpu().detach().numpy()
 
     # Simplified scaling of q_arr and p_arr
     q_arr = scaled_q_arr / np.sqrt(args.m * args.w0**2 / (args.k * args.T))
