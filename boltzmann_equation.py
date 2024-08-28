@@ -124,8 +124,11 @@ def main(args: argparse.ArgumentParser):
         logging.info("load saved model...")
 
         # loading model
-        model = PINN(args, torch.empty(0), torch.empty(0), torch.empty(0),
-                           torch.empty(0), torch.empty(0), torch.empty(0))
+        train_inputs = [torch.empty(0) for _ in range(3 if args.hamiltonian else 2)]
+        train_labels = [torch.empty(0) for _ in range(2 if args.hamiltonian else 1)]
+        val_inputs = [torch.empty(0) for _ in range(3 if args.hamiltonian else 2)]
+        val_labels = [torch.empty(0) for _ in range(2 if args.hamiltonian else 1)]
+        model = PINN(args, train_inputs, train_labels, val_inputs, val_labels)
         model.net.load_state_dict(torch.load(path))
         model.net.eval()
 
@@ -136,6 +139,7 @@ def main(args: argparse.ArgumentParser):
         # plotting solutions and distributions
         sol_files = []
         dis_files = []
+        ham_files = []
 
         spacing = (q_max - q_min) / args.grid_size
 
@@ -154,15 +158,21 @@ def main(args: argparse.ArgumentParser):
                     # method 3: extend the grid with the same spacing
                     q_arr = np.arange(q_arr[0]-spacing*args.ds_grid_add, q_arr[-1]+spacing*(args.ds_grid_add+1), spacing)
 
-            sol_files.append(plot_solution(args, q_arr, p_arr, t, prob_den, model))
+            sol_files.append(plot_solution(args, q_arr, p_arr, t, prob_den, model, output="f"))
             dis_files.append(plot_q_p_distributions(args, q_arr, p_arr, t, model))
+            if args.hamiltonian:
+                ham_files.append(plot_solution(args, q_arr, p_arr, t, hamiltonian, model, output="h"))
 
         if args.dynamic_scaling:
             save_gif_PIL(os.path.join(args.checkpoint, "solutions_ds.gif"), sol_files, fps=5, loop=0)
             save_gif_PIL(os.path.join(args.checkpoint, "q_p_distributions_ds.gif"), dis_files, fps=5, loop=0)
+            if args.hamiltonian:
+                save_gif_PIL(os.path.join(args.checkpoint, "hamiltonian_ds.gif"), ham_files, fps=5, loop=0)
         else:
             save_gif_PIL(os.path.join(args.checkpoint, "solutions.gif"), sol_files, fps=5, loop=0)
             save_gif_PIL(os.path.join(args.checkpoint, "q_p_distributions.gif"), dis_files, fps=5, loop=0)
+            if args.hamiltonian:
+                save_gif_PIL(os.path.join(args.checkpoint, "hamiltonian.gif"), ham_files, fps=5, loop=0)
 
         testing_end = time.perf_counter()
         print(f"testing time elapsed: {(testing_end - testing_start):02f}s")
@@ -285,7 +295,7 @@ if __name__=="__main__":
     parser.add_argument("--log_sol", action="store_true")
 
     # PINNs parameters
-    parser.add_argument("--layers", type=json.loads, default=[3,20,20,20,20,20,20,20,20,1])
+    parser.add_argument("--layers", type=json.loads, default=[3,20,20,20,20,20,20,1])
     parser.add_argument("--noise_level", type=float, default=0.0)
     parser.add_argument("--hamiltonian", action="store_true")
 
@@ -300,7 +310,9 @@ if __name__=="__main__":
     parser.add_argument("--save_freq", type=int, default=1000)
     parser.add_argument("--early_stopping", action="store_true")
     parser.add_argument("--patience", type=int, default=10)
-    parser.add_argument("--tolerance", type=float, default=1e-5)
+    parser.add_argument("--history_size", type=int, default=100)
+    parser.add_argument("--tolerance_grad", type=float, default=1e-05)
+    parser.add_argument("--tolerance_change", type=float, default=1e-09)
 
     # Visualization
     parser.add_argument("--dynamic_scaling", action="store_true")
@@ -344,6 +356,7 @@ if __name__=="__main__":
             os.path.join(args.checkpoint, "q_p_distributions"),
             os.path.join(args.checkpoint, "q_p_distributions_ds"),
             os.path.join(args.checkpoint, "solutions"),
-            os.path.join(args.checkpoint, "solutions_ds")])
+            os.path.join(args.checkpoint, "solutions_ds"),
+            os.path.join(args.checkpoint, "hamiltonian"),])
     
     main(args)

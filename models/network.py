@@ -42,7 +42,7 @@ class PINN(nn.Module):
             self.optimizer = torch.optim.Adam(self.net.parameters(), lr=args.learning_rate)
         elif args.optimizer == "l-bfgs":
             self.optimizer = torch.optim.LBFGS(self.net.parameters(), lr=args.learning_rate, max_iter=args.epochs, max_eval=5000,
-                                               history_size=100, tolerance_grad=1e-05, tolerance_change=1e-09,
+                                               history_size=args.history_size, tolerance_grad=args.tolerance_grad, tolerance_change=args.tolerance_change,
                                                line_search_fn="strong_wolfe")
         else:
             raise ValueError("Unknown optimizer")

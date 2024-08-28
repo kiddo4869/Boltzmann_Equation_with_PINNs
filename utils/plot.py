@@ -100,7 +100,8 @@ def plot_solution(args,
                   scaled_p_arr: np.array,
                   scaled_t: float,
                   func,
-                  model):
+                  model,
+                  output):
     plt.close()
     
     fig = plt.figure(1, figsize=(20, 6))
@@ -122,7 +123,12 @@ def plot_solution(args,
     if not args.hamiltonian:
         f_pred = model(q_trial, p_trial, t_trial).reshape(N_p, N_q).cpu().detach().numpy()
     else:
-        f_pred = model(q_trial, p_trial, t_trial)[:, 0].reshape(N_p, N_q).cpu().detach().numpy()
+        if output == "f":
+            f_pred = model(q_trial, p_trial, t_trial)[:, 0].reshape(N_p, N_q).cpu().detach().numpy()
+        elif output == "h":
+            f_pred = model(q_trial, p_trial, t_trial)[:, 1].reshape(N_p, N_q).cpu().detach().numpy()
+        else:
+            raise ValueError(f"Invalid output type: {output}")
     plot_data(ax2, scaled_q_arr, scaled_p_arr, f_pred, "Prediction")
     
     # Error
@@ -133,10 +139,18 @@ def plot_solution(args,
     mse_loss = mse_loss_instance(torch.from_numpy(f_exact), torch.from_numpy(f_pred)).item()
     ax3.text(-2, -7, f"MSE = {mse_loss:05f}", fontsize=13)
 
-    if args.dynamic_scaling:
-        path = os.path.join(args.checkpoint, "solutions_ds", f"solution_at_t={scaled_t}.png")
+    if output == "f":
+        folder = "solutions"
+    elif output == "h":
+        folder = "hamiltonian"
     else:
-        path = os.path.join(args.checkpoint, "solutions", f"solution_at_t={scaled_t}.png")
+        raise ValueError(f"Invalid output type: {output}")
+
+    if args.dynamic_scaling:
+        path = os.path.join(args.checkpoint, folder + "_ds", f"solution_at_t={scaled_t}.png")
+    else:
+        path = os.path.join(args.checkpoint, folder, f"solution_at_t={scaled_t}.png")
+
     plt.savefig(path)
 
     print(f"Saved solution at t' = {scaled_t} to {path}")
