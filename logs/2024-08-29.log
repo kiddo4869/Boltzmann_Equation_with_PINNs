@@ -1,0 +1,935 @@
+2024-08-29 21:57:09,538 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 21:57:09,538 - INFO - initialize data points...
+2024-08-29 21:57:13,197 - INFO - program time elapsed: 3.658889s
+2024-08-29 21:57:16,235 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 21:57:16,235 - INFO - initialize data points...
+2024-08-29 21:57:51,911 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 21:57:51,911 - INFO - initialize data points...
+2024-08-29 21:57:57,399 - INFO - Number of parameters: 2222
+2024-08-29 21:57:57,491 - INFO - start training...
+2024-08-29 21:58:00,687 - INFO - training time elapsed: 3.195920s
+2024-08-29 21:58:01,118 - INFO - program time elapsed: 9.208054s
+2024-08-29 21:58:08,613 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 21:58:08,613 - INFO - initialize data points...
+2024-08-29 21:58:13,023 - INFO - Number of parameters: 2222
+2024-08-29 21:58:13,034 - INFO - start training...
+2024-08-29 21:58:16,266 - INFO - training time elapsed: 3.231287s
+2024-08-29 21:58:16,724 - INFO - program time elapsed: 8.111863s
+2024-08-29 21:58:34,313 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 21:58:34,313 - INFO - initialize data points...
+2024-08-29 21:58:37,541 - INFO - load saved model...
+2024-08-29 21:58:38,122 - INFO - start testing...
+2024-08-29 21:58:50,308 - INFO - testing time elapsed: 12.185516s
+2024-08-29 21:58:50,308 - INFO - program time elapsed: 15.995859s
+2024-08-29 22:11:06,240 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:11:06,240 - INFO - initialize data points...
+2024-08-29 22:11:10,847 - INFO - Number of parameters: 2222
+2024-08-29 22:11:10,864 - INFO - start training...
+2024-08-29 22:11:13,673 - INFO - training time elapsed: 2.809191s
+2024-08-29 22:11:33,078 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:11:33,079 - INFO - initialize data points...
+2024-08-29 22:11:37,493 - INFO - Number of parameters: 2222
+2024-08-29 22:11:37,504 - INFO - start training...
+2024-08-29 22:11:40,437 - INFO - training time elapsed: 2.932867s
+2024-08-29 22:11:40,931 - INFO - program time elapsed: 7.853314s
+2024-08-29 22:13:13,312 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:13:13,312 - INFO - initialize data points...
+2024-08-29 22:13:17,918 - INFO - Number of parameters: 2222
+2024-08-29 22:13:17,931 - INFO - start training...
+2024-08-29 22:13:20,777 - INFO - training time elapsed: 2.845596s
+2024-08-29 22:13:21,253 - INFO - program time elapsed: 7.941012s
+2024-08-29 22:14:15,399 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:14:15,399 - INFO - initialize data points...
+2024-08-29 22:14:19,793 - INFO - Number of parameters: 2222
+2024-08-29 22:14:19,802 - INFO - start training...
+2024-08-29 22:14:22,618 - INFO - training time elapsed: 2.815191s
+2024-08-29 22:14:23,169 - INFO - program time elapsed: 7.770226s
+2024-08-29 22:14:26,159 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:14:26,159 - INFO - initialize data points...
+2024-08-29 22:14:30,666 - INFO - Number of parameters: 2222
+2024-08-29 22:14:30,676 - INFO - start training...
+2024-08-29 22:14:33,483 - INFO - training time elapsed: 2.806557s
+2024-08-29 22:14:34,005 - INFO - program time elapsed: 7.846442s
+2024-08-29 22:15:07,810 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:15:07,811 - INFO - initialize data points...
+2024-08-29 22:15:12,314 - INFO - Number of parameters: 2222
+2024-08-29 22:15:12,325 - INFO - start training...
+2024-08-29 22:15:15,166 - INFO - training time elapsed: 2.840190s
+2024-08-29 22:15:15,781 - INFO - program time elapsed: 7.971331s
+2024-08-29 22:16:08,939 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:16:08,939 - INFO - initialize data points...
+2024-08-29 22:16:13,429 - INFO - Number of parameters: 2222
+2024-08-29 22:16:13,441 - INFO - start training...
+2024-08-29 22:16:16,548 - INFO - training time elapsed: 3.106124s
+2024-08-29 22:16:17,110 - INFO - program time elapsed: 8.171799s
+2024-08-29 22:17:06,972 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:17:06,972 - INFO - initialize data points...
+2024-08-29 22:17:10,063 - INFO - load saved model...
+2024-08-29 22:17:10,638 - INFO - start testing...
+2024-08-29 22:17:22,423 - INFO - testing time elapsed: 11.784602s
+2024-08-29 22:17:22,424 - INFO - program time elapsed: 15.452204s
+2024-08-29 22:29:03,214 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:29:03,214 - INFO - initialize data points...
+2024-08-29 22:29:06,499 - INFO - load saved model...
+2024-08-29 22:29:07,082 - INFO - start testing...
+2024-08-29 22:29:16,060 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:29:16,060 - INFO - initialize data points...
+2024-08-29 22:29:20,611 - INFO - Number of parameters: 2222
+2024-08-29 22:29:20,622 - INFO - start training...
+2024-08-29 22:29:23,576 - INFO - training time elapsed: 2.953841s
+2024-08-29 22:29:24,125 - INFO - program time elapsed: 8.065513s
+2024-08-29 22:29:32,244 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:29:32,244 - INFO - initialize data points...
+2024-08-29 22:29:35,787 - INFO - load saved model...
+2024-08-29 22:29:36,378 - INFO - start testing...
+2024-08-29 22:29:48,939 - INFO - testing time elapsed: 12.560219s
+2024-08-29 22:29:48,939 - INFO - program time elapsed: 16.695586s
+2024-08-29 22:31:03,640 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:31:03,640 - INFO - initialize data points...
+2024-08-29 22:31:07,333 - INFO - load saved model...
+2024-08-29 22:31:07,977 - INFO - start testing...
+2024-08-29 22:31:16,981 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:31:16,981 - INFO - initialize data points...
+2024-08-29 22:31:22,029 - INFO - Number of parameters: 2222
+2024-08-29 22:31:22,039 - INFO - start training...
+2024-08-29 22:31:25,331 - INFO - training time elapsed: 3.291155s
+2024-08-29 22:31:25,968 - INFO - program time elapsed: 8.987672s
+2024-08-29 22:37:35,956 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:37:35,956 - INFO - initialize data points...
+2024-08-29 22:37:40,913 - INFO - Number of parameters: 2222
+2024-08-29 22:37:40,926 - INFO - start training...
+2024-08-29 22:37:44,021 - INFO - training time elapsed: 3.095142s
+2024-08-29 22:37:44,569 - INFO - program time elapsed: 8.613817s
+2024-08-29 22:37:52,467 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:37:52,467 - INFO - initialize data points...
+2024-08-29 22:37:55,905 - INFO - load saved model...
+2024-08-29 22:37:56,456 - INFO - start testing...
+2024-08-29 22:38:08,033 - INFO - testing time elapsed: 11.575988s
+2024-08-29 22:38:08,033 - INFO - program time elapsed: 15.566236s
+2024-08-29 22:39:13,934 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:39:13,934 - INFO - initialize data points...
+2024-08-29 22:39:17,621 - INFO - load saved model...
+2024-08-29 22:39:18,202 - INFO - start testing...
+2024-08-29 22:39:30,649 - INFO - testing time elapsed: 12.446831s
+2024-08-29 22:39:30,650 - INFO - program time elapsed: 16.715775s
+2024-08-29 22:41:22,225 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:41:22,226 - INFO - initialize data points...
+2024-08-29 22:41:25,731 - INFO - load saved model...
+2024-08-29 22:41:26,286 - INFO - start testing...
+2024-08-29 22:41:38,802 - INFO - testing time elapsed: 12.516330s
+2024-08-29 22:41:38,802 - INFO - program time elapsed: 16.577315s
+2024-08-29 22:42:07,698 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:42:07,698 - INFO - initialize data points...
+2024-08-29 22:42:11,389 - INFO - load saved model...
+2024-08-29 22:42:12,010 - INFO - start testing...
+2024-08-29 22:42:24,533 - INFO - testing time elapsed: 12.523220s
+2024-08-29 22:42:24,533 - INFO - program time elapsed: 16.836154s
+2024-08-29 22:42:57,017 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:42:57,018 - INFO - initialize data points...
+2024-08-29 22:43:00,566 - INFO - load saved model...
+2024-08-29 22:43:01,118 - INFO - start testing...
+2024-08-29 22:43:13,749 - INFO - testing time elapsed: 12.630990s
+2024-08-29 22:43:13,749 - INFO - program time elapsed: 16.732447s
+2024-08-29 22:43:49,314 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:43:49,314 - INFO - initialize data points...
+2024-08-29 22:43:54,102 - INFO - Number of parameters: 2222
+2024-08-29 22:43:54,114 - INFO - start training...
+2024-08-29 22:43:56,927 - INFO - training time elapsed: 2.812753s
+2024-08-29 22:43:57,467 - INFO - program time elapsed: 8.153585s
+2024-08-29 22:44:26,705 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:44:26,706 - INFO - initialize data points...
+2024-08-29 22:44:30,176 - INFO - load saved model...
+2024-08-29 22:44:30,731 - INFO - start testing...
+2024-08-29 22:44:43,005 - INFO - testing time elapsed: 12.274054s
+2024-08-29 22:44:43,005 - INFO - program time elapsed: 16.300131s
+2024-08-29 22:45:30,266 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:45:30,266 - INFO - initialize data points...
+2024-08-29 22:45:34,921 - INFO - Number of parameters: 2222
+2024-08-29 22:45:34,935 - INFO - start training...
+2024-08-29 22:45:35,941 - INFO - training time elapsed: 1.006585s
+2024-08-29 22:45:36,480 - INFO - program time elapsed: 6.214116s
+2024-08-29 22:45:45,929 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:45:45,929 - INFO - initialize data points...
+2024-08-29 22:45:50,751 - INFO - Number of parameters: 2222
+2024-08-29 22:45:50,763 - INFO - start training...
+2024-08-29 22:45:51,765 - INFO - training time elapsed: 1.000815s
+2024-08-29 22:45:52,314 - INFO - program time elapsed: 6.385605s
+2024-08-29 22:46:29,384 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:46:29,384 - INFO - initialize data points...
+2024-08-29 22:46:34,148 - INFO - Number of parameters: 2222
+2024-08-29 22:46:34,159 - INFO - start training...
+2024-08-29 22:46:35,802 - INFO - training time elapsed: 1.643089s
+2024-08-29 22:46:36,646 - INFO - program time elapsed: 7.262639s
+2024-08-29 22:46:50,407 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:46:50,407 - INFO - initialize data points...
+2024-08-29 22:46:55,430 - INFO - Number of parameters: 2222
+2024-08-29 22:46:55,443 - INFO - start training...
+2024-08-29 22:47:05,869 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:47:05,869 - INFO - initialize data points...
+2024-08-29 22:47:10,692 - INFO - Number of parameters: 2222
+2024-08-29 22:47:10,702 - INFO - start training...
+2024-08-29 22:47:21,614 - INFO - training time elapsed: 10.911580s
+2024-08-29 22:47:22,329 - INFO - program time elapsed: 16.459647s
+2024-08-29 22:47:31,647 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:47:31,647 - INFO - initialize data points...
+2024-08-29 22:47:36,400 - INFO - Number of parameters: 2222
+2024-08-29 22:47:36,411 - INFO - start training...
+2024-08-29 22:47:47,790 - INFO - training time elapsed: 11.378302s
+2024-08-29 22:47:48,564 - INFO - program time elapsed: 16.917131s
+2024-08-29 22:49:09,080 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:49:09,080 - INFO - initialize data points...
+2024-08-29 22:49:13,890 - INFO - Number of parameters: 2222
+2024-08-29 22:49:13,902 - INFO - start training...
+2024-08-29 22:49:22,359 - INFO - training time elapsed: 8.456508s
+2024-08-29 22:49:22,984 - INFO - program time elapsed: 13.905065s
+2024-08-29 22:49:37,956 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 22:49:37,956 - INFO - initialize data points...
+2024-08-29 22:49:41,321 - INFO - load saved model...
+2024-08-29 22:49:41,869 - INFO - start testing...
+2024-08-29 22:49:54,024 - INFO - testing time elapsed: 12.154679s
+2024-08-29 22:49:54,024 - INFO - program time elapsed: 16.068392s
+2024-08-29 23:09:35,060 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:09:35,061 - INFO - initialize data points...
+2024-08-29 23:09:39,775 - INFO - Number of parameters: 2222
+2024-08-29 23:09:39,802 - INFO - start training...
+2024-08-29 23:09:56,877 - INFO - training time elapsed: 17.074548s
+2024-08-29 23:09:57,435 - INFO - program time elapsed: 22.375268s
+2024-08-29 23:10:07,749 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:10:07,750 - INFO - initialize data points...
+2024-08-29 23:10:11,521 - INFO - load saved model...
+2024-08-29 23:10:12,100 - INFO - start testing...
+2024-08-29 23:10:24,641 - INFO - testing time elapsed: 12.540566s
+2024-08-29 23:10:24,641 - INFO - program time elapsed: 16.892177s
+2024-08-29 23:10:55,149 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:10:55,149 - INFO - initialize data points...
+2024-08-29 23:10:58,674 - INFO - load saved model...
+2024-08-29 23:10:59,239 - INFO - start testing...
+2024-08-29 23:11:11,492 - INFO - testing time elapsed: 12.252076s
+2024-08-29 23:11:11,492 - INFO - program time elapsed: 16.343585s
+2024-08-29 23:11:31,262 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:11:31,262 - INFO - initialize data points...
+2024-08-29 23:11:35,976 - INFO - Number of parameters: 2222
+2024-08-29 23:11:35,995 - INFO - start training...
+2024-08-29 23:11:53,582 - INFO - training time elapsed: 17.587607s
+2024-08-29 23:11:54,108 - INFO - program time elapsed: 22.845903s
+2024-08-29 23:13:14,626 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:13:14,626 - INFO - initialize data points...
+2024-08-29 23:13:38,334 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:13:38,334 - INFO - initialize data points...
+2024-08-29 23:13:43,221 - INFO - Number of parameters: 2222
+2024-08-29 23:13:43,245 - INFO - start training...
+2024-08-29 23:14:01,475 - INFO - training time elapsed: 18.229856s
+2024-08-29 23:14:02,134 - INFO - program time elapsed: 23.799718s
+2024-08-29 23:16:01,359 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:16:01,360 - INFO - initialize data points...
+2024-08-29 23:16:06,426 - INFO - Number of parameters: 2222
+2024-08-29 23:16:06,452 - INFO - start training...
+2024-08-29 23:16:25,268 - INFO - training time elapsed: 18.815747s
+2024-08-29 23:16:25,907 - INFO - program time elapsed: 24.547787s
+2024-08-29 23:17:02,566 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:17:02,566 - INFO - initialize data points...
+2024-08-29 23:17:06,399 - INFO - load saved model...
+2024-08-29 23:17:06,997 - INFO - start testing...
+2024-08-29 23:17:19,984 - INFO - testing time elapsed: 12.987337s
+2024-08-29 23:17:19,985 - INFO - program time elapsed: 17.419616s
+2024-08-29 23:20:36,279 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:20:36,279 - INFO - initialize data points...
+2024-08-29 23:21:38,404 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:21:38,404 - INFO - initialize data points...
+2024-08-29 23:25:26,196 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:25:26,196 - INFO - initialize data points...
+2024-08-29 23:25:39,788 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:25:39,788 - INFO - initialize data points...
+2024-08-29 23:25:56,823 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:25:56,823 - INFO - initialize data points...
+2024-08-29 23:26:18,638 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:26:18,638 - INFO - initialize data points...
+2024-08-29 23:26:20,346 - INFO - Number of parameters: 2222
+2024-08-29 23:26:20,356 - INFO - start training...
+2024-08-29 23:26:31,692 - INFO - training time elapsed: 11.335577s
+2024-08-29 23:26:32,348 - INFO - program time elapsed: 13.710571s
+2024-08-29 23:27:19,171 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:27:19,172 - INFO - initialize data points...
+2024-08-29 23:27:20,793 - INFO - Number of parameters: 2222
+2024-08-29 23:27:20,805 - INFO - start training...
+2024-08-29 23:27:31,400 - INFO - training time elapsed: 10.594042s
+2024-08-29 23:27:32,000 - INFO - program time elapsed: 12.828802s
+2024-08-29 23:28:44,937 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:28:44,937 - INFO - initialize data points...
+2024-08-29 23:28:45,611 - INFO - load saved model...
+2024-08-29 23:28:46,192 - INFO - start testing...
+2024-08-29 23:28:56,454 - INFO - testing time elapsed: 10.261890s
+2024-08-29 23:28:56,454 - INFO - program time elapsed: 11.517473s
+2024-08-29 23:30:23,999 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:30:23,999 - INFO - initialize data points...
+2024-08-29 23:30:25,844 - INFO - Number of parameters: 2222
+2024-08-29 23:30:25,866 - INFO - start training...
+2024-08-29 23:31:08,976 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:31:08,976 - INFO - initialize data points...
+2024-08-29 23:31:10,970 - INFO - Number of parameters: 2222
+2024-08-29 23:31:10,990 - INFO - start training...
+2024-08-29 23:31:21,044 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:31:21,044 - INFO - initialize data points...
+2024-08-29 23:31:23,004 - INFO - Number of parameters: 2222
+2024-08-29 23:31:23,026 - INFO - start training...
+2024-08-29 23:31:40,779 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:31:40,779 - INFO - initialize data points...
+2024-08-29 23:31:42,729 - INFO - Number of parameters: 2222
+2024-08-29 23:31:42,750 - INFO - start training...
+2024-08-29 23:32:00,883 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:32:00,883 - INFO - initialize data points...
+2024-08-29 23:32:02,820 - INFO - Number of parameters: 2222
+2024-08-29 23:32:02,835 - INFO - start training...
+2024-08-29 23:32:56,805 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:32:56,805 - INFO - initialize data points...
+2024-08-29 23:32:58,716 - INFO - Number of parameters: 2222
+2024-08-29 23:32:58,731 - INFO - start training...
+2024-08-29 23:33:12,684 - INFO - training time elapsed: 13.952218s
+2024-08-29 23:33:13,258 - INFO - program time elapsed: 16.453045s
+2024-08-29 23:33:34,979 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:33:34,979 - INFO - initialize data points...
+2024-08-29 23:33:35,779 - INFO - load saved model...
+2024-08-29 23:33:36,341 - INFO - start testing...
+2024-08-29 23:33:46,863 - INFO - testing time elapsed: 10.522353s
+2024-08-29 23:33:46,864 - INFO - program time elapsed: 11.884866s
+2024-08-29 23:34:51,275 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:34:51,275 - INFO - initialize data points...
+2024-08-29 23:34:53,232 - INFO - Number of parameters: 2222
+2024-08-29 23:34:53,280 - INFO - start training...
+2024-08-29 23:35:08,261 - INFO - training time elapsed: 14.980455s
+2024-08-29 23:35:08,847 - INFO - program time elapsed: 17.572359s
+2024-08-29 23:35:16,789 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:35:16,789 - INFO - initialize data points...
+2024-08-29 23:35:17,611 - INFO - load saved model...
+2024-08-29 23:35:18,176 - INFO - start testing...
+2024-08-29 23:35:29,541 - INFO - testing time elapsed: 11.365100s
+2024-08-29 23:35:29,541 - INFO - program time elapsed: 12.752791s
+2024-08-29 23:37:18,265 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:37:18,265 - INFO - initialize data points...
+2024-08-29 23:37:32,274 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:37:32,275 - INFO - initialize data points...
+2024-08-29 23:40:15,287 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:40:15,287 - INFO - initialize data points...
+2024-08-29 23:41:41,580 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:41:41,580 - INFO - initialize data points...
+2024-08-29 23:43:30,395 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:43:30,395 - INFO - initialize data points...
+2024-08-29 23:43:59,565 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:43:59,565 - INFO - initialize data points...
+2024-08-29 23:45:38,374 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:45:38,374 - INFO - initialize data points...
+2024-08-29 23:45:52,407 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:45:52,408 - INFO - initialize data points...
+2024-08-29 23:46:02,183 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:46:02,184 - INFO - initialize data points...
+2024-08-29 23:47:14,511 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:47:14,511 - INFO - initialize data points...
+2024-08-29 23:47:42,139 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:47:42,139 - INFO - initialize data points...
+2024-08-29 23:49:13,184 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:49:13,184 - INFO - initialize data points...
+2024-08-29 23:49:57,440 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:49:57,440 - INFO - initialize data points...
+2024-08-29 23:50:02,550 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:50:02,551 - INFO - initialize data points...
+2024-08-29 23:50:33,646 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:50:33,646 - INFO - initialize data points...
+2024-08-29 23:50:40,443 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:50:40,444 - INFO - initialize data points...
+2024-08-29 23:50:47,179 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:50:47,179 - INFO - initialize data points...
+2024-08-29 23:50:54,991 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:50:54,991 - INFO - initialize data points...
+2024-08-29 23:51:03,718 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:51:03,718 - INFO - initialize data points...
+2024-08-29 23:51:13,062 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:51:13,062 - INFO - initialize data points...
+2024-08-29 23:51:25,413 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:51:25,414 - INFO - initialize data points...
+2024-08-29 23:51:44,841 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:51:44,841 - INFO - initialize data points...
+2024-08-29 23:52:25,916 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:52:25,916 - INFO - initialize data points...
+2024-08-29 23:53:22,934 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-08-29 23:53:22,934 - INFO - initialize data points...

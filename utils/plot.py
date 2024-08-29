@@ -48,19 +48,23 @@ def plot_loss(ax, iter_list, train_loss_list, valid_loss_list, title_text):
 def plot_losses(save_to_dir: str, model):
 
     plt.close()
-    fig = plt.figure(1, figsize=(20, 6))
+    fig = plt.figure(1, figsize=(18, 12))
     plt.suptitle(f"losses against epoch", fontsize=16)
 
     # IC Loss
-    ax1 = plt.subplot(1, 3, 1)
+    ax1 = plt.subplot(2, 2, 1)
     plot_loss(ax1, model.iter_list, model.train_ic_ll, model.valid_ic_ll, "Initial Condition Loss")
+
+    # BC Loss
+    ax2 = plt.subplot(2, 2, 2)
+    plot_loss(ax2, model.iter_list, model.train_bc_ll, model.valid_bc_ll, "Boundary Condition Loss")
     
     # PDE Loss
-    ax2 = plt.subplot(1, 3, 2)
+    ax2 = plt.subplot(2, 2, 3)
     plot_loss(ax2, model.iter_list, model.train_pde_ll, model.valid_pde_ll, "PDE Loss")
     
     # Total Loss
-    ax3 = plt.subplot(1, 3, 3)
+    ax3 = plt.subplot(2, 2, 4)
     plot_loss(ax3, model.iter_list, model.train_loss_list, model.valid_loss_list, "Total Loss")
 
     # tight layout

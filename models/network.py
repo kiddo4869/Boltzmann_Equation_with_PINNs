@@ -52,6 +52,8 @@ class PINN(nn.Module):
         self.valid_loss = 0.0
         self.train_ic_loss = 0.0
         self.valid_ic_loss = 0.0
+        self.train_bc_loss = 0.0
+        self.valid_bc_loss = 0.0
         self.train_pde_loss = 0.0
         self.valid_pde_loss = 0.0
         
@@ -60,6 +62,8 @@ class PINN(nn.Module):
         self.valid_loss_list = []
         self.train_ic_ll = []
         self.valid_ic_ll = []
+        self.train_bc_ll = []
+        self.valid_bc_ll = []
         self.train_pde_ll = []
         self.valid_pde_ll = []
 
@@ -138,7 +142,7 @@ class PINN(nn.Module):
             loss1 = self.loss_function(LHS_1, torch.zeros(h.shape).to(self.device))
             loss2 = self.loss_function(LHS_2, torch.zeros(h.shape).to(self.device))
 
-            return loss + loss1 + loss2
+            return 0.0 + loss1 + loss2
         else:
             return loss
 
@@ -220,6 +224,8 @@ class PINN(nn.Module):
         self.valid_loss_list.append(self.valid_loss.item())
         self.train_ic_ll.append(self.train_ic_loss.item())
         self.valid_ic_ll.append(self.valid_ic_loss.item())
+        self.train_bc_ll.append(self.train_bc_loss.item())
+        self.valid_bc_ll.append(self.valid_bc_loss.item())
         self.train_pde_ll.append(self.train_pde_loss.item())
         self.valid_pde_ll.append(self.valid_pde_loss.item())
 

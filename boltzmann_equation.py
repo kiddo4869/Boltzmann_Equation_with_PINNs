@@ -44,14 +44,22 @@ def main(args: argparse.ArgumentParser):
     t_range = np.array([t_min, t_max])
 
     # Grids
-    q_arr = np.linspace(q_min, q_max, args.grid_size, dtype=np.float64)
-    p_arr = np.linspace(p_min, p_max, args.grid_size, dtype=np.float64)
-    t_arr = np.linspace(t_min, t_max, args.grid_size, dtype=np.float64)
+    q_arr = np.linspace(q_min, q_max, args.N_q, dtype=np.float64) # N_q = 1
+    p_arr = np.linspace(p_min, p_max, args.N_p, dtype=np.float64) # N_p = 10
+    t_arr = np.linspace(t_min, t_max, args.N_t, dtype=np.float64) # N_t = 100
     pv, qv, tv = np.meshgrid(p_arr, q_arr, t_arr, indexing="ij")
-    
+    print(f"pv shape: {pv.shape}")
+    print(f"qv shape: {qv.shape}")
+    print(f"tv shape: {tv.shape}")
+
+    #print(qv[:, :, 50])
+    #print(pv[:, :, 50])
+    #print(tv[0, 0, :])
+    exit()
     # Exact solution
     f_exact = np.array([[prob_den(args, q, p, 0.0) for q in q_arr] for p in p_arr])
     h_exact = np.array([[hamiltonian(args, q, p, 0.0) for q in q_arr] for p in p_arr])
+    ######################### Check this part #########################
     h_exact_over_time = np.array([[[hamiltonian(args, q, p, t) for q in q_arr] for p in p_arr] for t in t_arr])
 
     plot_init_solution(args, q_arr, p_arr, f_exact, "Initial Probability Density")
@@ -264,6 +272,9 @@ if __name__=="__main__":
     parser = argparse.ArgumentParser(description="Physics Informed Neural Networks")
     # Physical Conditions
     parser.add_argument("--grid_size", type=int, default=100)
+    parser.add_argument("--N_q", type=int, default=5)
+    parser.add_argument("--N_p", type=int, default=10)
+    parser.add_argument("--N_t", type=int, default=100)
     parser.add_argument("--T", type=float, default=1.7e-07)
     parser.add_argument("--w0", type=float, default=1e5)
     parser.add_argument("--k", type=float, default=sc.physical_constants['Boltzmann constant in Hz/K'][0])
@@ -271,9 +282,9 @@ if __name__=="__main__":
     parser.add_argument("--fermi_scaling", action="store_true")
 
     # Data Sampling
-    parser.add_argument("--q_min_max", type=json.loads, default=[-5, 5])
-    parser.add_argument("--p_min_max", type=json.loads, default=[-5, 5])
-    parser.add_argument("--t_min_max", type=json.loads, default=[0, 50])
+    parser.add_argument("--q_min_max", type=json.loads, default=[-10, -1])
+    parser.add_argument("--p_min_max", type=json.loads, default=[0, 19])
+    parser.add_argument("--t_min_max", type=json.loads, default=[20, 50])
     parser.add_argument("--N_initial", type=int, default=200, help="Number of training data")
     parser.add_argument("--N_boundary", type=int, default=100, help="Number of training boundary points")
     parser.add_argument("--N_collocation", type=int, default=600, help="Number of training collocation points")
@@ -323,7 +334,7 @@ if __name__=="__main__":
     args = parser.parse_args()
 
     if args.debug:
-        args.epochs = 100
+        #args.epochs = 100
         args.log_loss = True
         args.log_freq = 10
 
