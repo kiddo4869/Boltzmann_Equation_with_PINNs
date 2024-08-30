@@ -57,11 +57,7 @@ def preprocess_data(args,
 
     # Get boundary points
     boundary_points = get_boundary_points([X, Y, T])
-    print(boundary_points.shape)
-    
     boundary_ham = get_boundary_points([ham])
-    print(boundary_ham.shape)
-    exit()
     
     # Sample random points in boundary condition
     idx = np.random.choice(boundary_points.shape[0], args.N_boundary, replace=False)

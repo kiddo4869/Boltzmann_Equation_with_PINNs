@@ -7,6 +7,9 @@ N_collocation: 6000
 N_collocation_val: 3000
 N_initial: 300
 N_initial_val: 150
+N_p: 100
+N_q: 100
+N_t: 100
 PDE_weight: 0.15
 T: 1.7e-07
 checkpoint: ./checkpoints/l-bfgs
@@ -21,10 +24,10 @@ early_stopping: False
 epochs: 2000
 fermi_scaling: False
 grid_size: 100
-hamiltonian: False
+hamiltonian: True
 history_size: 100
 k: 20836619120.0
-layers: [3, 20, 20, 20, 20, 20, 20, 1]
+layers: [3, 20, 20, 20, 20, 20, 20, 2]
 learning_rate: 0.01
 log_freq: 10
 log_loss: True

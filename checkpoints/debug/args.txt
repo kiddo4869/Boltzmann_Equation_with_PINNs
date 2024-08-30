@@ -1,16 +1,16 @@
 BC_weight: 1.0
-IC_weight: 0.0
+IC_weight: 1.0
 N0: 4.493077990280913
-N_boundary: 500
-N_boundary_val: 500
+N_boundary: 200
+N_boundary_val: 200
 N_collocation: 100
 N_collocation_val: 100
-N_initial: 100
-N_initial_val: 100
-N_p: 10
-N_q: 5
+N_initial: 200
+N_initial_val: 200
+N_p: 100
+N_q: 100
 N_t: 100
-PDE_weight: 0.0
+PDE_weight: 0.2
 T: 1.7e-07
 checkpoint: ./checkpoints/debug
 checkpoint_path: ./checkpoints
@@ -21,7 +21,7 @@ ds_grid_add: 3
 ds_ratio: 1.05
 dynamic_scaling: False
 early_stopping: False
-epochs: 1000
+epochs: 100
 fermi_scaling: False
 grid_size: 100
 hamiltonian: True
@@ -39,14 +39,14 @@ name: debug
 noise_level: 0.0
 optimizer: l-bfgs
 output_path: ./outputs
-p_min_max: [0, 19]
+p_min_max: [-5, 5]
 patience: 10
-phase: train
+phase: test
 pinn: False
-q_min_max: [-10, -1]
+q_min_max: [-5, 5]
 save_freq: 1000
 seed: 0
-t_min_max: [20, 50]
+t_min_max: [0, 50]
 tolerance_change: 1e-09
 tolerance_grad: 1e-05
 w0: 100000.0

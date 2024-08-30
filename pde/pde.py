@@ -29,7 +29,7 @@ def hamiltonian(args, scaled_q: float, scaled_p: float, scaled_t: float) -> floa
 
     w = omega(args, t)
     h = p ** 2 / (2 * args.m) + 0.5 * args.m * w ** 2 * q ** 2
-    return h / (args.k * args.T) #np.log(h + 1)
+    return h / (args.k * args.T)
 
 def prob_den(args, scaled_q: float, scaled_p: float, scaled_t: float) -> float:
     if args.fermi_scaling:
