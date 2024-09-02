@@ -2,6 +2,7 @@ from typing import List, Optional, Tuple, Dict, Union
 import numpy as np
 import torch
 from pyDOE import lhs
+from pde.pde import hamiltonian
 
 def stack_data(input_list: list, phi_data: np.array):
     inputs = np.hstack([input_data.reshape(-1, 1) for input_data in input_list])
@@ -36,6 +37,22 @@ def select_points(idx: np.array, points: np.array) -> np.array:
     sampled_points = points[idx, :].copy()
     return sampled_points
 
+def find_hamiltonian_seperately(args, q_arr: np.array, p_arr: np.array, t_arr: np.array) -> np.array:
+    sampled_inputs = []
+    for i, (q, p, t) in enumerate(zip(q_arr, p_arr, t_arr)):
+        hamiltonian_value = hamiltonian(args, q, p, t)
+        sampled_inputs.append(hamiltonian_value)
+
+    return np.array(sampled_inputs).reshape(-1, 1)
+
+def add_hamiltonian(args, sampled_initial_points: np.array) -> np.array:
+    sampled_inputs = []
+    for i, (q, p, t) in enumerate(sampled_initial_points):
+        hamiltonian_value = hamiltonian(args, q, p, t)
+        sampled_inputs.append([q, p, t, hamiltonian_value])
+
+    return np.array(sampled_inputs)
+
 def preprocess_data(args,
                     X: np.array,
                     Y: np.array,
@@ -53,24 +70,29 @@ def preprocess_data(args,
     # Sample random points in initial condition
     idx = np.random.choice(initial_points.shape[0], args.N_initial, replace=False)
     sampled_initial_points = select_points(idx, initial_points)
+    if args.hamiltonian == "input":
+        sampled_initial_points = add_hamiltonian(args, sampled_initial_points)
     sampled_initial_phi = select_points(idx, initial_phi)
 
-    # Get boundary points
+    # Get interior points
     boundary_points = get_boundary_points([X, Y, T])
     boundary_ham = get_boundary_points([ham])
     
     # Sample random points in boundary condition
     idx = np.random.choice(boundary_points.shape[0], args.N_boundary, replace=False)
-    sampled_boundary_points = select_points(idx, boundary_points)
-    sampled_boundary_ham = select_points(idx, boundary_ham)
+    sampled_interior_points = select_points(idx, boundary_points)
+    sampled_interior_ham = select_points(idx, boundary_ham)
     
     # Sample collocation points in the domain
-    collocation_points = select_collocation_points(args.N_collocation, ub, lb, t_range)
+    sampled_collocation_points = select_collocation_points(args.N_collocation, ub, lb, t_range)
+    if args.hamiltonian == "input":
+        sampled_collocation_points = add_hamiltonian(args, sampled_collocation_points)
 
-    if not args.hamiltonian:
-        return [sampled_initial_points, collocation_points], [sampled_initial_phi]
+    if args.hamiltonian == "output":
+        return [sampled_initial_points, sampled_interior_points, sampled_collocation_points], [sampled_initial_phi, sampled_interior_ham]
     else:
-        return [sampled_initial_points, sampled_boundary_points, collocation_points], [sampled_initial_phi, sampled_boundary_ham]
+        return [sampled_initial_points, sampled_collocation_points], [sampled_initial_phi]
+        
 
 def create_inputs(q_arr: np.array, p_arr: np.array, t: float):
     pv, qv = np.meshgrid(p_arr, q_arr, indexing="ij")

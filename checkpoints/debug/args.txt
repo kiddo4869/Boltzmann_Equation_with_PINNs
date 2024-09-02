@@ -12,6 +12,7 @@ N_q: 100
 N_t: 100
 PDE_weight: 0.2
 T: 1.7e-07
+case_idx: 0
 checkpoint: ./checkpoints/debug
 checkpoint_path: ./checkpoints
 debug: True
@@ -24,10 +25,10 @@ early_stopping: False
 epochs: 100
 fermi_scaling: False
 grid_size: 100
-hamiltonian: True
+hamiltonian: input
 history_size: 100
 k: 20836619120.0
-layers: [3, 20, 20, 20, 20, 20, 20, 2]
+layers: [4, 20, 20, 20, 20, 20, 20, 20, 20, 1]
 learning_rate: 1.0
 log_freq: 10
 log_loss: True
@@ -46,7 +47,7 @@ pinn: False
 q_min_max: [-5, 5]
 save_freq: 1000
 seed: 0
-t_min_max: [0, 50]
+t_min_max: [0, 10]
 tolerance_change: 1e-09
 tolerance_grad: 1e-05
 w0: 100000.0

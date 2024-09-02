@@ -5,13 +5,13 @@ from numpy import trapz
 import torch
 import torch.nn as nn
 from PIL import Image
-from data.data_processing import create_inputs
+from data.data_processing import create_inputs, find_hamiltonian_seperately
 
 def plot_data_inputs(args, data_list, title):
-    if not args.hamiltonian:
-        sampled_initial_points, collocation_points = data_list
+    if args.hamiltonian == "output":
+        sampled_initial_points, sampled_interior_points, collocation_points = data_list
     else:
-        sampled_initial_points, sampled_boundary_points, collocation_points = data_list
+        sampled_initial_points, collocation_points = data_list
 
     plt.close()
 
@@ -23,8 +23,8 @@ def plot_data_inputs(args, data_list, title):
     ax.scatter3D(sampled_initial_points[:, 0], sampled_initial_points[:, 1], sampled_initial_points[:, 2], color="blue", label="Initial Points")
     ax.scatter3D(collocation_points[:, 0], collocation_points[:, 1], collocation_points[:, 2], color="red", label="Collocation Points")
 
-    if args.hamiltonian:
-        ax.scatter3D(sampled_boundary_points[:, 0], sampled_boundary_points[:, 1], sampled_boundary_points[:, 2], color="green", label="Boundary Points")
+    if args.hamiltonian == "output":
+        ax.scatter3D(sampled_interior_points[:, 0], sampled_interior_points[:, 1], sampled_interior_points[:, 2], color="green", label="Interior Points")
     
     ax.set_xlabel("q")
     ax.set_ylabel("p")
@@ -118,21 +118,23 @@ def plot_solution(args,
     plot_data(ax1, scaled_q_arr, scaled_p_arr, f_exact, "Exact Solution")
 
     q_trial, p_trial, t_trial = create_inputs(scaled_q_arr, scaled_p_arr, scaled_t)
+    h_trial = torch.from_numpy(find_hamiltonian_seperately(args, q_trial, p_trial, t_trial)).to(args.device)
     
     N_q = len(scaled_q_arr)
     N_p = len(scaled_p_arr)
     
     # Prediction
     ax2 = plt.subplot(1, 3, 2)
-    if not args.hamiltonian:
-        f_pred = model(q_trial, p_trial, t_trial).reshape(N_p, N_q).cpu().detach().numpy()
-    else:
+    if args.hamiltonian == "output":
         if output == "f":
-            f_pred = model(q_trial, p_trial, t_trial)[:, 0].reshape(N_p, N_q).cpu().detach().numpy()
+            f_pred = model(q_trial, p_trial, t_trial, h_trial)[:, 0].reshape(N_p, N_q).cpu().detach().numpy()
         elif output == "h":
-            f_pred = model(q_trial, p_trial, t_trial)[:, 1].reshape(N_p, N_q).cpu().detach().numpy()
+            f_pred = model(q_trial, p_trial, t_trial, h_trial)[:, 1].reshape(N_p, N_q).cpu().detach().numpy()
         else:
             raise ValueError(f"Invalid output type: {output}")
+    else:
+        f_pred = model(q_trial, p_trial, t_trial, h_trial).reshape(N_p, N_q).cpu().detach().numpy()
+        
     plot_data(ax2, scaled_q_arr, scaled_p_arr, f_pred, "Prediction")
     
     # Error
@@ -166,13 +168,14 @@ def plot_q_p_distributions(args, scaled_q_arr, scaled_p_arr, scaled_t, model):
     plt.close()
 
     q_trial, p_trial, t_trial = create_inputs(scaled_q_arr, scaled_p_arr, scaled_t)
+    h_trial = torch.from_numpy(find_hamiltonian_seperately(args, q_trial, p_trial, t_trial)).to(args.device)
     
     N_q = len(scaled_q_arr)
     N_p = len(scaled_p_arr)
-    if not args.hamiltonian:
-        f_distrib = model(q_trial, p_trial, t_trial).reshape(N_p, N_q).cpu().detach().numpy()
+    if args.hamiltonian == "output":
+        f_distrib = model(q_trial, p_trial, t_trial, h_trial)[:, 0].reshape(N_p, N_q).cpu().detach().numpy()
     else:
-        f_distrib = model(q_trial, p_trial, t_trial)[:, 0].reshape(N_p, N_q).cpu().detach().numpy()
+        f_distrib = model(q_trial, p_trial, t_trial, h_trial).reshape(N_p, N_q).cpu().detach().numpy()
 
     # Simplified scaling of q_arr and p_arr
     q_arr = scaled_q_arr / np.sqrt(args.m * args.w0**2 / (args.k * args.T))
@@ -196,11 +199,13 @@ def plot_q_p_distributions(args, scaled_q_arr, scaled_p_arr, scaled_t, model):
     # Second subplot: Distribution of q
     ax = axs[0, 1]
     ax.plot(q_arr, position_distribution)
+    ax.axvline(x=0, color="red", linestyle='--')
     ax.set_title('Distribution of Position q')
 
     # Third subplot: Distribution of p
     ax = axs[1, 0]
     ax.plot(p_arr, momentum_distribution)
+    ax.axvline(x=0, color="red", linestyle='--')
     ax.set_title('Distribution of Momentum p')
 
     # Hide the top-right subplot
