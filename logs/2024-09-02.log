@@ -1,0 +1,1920 @@
+2024-09-02 14:06:53,454 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 14:06:53,454 - INFO - initialize data points...
+2024-09-02 14:07:12,418 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 14:07:12,418 - INFO - initialize data points...
+2024-09-02 14:07:20,104 - INFO - Number of parameters: 3062
+2024-09-02 14:07:20,217 - INFO - start training...
+2024-09-02 14:08:29,579 - INFO - training time elapsed: 69.361620s
+2024-09-02 14:08:30,204 - INFO - program time elapsed: 77.786350s
+2024-09-02 14:08:42,780 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 14:08:42,781 - INFO - initialize data points...
+2024-09-02 14:08:48,218 - INFO - load saved model...
+2024-09-02 14:08:48,862 - INFO - start testing...
+2024-09-02 14:09:39,920 - INFO - testing time elapsed: 51.057666s
+2024-09-02 14:09:39,920 - INFO - program time elapsed: 57.139824s
+2024-09-02 14:11:19,649 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 14:11:19,649 - INFO - initialize data points...
+2024-09-02 14:11:24,891 - INFO - load saved model...
+2024-09-02 14:11:25,429 - INFO - start testing...
+2024-09-02 14:12:07,755 - INFO - testing time elapsed: 42.325508s
+2024-09-02 14:12:07,755 - INFO - program time elapsed: 48.106748s
+2024-09-02 17:22:29,535 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 17:22:29,536 - INFO - initialize data points...
+2024-09-02 17:22:35,120 - INFO - load saved model...
+2024-09-02 17:22:36,370 - INFO - start testing...
+2024-09-02 17:23:21,720 - INFO - testing time elapsed: 45.349544s
+2024-09-02 17:23:21,720 - INFO - program time elapsed: 52.185594s
+2024-09-02 17:27:33,034 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 17:27:33,034 - INFO - initialize data points...
+2024-09-02 17:27:38,269 - INFO - load saved model...
+2024-09-02 17:28:19,371 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 17:28:19,371 - INFO - initialize data points...
+2024-09-02 17:28:25,870 - INFO - Number of parameters: 3062
+2024-09-02 17:28:25,909 - INFO - start training...
+2024-09-02 17:29:35,583 - INFO - training time elapsed: 69.673783s
+2024-09-02 17:29:36,423 - INFO - program time elapsed: 77.052581s
+2024-09-02 17:30:45,013 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 17:30:45,014 - INFO - initialize data points...
+2024-09-02 17:30:50,074 - INFO - load saved model...
+2024-09-02 17:30:50,627 - INFO - start testing...
+2024-09-02 17:31:33,699 - INFO - testing time elapsed: 43.071755s
+2024-09-02 17:31:33,699 - INFO - program time elapsed: 48.686014s
+2024-09-02 17:32:44,186 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 17:32:44,186 - INFO - initialize data points...
+2024-09-02 17:32:50,686 - INFO - Number of parameters: 3062
+2024-09-02 17:32:50,710 - INFO - start training...
+2024-09-02 17:32:50,734 - INFO - Epoch 0/1000, train loss: 287.813232422, valid loss: 291.398376465
+2024-09-02 17:32:50,939 - INFO - Epoch 10/1000, train loss: 161.763748169, valid loss: 164.566101074
+2024-09-02 17:32:51,129 - INFO - Epoch 20/1000, train loss: 15.737405777, valid loss: 16.600748062
+2024-09-02 17:32:51,324 - INFO - Epoch 30/1000, train loss: 14.397853851, valid loss: 15.134984016
+2024-09-02 17:32:51,522 - INFO - Epoch 40/1000, train loss: 14.262458801, valid loss: 14.946403503
+2024-09-02 17:32:51,716 - INFO - Epoch 50/1000, train loss: 14.262264252, valid loss: 14.945023537
+2024-09-02 17:32:51,820 - INFO - training time elapsed: 1.110133s
+2024-09-02 17:32:52,348 - INFO - program time elapsed: 8.162266s
+2024-09-02 17:32:57,069 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 17:32:57,069 - INFO - initialize data points...
+2024-09-02 17:33:03,562 - INFO - Number of parameters: 3062
+2024-09-02 17:33:03,587 - INFO - start training...
+2024-09-02 17:33:03,605 - INFO - Epoch 0/1000, train loss: 297.194458008, valid loss: 310.208831787
+2024-09-02 17:33:03,808 - INFO - Epoch 10/1000, train loss: 111.512046814, valid loss: 119.597366333
+2024-09-02 17:33:03,997 - INFO - Epoch 20/1000, train loss: 32.620693207, valid loss: 36.811641693
+2024-09-02 17:33:04,193 - INFO - Epoch 30/1000, train loss: 19.525331497, valid loss: 22.300127029
+2024-09-02 17:33:04,392 - INFO - Epoch 40/1000, train loss: 14.401608467, valid loss: 15.765229225
+2024-09-02 17:33:04,621 - INFO - Epoch 50/1000, train loss: 14.317792892, valid loss: 15.498911858
+2024-09-02 17:33:04,819 - INFO - Epoch 60/1000, train loss: 14.316888809, valid loss: 15.484789848
+2024-09-02 17:33:05,013 - INFO - Epoch 70/1000, train loss: 14.316674232, valid loss: 15.477375031
+2024-09-02 17:33:05,060 - INFO - training time elapsed: 1.473301s
+2024-09-02 17:33:05,631 - INFO - program time elapsed: 8.562256s
+2024-09-02 18:04:43,423 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:04:43,423 - INFO - initialize data points...
+2024-09-02 18:05:03,300 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:05:03,301 - INFO - initialize data points...
+2024-09-02 18:21:18,228 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:21:18,228 - INFO - initialize data points...
+2024-09-02 18:21:35,864 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:21:35,864 - INFO - initialize data points...
+2024-09-02 18:23:08,272 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:23:08,272 - INFO - initialize data points...
+2024-09-02 18:24:08,655 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:24:08,655 - INFO - initialize data points...
+2024-09-02 18:24:24,272 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:24:24,273 - INFO - initialize data points...
+2024-09-02 18:24:48,580 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:24:48,580 - INFO - initialize data points...
+2024-09-02 18:25:19,875 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:25:19,875 - INFO - initialize data points...
+2024-09-02 18:25:35,349 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:25:35,349 - INFO - initialize data points...
+2024-09-02 18:25:49,062 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:25:49,062 - INFO - initialize data points...
+2024-09-02 18:26:08,983 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:26:08,983 - INFO - initialize data points...
+2024-09-02 18:26:42,711 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:26:42,711 - INFO - initialize data points...
+2024-09-02 18:27:59,672 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:27:59,672 - INFO - initialize data points...
+2024-09-02 18:28:40,061 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:28:40,061 - INFO - initialize data points...
+2024-09-02 18:28:59,955 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:28:59,955 - INFO - initialize data points...
+2024-09-02 18:29:16,699 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:29:16,699 - INFO - initialize data points...
+2024-09-02 18:30:00,601 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:30:00,601 - INFO - initialize data points...
+2024-09-02 18:31:59,734 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:31:59,734 - INFO - initialize data points...
+2024-09-02 18:32:42,914 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:32:42,914 - INFO - initialize data points...
+2024-09-02 18:45:23,414 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:45:23,415 - INFO - initialize data points...
+2024-09-02 18:45:46,578 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:45:46,578 - INFO - initialize data points...
+2024-09-02 18:45:53,134 - INFO - Number of parameters: 3041
+2024-09-02 18:45:53,147 - INFO - start training...
+2024-09-02 18:45:53,156 - INFO - Epoch 0/100, train loss: 1.054827094, valid loss: 0.767478824
+2024-09-02 18:45:53,232 - INFO - Epoch 10/100, train loss: 0.572580040, valid loss: 0.375059754
+2024-09-02 18:45:53,296 - INFO - Epoch 20/100, train loss: 0.724672258, valid loss: 0.435989916
+2024-09-02 18:45:53,351 - INFO - Epoch 30/100, train loss: 0.481376559, valid loss: 0.354896218
+2024-09-02 18:45:53,423 - INFO - Epoch 40/100, train loss: 0.333181858, valid loss: 0.337786973
+2024-09-02 18:45:53,493 - INFO - Epoch 50/100, train loss: 0.200120196, valid loss: 0.216884345
+2024-09-02 18:45:53,568 - INFO - Epoch 60/100, train loss: 0.103981152, valid loss: 0.141744345
+2024-09-02 18:45:53,639 - INFO - Epoch 70/100, train loss: 0.029558102, valid loss: 0.040766831
+2024-09-02 18:45:53,716 - INFO - Epoch 80/100, train loss: 0.009393193, valid loss: 0.012963444
+2024-09-02 18:45:53,795 - INFO - Epoch 90/100, train loss: 0.004802919, valid loss: 0.006146655
+2024-09-02 18:45:53,875 - INFO - Epoch 100/100, train loss: 0.002617686, valid loss: 0.004006112
+2024-09-02 18:45:53,945 - INFO - training time elapsed: 0.797913s
+2024-09-02 18:45:54,500 - INFO - program time elapsed: 7.922373s
+2024-09-02 18:48:07,610 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:48:07,610 - INFO - initialize data points...
+2024-09-02 18:48:13,822 - INFO - Number of parameters: 3041
+2024-09-02 18:48:13,829 - INFO - start training...
+2024-09-02 18:48:13,834 - INFO - Epoch 0/100, train loss: 0.932141423, valid loss: 0.434901714
+2024-09-02 18:48:13,900 - INFO - Epoch 10/100, train loss: 0.734153926, valid loss: 0.313454241
+2024-09-02 18:48:13,960 - INFO - Epoch 20/100, train loss: 0.673756361, valid loss: 0.311403930
+2024-09-02 18:48:14,029 - INFO - Epoch 30/100, train loss: 0.597320020, valid loss: 0.245098814
+2024-09-02 18:48:14,093 - INFO - Epoch 40/100, train loss: 0.460643023, valid loss: 0.251456887
+2024-09-02 18:48:14,157 - INFO - Epoch 50/100, train loss: 0.237649083, valid loss: 0.224891692
+2024-09-02 18:48:14,293 - INFO - Epoch 60/100, train loss: 0.079433359, valid loss: 0.080345012
+2024-09-02 18:48:14,364 - INFO - Epoch 70/100, train loss: 0.015850201, valid loss: 0.018604532
+2024-09-02 18:48:14,439 - INFO - Epoch 80/100, train loss: 0.007090109, valid loss: 0.009852003
+2024-09-02 18:48:14,516 - INFO - Epoch 90/100, train loss: 0.003546313, valid loss: 0.006303302
+2024-09-02 18:48:14,602 - INFO - Epoch 100/100, train loss: 0.002262909, valid loss: 0.004975217
+2024-09-02 18:48:14,672 - INFO - training time elapsed: 0.842931s
+2024-09-02 18:48:15,197 - INFO - program time elapsed: 7.586949s
+2024-09-02 18:50:59,846 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:50:59,846 - INFO - initialize data points...
+2024-09-02 18:55:25,878 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 18:55:25,878 - INFO - initialize data points...
+2024-09-02 21:21:48,297 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 21:21:48,298 - INFO - initialize data points...
+2024-09-02 21:22:07,530 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 21:22:07,530 - INFO - initialize data points...
+2024-09-02 21:22:40,696 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 21:22:40,697 - INFO - initialize data points...
+2024-09-02 21:23:28,118 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 21:23:28,118 - INFO - initialize data points...
+2024-09-02 21:24:12,572 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 21:24:12,572 - INFO - initialize data points...
+2024-09-02 21:26:14,572 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 21:26:14,572 - INFO - initialize data points...
+2024-09-02 21:27:41,051 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 21:27:41,051 - INFO - initialize data points...
+2024-09-02 21:28:55,248 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 21:28:55,248 - INFO - initialize data points...
+2024-09-02 21:29:34,305 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 21:29:34,306 - INFO - initialize data points...
+2024-09-02 21:30:07,605 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 21:30:07,605 - INFO - initialize data points...
+2024-09-02 21:30:38,100 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 21:30:38,100 - INFO - initialize data points...
+2024-09-02 21:33:56,127 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 21:33:56,127 - INFO - initialize data points...
+2024-09-02 21:45:46,177 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 21:45:46,177 - INFO - initialize data points...
+2024-09-02 21:45:52,584 - INFO - Number of parameters: 3061
+2024-09-02 21:45:58,861 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 21:45:58,861 - INFO - initialize data points...
+2024-09-02 21:46:04,904 - INFO - Number of parameters: 3061
+2024-09-02 21:54:48,597 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 21:54:48,598 - INFO - initialize data points...
+2024-09-02 21:54:54,664 - INFO - Number of parameters: 3061
+2024-09-02 21:57:46,142 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 21:57:46,142 - INFO - initialize data points...
+2024-09-02 21:57:53,442 - INFO - Number of parameters: 3061
+2024-09-02 22:02:24,969 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:02:24,969 - INFO - initialize data points...
+2024-09-02 22:02:31,739 - INFO - Number of parameters: 3061
+2024-09-02 22:04:19,335 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:04:19,335 - INFO - initialize data points...
+2024-09-02 22:04:25,677 - INFO - Number of parameters: 3061
+2024-09-02 22:05:19,562 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:05:19,562 - INFO - initialize data points...
+2024-09-02 22:05:25,775 - INFO - Number of parameters: 3061
+2024-09-02 22:08:25,831 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:08:25,831 - INFO - initialize data points...
+2024-09-02 22:08:32,536 - INFO - Number of parameters: 3061
+2024-09-02 22:08:48,906 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:08:48,906 - INFO - initialize data points...
+2024-09-02 22:08:55,446 - INFO - Number of parameters: 3061
+2024-09-02 22:09:35,548 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:09:35,549 - INFO - initialize data points...
+2024-09-02 22:09:42,351 - INFO - Number of parameters: 3061
+2024-09-02 22:19:32,880 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:19:32,880 - INFO - initialize data points...
+2024-09-02 22:21:42,793 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:21:42,793 - INFO - initialize data points...
+2024-09-02 22:22:10,289 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:22:10,289 - INFO - initialize data points...
+2024-09-02 22:22:16,528 - INFO - Number of parameters: 3061
+2024-09-02 22:22:30,747 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:22:30,747 - INFO - initialize data points...
+2024-09-02 22:22:37,062 - INFO - Number of parameters: 3061
+2024-09-02 22:23:05,618 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:23:05,618 - INFO - initialize data points...
+2024-09-02 22:23:12,068 - INFO - Number of parameters: 3061
+2024-09-02 22:24:43,091 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:24:43,091 - INFO - initialize data points...
+2024-09-02 22:24:50,160 - INFO - Number of parameters: 3061
+2024-09-02 22:26:43,871 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:26:43,871 - INFO - initialize data points...
+2024-09-02 22:26:50,406 - INFO - Number of parameters: 3061
+2024-09-02 22:28:44,126 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:28:44,126 - INFO - initialize data points...
+2024-09-02 22:28:50,700 - INFO - Number of parameters: 3061
+2024-09-02 22:29:24,281 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:29:24,282 - INFO - initialize data points...
+2024-09-02 22:29:30,600 - INFO - Number of parameters: 3061
+2024-09-02 22:30:07,188 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:30:07,188 - INFO - initialize data points...
+2024-09-02 22:30:13,779 - INFO - Number of parameters: 3061
+2024-09-02 22:30:37,784 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:30:37,784 - INFO - initialize data points...
+2024-09-02 22:30:44,140 - INFO - Number of parameters: 3061
+2024-09-02 22:31:36,264 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:31:36,264 - INFO - initialize data points...
+2024-09-02 22:31:42,264 - INFO - Number of parameters: 3061
+2024-09-02 22:33:59,967 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:33:59,967 - INFO - initialize data points...
+2024-09-02 22:34:06,533 - INFO - Number of parameters: 3061
+2024-09-02 22:34:33,064 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:34:33,064 - INFO - initialize data points...
+2024-09-02 22:34:39,679 - INFO - Number of parameters: 3061
+2024-09-02 22:35:25,303 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:35:25,303 - INFO - initialize data points...
+2024-09-02 22:35:32,260 - INFO - Number of parameters: 3061
+2024-09-02 22:36:15,201 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:36:15,201 - INFO - initialize data points...
+2024-09-02 22:36:21,806 - INFO - Number of parameters: 3061
+2024-09-02 22:37:02,924 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:37:02,925 - INFO - initialize data points...
+2024-09-02 22:37:09,180 - INFO - Number of parameters: 3061
+2024-09-02 22:38:28,003 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:38:28,003 - INFO - initialize data points...
+2024-09-02 22:38:34,258 - INFO - Number of parameters: 3061
+2024-09-02 22:38:49,186 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:38:49,186 - INFO - initialize data points...
+2024-09-02 22:38:55,815 - INFO - Number of parameters: 3061
+2024-09-02 22:39:18,918 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:39:18,918 - INFO - initialize data points...
+2024-09-02 22:39:25,308 - INFO - Number of parameters: 3061
+2024-09-02 22:40:06,395 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:40:06,395 - INFO - initialize data points...
+2024-09-02 22:40:12,541 - INFO - Number of parameters: 3061
+2024-09-02 22:40:43,825 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:40:43,825 - INFO - initialize data points...
+2024-09-02 22:40:50,265 - INFO - Number of parameters: 3061
+2024-09-02 22:41:59,518 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:41:59,518 - INFO - initialize data points...
+2024-09-02 22:42:06,465 - INFO - Number of parameters: 3061
+2024-09-02 22:42:09,810 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:42:09,810 - INFO - initialize data points...
+2024-09-02 22:42:16,103 - INFO - Number of parameters: 3061
+2024-09-02 22:44:18,117 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:44:18,117 - INFO - initialize data points...
+2024-09-02 22:44:24,279 - INFO - Number of parameters: 3061
+2024-09-02 22:44:37,784 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:44:37,785 - INFO - initialize data points...
+2024-09-02 22:44:44,160 - INFO - Number of parameters: 3061
+2024-09-02 22:46:16,010 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:46:16,010 - INFO - initialize data points...
+2024-09-02 22:46:22,647 - INFO - Number of parameters: 3061
+2024-09-02 22:46:41,847 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:46:41,847 - INFO - initialize data points...
+2024-09-02 22:46:48,346 - INFO - Number of parameters: 3061
+2024-09-02 22:47:45,688 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:47:45,688 - INFO - initialize data points...
+2024-09-02 22:47:52,110 - INFO - Number of parameters: 3061
+2024-09-02 22:54:19,113 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:54:19,113 - INFO - initialize data points...
+2024-09-02 22:54:25,305 - INFO - Number of parameters: 3061
+2024-09-02 22:55:25,489 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:55:25,489 - INFO - initialize data points...
+2024-09-02 22:55:31,575 - INFO - Number of parameters: 3061
+2024-09-02 22:56:45,443 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:56:45,443 - INFO - initialize data points...
+2024-09-02 22:56:52,184 - INFO - Number of parameters: 3061
+2024-09-02 22:57:33,550 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:57:33,551 - INFO - initialize data points...
+2024-09-02 22:57:39,806 - INFO - Number of parameters: 3061
+2024-09-02 22:58:08,270 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:58:08,270 - INFO - initialize data points...
+2024-09-02 22:58:14,705 - INFO - Number of parameters: 3061
+2024-09-02 22:58:21,992 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:58:21,992 - INFO - initialize data points...
+2024-09-02 22:58:28,146 - INFO - Number of parameters: 3061
+2024-09-02 22:59:35,321 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 22:59:35,321 - INFO - initialize data points...
+2024-09-02 22:59:41,572 - INFO - Number of parameters: 3061
+2024-09-02 23:00:26,247 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:00:26,247 - INFO - initialize data points...
+2024-09-02 23:00:32,759 - INFO - Number of parameters: 3061
+2024-09-02 23:00:41,065 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:00:41,066 - INFO - initialize data points...
+2024-09-02 23:00:47,518 - INFO - Number of parameters: 3061
+2024-09-02 23:02:05,785 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:02:05,786 - INFO - initialize data points...
+2024-09-02 23:02:12,558 - INFO - Number of parameters: 3061
+2024-09-02 23:03:33,360 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:03:33,360 - INFO - initialize data points...
+2024-09-02 23:03:40,435 - INFO - Number of parameters: 3061
+2024-09-02 23:03:53,094 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:03:53,094 - INFO - initialize data points...
+2024-09-02 23:03:59,702 - INFO - Number of parameters: 3061
+2024-09-02 23:04:59,004 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:04:59,004 - INFO - initialize data points...
+2024-09-02 23:05:05,810 - INFO - Number of parameters: 3061
+2024-09-02 23:05:31,999 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:05:31,999 - INFO - initialize data points...
+2024-09-02 23:05:38,189 - INFO - Number of parameters: 3061
+2024-09-02 23:05:45,700 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:05:45,700 - INFO - initialize data points...
+2024-09-02 23:05:52,195 - INFO - Number of parameters: 3061
+2024-09-02 23:15:26,545 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:15:26,545 - INFO - initialize data points...
+2024-09-02 23:15:33,171 - INFO - Number of parameters: 3061
+2024-09-02 23:15:55,451 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:15:55,452 - INFO - initialize data points...
+2024-09-02 23:16:02,186 - INFO - Number of parameters: 3061
+2024-09-02 23:16:35,540 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:16:35,540 - INFO - initialize data points...
+2024-09-02 23:16:42,232 - INFO - Number of parameters: 3061
+2024-09-02 23:16:42,240 - INFO - start training...
+2024-09-02 23:16:42,245 - INFO - Epoch 0/100, train loss: 0.850608766, valid loss: 0.900952041
+2024-09-02 23:17:46,570 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:17:46,570 - INFO - initialize data points...
+2024-09-02 23:17:53,096 - INFO - Number of parameters: 3061
+2024-09-02 23:17:53,104 - INFO - start training...
+2024-09-02 23:17:53,110 - INFO - Epoch 0/100, train loss: 1.067470074, valid loss: 1.130355477
+2024-09-02 23:17:53,190 - INFO - Epoch 10/100, train loss: 0.637169838, valid loss: 0.642863095
+2024-09-02 23:17:53,299 - INFO - Epoch 20/100, train loss: 0.599448323, valid loss: 0.575323224
+2024-09-02 23:17:53,464 - INFO - Epoch 30/100, train loss: 0.456756800, valid loss: 0.437289894
+2024-09-02 23:17:53,559 - INFO - Epoch 40/100, train loss: 0.138912976, valid loss: 0.160965711
+2024-09-02 23:17:53,752 - INFO - Epoch 50/100, train loss: 0.058097042, valid loss: 0.079033807
+2024-09-02 23:17:53,840 - INFO - Epoch 60/100, train loss: 0.030321097, valid loss: 0.048395865
+2024-09-02 23:17:53,937 - INFO - Epoch 70/100, train loss: 0.016550029, valid loss: 0.041508947
+2024-09-02 23:17:54,030 - INFO - Epoch 80/100, train loss: 0.011418310, valid loss: 0.034682393
+2024-09-02 23:17:54,132 - INFO - Epoch 90/100, train loss: 0.007998275, valid loss: 0.035953566
+2024-09-02 23:17:54,234 - INFO - Epoch 100/100, train loss: 0.005263675, valid loss: 0.028921401
+2024-09-02 23:17:54,325 - INFO - Epoch 110/100, train loss: 0.003454103, valid loss: 0.024346914
+2024-09-02 23:17:54,339 - INFO - training time elapsed: 1.234166s
+2024-09-02 23:17:54,950 - INFO - program time elapsed: 8.380448s
+2024-09-02 23:22:19,251 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:22:19,251 - INFO - initialize data points...
+2024-09-02 23:22:25,051 - INFO - load saved model...
+2024-09-02 23:25:14,638 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:25:14,638 - INFO - initialize data points...
+2024-09-02 23:25:20,705 - INFO - load saved model...
+2024-09-02 23:28:46,039 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:28:46,039 - INFO - initialize data points...
+2024-09-02 23:28:51,531 - INFO - load saved model...
+2024-09-02 23:28:52,086 - INFO - start testing...
+2024-09-02 23:41:46,120 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:41:46,121 - INFO - initialize data points...
+2024-09-02 23:41:51,441 - INFO - load saved model...
+2024-09-02 23:41:52,006 - INFO - start testing...
+2024-09-02 23:42:23,478 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:42:23,479 - INFO - initialize data points...
+2024-09-02 23:42:28,926 - INFO - load saved model...
+2024-09-02 23:42:29,477 - INFO - start testing...
+2024-09-02 23:42:38,464 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:42:38,464 - INFO - initialize data points...
+2024-09-02 23:42:43,447 - INFO - load saved model...
+2024-09-02 23:42:44,009 - INFO - start testing...
+2024-09-02 23:43:31,903 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:43:31,903 - INFO - initialize data points...
+2024-09-02 23:43:37,743 - INFO - load saved model...
+2024-09-02 23:43:38,394 - INFO - start testing...
+2024-09-02 23:44:14,840 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:44:14,841 - INFO - initialize data points...
+2024-09-02 23:44:20,040 - INFO - load saved model...
+2024-09-02 23:44:20,602 - INFO - start testing...
+2024-09-02 23:44:45,601 - INFO - testing time elapsed: 24.998905s
+2024-09-02 23:44:45,602 - INFO - program time elapsed: 30.761633s
+2024-09-02 23:45:45,944 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:45:45,944 - INFO - initialize data points...
+2024-09-02 23:45:51,392 - INFO - load saved model...
+2024-09-02 23:45:52,056 - INFO - start testing...
+2024-09-02 23:46:16,243 - INFO - testing time elapsed: 24.187233s
+2024-09-02 23:46:16,244 - INFO - program time elapsed: 30.300175s
+2024-09-02 23:47:44,228 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:47:44,228 - INFO - initialize data points...
+2024-09-02 23:47:50,469 - INFO - Number of parameters: 3061
+2024-09-02 23:47:50,475 - INFO - start training...
+2024-09-02 23:47:50,481 - INFO - Epoch 0/100, train loss: 0.885248363, valid loss: 0.941886246
+2024-09-02 23:47:50,553 - INFO - Epoch 10/100, train loss: 0.635860085, valid loss: 0.644912004
+2024-09-02 23:47:50,619 - INFO - Epoch 20/100, train loss: 0.580760896, valid loss: 0.541696787
+2024-09-02 23:47:50,697 - INFO - Epoch 30/100, train loss: 0.489675522, valid loss: 0.405539602
+2024-09-02 23:47:50,758 - INFO - Epoch 40/100, train loss: 0.172897100, valid loss: 0.185829446
+2024-09-02 23:47:50,838 - INFO - Epoch 50/100, train loss: 0.053770073, valid loss: 0.081652470
+2024-09-02 23:47:50,914 - INFO - Epoch 60/100, train loss: 0.023423227, valid loss: 0.070366755
+2024-09-02 23:47:50,991 - INFO - Epoch 70/100, train loss: 0.015932860, valid loss: 0.079637855
+2024-09-02 23:47:51,074 - INFO - Epoch 80/100, train loss: 0.011358310, valid loss: 0.064257562
+2024-09-02 23:47:51,166 - INFO - Epoch 90/100, train loss: 0.008208072, valid loss: 0.079288892
+2024-09-02 23:47:51,307 - INFO - Epoch 100/100, train loss: 0.006695382, valid loss: 0.091314748
+2024-09-02 23:47:51,360 - INFO - training time elapsed: 0.884878s
+2024-09-02 23:47:51,896 - INFO - program time elapsed: 7.668998s
+2024-09-02 23:48:01,094 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:48:01,094 - INFO - initialize data points...
+2024-09-02 23:48:06,799 - INFO - load saved model...
+2024-09-02 23:48:07,398 - INFO - start testing...
+2024-09-02 23:48:24,507 - INFO - testing time elapsed: 17.108312s
+2024-09-02 23:48:24,507 - INFO - program time elapsed: 23.413459s
+2024-09-02 23:49:52,961 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:49:52,962 - INFO - initialize data points...
+2024-09-02 23:49:59,396 - INFO - Number of parameters: 3061
+2024-09-02 23:49:59,415 - INFO - start training...
+2024-09-02 23:49:59,445 - INFO - Epoch 0/1000, train loss: 0.886375666, valid loss: 0.564468324
+2024-09-02 23:49:59,642 - INFO - Epoch 10/1000, train loss: 0.624319255, valid loss: 0.390392274
+2024-09-02 23:49:59,820 - INFO - Epoch 20/1000, train loss: 0.612978995, valid loss: 0.392122626
+2024-09-02 23:49:59,997 - INFO - Epoch 30/1000, train loss: 0.581354558, valid loss: 0.367557913
+2024-09-02 23:50:00,176 - INFO - Epoch 40/1000, train loss: 0.568905830, valid loss: 0.364722729
+2024-09-02 23:50:00,364 - INFO - Epoch 50/1000, train loss: 0.547198772, valid loss: 0.378679633
+2024-09-02 23:50:00,595 - INFO - Epoch 60/1000, train loss: 0.512720227, valid loss: 0.351107955
+2024-09-02 23:50:00,781 - INFO - Epoch 70/1000, train loss: 0.491972238, valid loss: 0.318397611
+2024-09-02 23:50:00,964 - INFO - Epoch 80/1000, train loss: 0.436268955, valid loss: 0.299079508
+2024-09-02 23:50:01,135 - INFO - Epoch 90/1000, train loss: 0.398071527, valid loss: 0.308348715
+2024-09-02 23:50:01,308 - INFO - Epoch 100/1000, train loss: 0.307515353, valid loss: 0.230229497
+2024-09-02 23:50:01,508 - INFO - Epoch 110/1000, train loss: 0.242915854, valid loss: 0.195559040
+2024-09-02 23:50:01,685 - INFO - Epoch 120/1000, train loss: 0.215614185, valid loss: 0.196557343
+2024-09-02 23:50:01,877 - INFO - Epoch 130/1000, train loss: 0.190167129, valid loss: 0.165092885
+2024-09-02 23:50:02,080 - INFO - Epoch 140/1000, train loss: 0.161668062, valid loss: 0.145941198
+2024-09-02 23:50:02,258 - INFO - Epoch 150/1000, train loss: 0.143877313, valid loss: 0.131918982
+2024-09-02 23:50:02,448 - INFO - Epoch 160/1000, train loss: 0.109201811, valid loss: 0.095119655
+2024-09-02 23:50:02,633 - INFO - Epoch 170/1000, train loss: 0.094622508, valid loss: 0.086538404
+2024-09-02 23:50:02,814 - INFO - Epoch 180/1000, train loss: 0.086558014, valid loss: 0.080285087
+2024-09-02 23:50:03,000 - INFO - Epoch 190/1000, train loss: 0.079606846, valid loss: 0.072488368
+2024-09-02 23:50:03,176 - INFO - Epoch 200/1000, train loss: 0.075220510, valid loss: 0.068586096
+2024-09-02 23:50:03,356 - INFO - Epoch 210/1000, train loss: 0.067390844, valid loss: 0.063094527
+2024-09-02 23:50:03,552 - INFO - Epoch 220/1000, train loss: 0.058019251, valid loss: 0.056618609
+2024-09-02 23:50:03,738 - INFO - Epoch 230/1000, train loss: 0.054229621, valid loss: 0.053586010
+2024-09-02 23:50:03,924 - INFO - Epoch 240/1000, train loss: 0.045783870, valid loss: 0.042221032
+2024-09-02 23:50:04,115 - INFO - Epoch 250/1000, train loss: 0.039967321, valid loss: 0.036782138
+2024-09-02 23:50:04,302 - INFO - Epoch 260/1000, train loss: 0.033717528, valid loss: 0.033619124
+2024-09-02 23:50:04,491 - INFO - Epoch 270/1000, train loss: 0.025501139, valid loss: 0.026434563
+2024-09-02 23:50:04,682 - INFO - Epoch 280/1000, train loss: 0.019726189, valid loss: 0.019714776
+2024-09-02 23:50:04,868 - INFO - Epoch 290/1000, train loss: 0.017183643, valid loss: 0.016881939
+2024-09-02 23:50:05,057 - INFO - Epoch 300/1000, train loss: 0.010789481, valid loss: 0.010480206
+2024-09-02 23:50:05,236 - INFO - Epoch 310/1000, train loss: 0.007133778, valid loss: 0.007021118
+2024-09-02 23:50:05,446 - INFO - Epoch 320/1000, train loss: 0.006138640, valid loss: 0.006201534
+2024-09-02 23:50:05,622 - INFO - Epoch 330/1000, train loss: 0.005610907, valid loss: 0.005601142
+2024-09-02 23:50:05,821 - INFO - Epoch 340/1000, train loss: 0.004158902, valid loss: 0.004160337
+2024-09-02 23:50:06,053 - INFO - Epoch 350/1000, train loss: 0.003719055, valid loss: 0.003735758
+2024-09-02 23:50:06,259 - INFO - Epoch 360/1000, train loss: 0.003331420, valid loss: 0.003291545
+2024-09-02 23:50:06,459 - INFO - Epoch 370/1000, train loss: 0.002689709, valid loss: 0.002681825
+2024-09-02 23:50:06,650 - INFO - Epoch 380/1000, train loss: 0.002231432, valid loss: 0.002448297
+2024-09-02 23:50:06,835 - INFO - Epoch 390/1000, train loss: 0.002107959, valid loss: 0.002415260
+2024-09-02 23:50:07,029 - INFO - Epoch 400/1000, train loss: 0.001883427, valid loss: 0.002069388
+2024-09-02 23:50:07,220 - INFO - Epoch 410/1000, train loss: 0.001783535, valid loss: 0.001926630
+2024-09-02 23:50:07,406 - INFO - Epoch 420/1000, train loss: 0.001697639, valid loss: 0.001768665
+2024-09-02 23:50:07,603 - INFO - Epoch 430/1000, train loss: 0.001550385, valid loss: 0.001549209
+2024-09-02 23:50:07,784 - INFO - Epoch 440/1000, train loss: 0.001349218, valid loss: 0.001387293
+2024-09-02 23:50:07,966 - INFO - Epoch 450/1000, train loss: 0.001182445, valid loss: 0.001314072
+2024-09-02 23:50:08,157 - INFO - Epoch 460/1000, train loss: 0.001085525, valid loss: 0.001224014
+2024-09-02 23:50:08,343 - INFO - Epoch 470/1000, train loss: 0.001022650, valid loss: 0.001127771
+2024-09-02 23:50:08,530 - INFO - Epoch 480/1000, train loss: 0.000999785, valid loss: 0.001105879
+2024-09-02 23:50:08,715 - INFO - Epoch 490/1000, train loss: 0.000972718, valid loss: 0.001090454
+2024-09-02 23:50:08,898 - INFO - Epoch 500/1000, train loss: 0.000931927, valid loss: 0.001037185
+2024-09-02 23:50:09,072 - INFO - Epoch 510/1000, train loss: 0.000891056, valid loss: 0.000956501
+2024-09-02 23:50:09,256 - INFO - Epoch 520/1000, train loss: 0.000881646, valid loss: 0.000941133
+2024-09-02 23:50:09,453 - INFO - Epoch 530/1000, train loss: 0.000872054, valid loss: 0.000927212
+2024-09-02 23:50:09,642 - INFO - Epoch 540/1000, train loss: 0.000825542, valid loss: 0.000876397
+2024-09-02 23:50:09,827 - INFO - Epoch 550/1000, train loss: 0.000674326, valid loss: 0.000743420
+2024-09-02 23:50:10,012 - INFO - Epoch 560/1000, train loss: 0.000645573, valid loss: 0.000720306
+2024-09-02 23:50:10,193 - INFO - Epoch 570/1000, train loss: 0.000640254, valid loss: 0.000713193
+2024-09-02 23:50:10,389 - INFO - Epoch 580/1000, train loss: 0.000611816, valid loss: 0.000672665
+2024-09-02 23:50:10,601 - INFO - Epoch 590/1000, train loss: 0.000577671, valid loss: 0.000633603
+2024-09-02 23:50:10,802 - INFO - Epoch 600/1000, train loss: 0.000553346, valid loss: 0.000621266
+2024-09-02 23:50:10,983 - INFO - Epoch 610/1000, train loss: 0.000545615, valid loss: 0.000619164
+2024-09-02 23:50:11,181 - INFO - Epoch 620/1000, train loss: 0.000542890, valid loss: 0.000617299
+2024-09-02 23:50:11,367 - INFO - Epoch 630/1000, train loss: 0.000532601, valid loss: 0.000605549
+2024-09-02 23:50:11,557 - INFO - Epoch 640/1000, train loss: 0.000504411, valid loss: 0.000563050
+2024-09-02 23:50:11,740 - INFO - Epoch 650/1000, train loss: 0.000446406, valid loss: 0.000471983
+2024-09-02 23:50:11,923 - INFO - Epoch 660/1000, train loss: 0.000418140, valid loss: 0.000440449
+2024-09-02 23:50:12,127 - INFO - Epoch 670/1000, train loss: 0.000414946, valid loss: 0.000438543
+2024-09-02 23:50:12,322 - INFO - Epoch 680/1000, train loss: 0.000412741, valid loss: 0.000438322
+2024-09-02 23:50:12,524 - INFO - Epoch 690/1000, train loss: 0.000407275, valid loss: 0.000436631
+2024-09-02 23:50:12,715 - INFO - Epoch 700/1000, train loss: 0.000385822, valid loss: 0.000428345
+2024-09-02 23:50:12,899 - INFO - Epoch 710/1000, train loss: 0.000320552, valid loss: 0.000372004
+2024-09-02 23:50:13,079 - INFO - Epoch 720/1000, train loss: 0.000288334, valid loss: 0.000327024
+2024-09-02 23:50:13,263 - INFO - Epoch 730/1000, train loss: 0.000281930, valid loss: 0.000321586
+2024-09-02 23:50:13,453 - INFO - Epoch 740/1000, train loss: 0.000280521, valid loss: 0.000322126
+2024-09-02 23:50:13,697 - INFO - Epoch 750/1000, train loss: 0.000279024, valid loss: 0.000321399
+2024-09-02 23:50:13,878 - INFO - Epoch 760/1000, train loss: 0.000274431, valid loss: 0.000315404
+2024-09-02 23:50:14,069 - INFO - Epoch 770/1000, train loss: 0.000269771, valid loss: 0.000307355
+2024-09-02 23:50:14,259 - INFO - Epoch 780/1000, train loss: 0.000265379, valid loss: 0.000298644
+2024-09-02 23:50:14,457 - INFO - Epoch 790/1000, train loss: 0.000257859, valid loss: 0.000288596
+2024-09-02 23:50:14,647 - INFO - Epoch 800/1000, train loss: 0.000245289, valid loss: 0.000272734
+2024-09-02 23:50:14,821 - INFO - Epoch 810/1000, train loss: 0.000230028, valid loss: 0.000251817
+2024-09-02 23:50:15,001 - INFO - Epoch 820/1000, train loss: 0.000214266, valid loss: 0.000240002
+2024-09-02 23:50:15,185 - INFO - Epoch 830/1000, train loss: 0.000205828, valid loss: 0.000234840
+2024-09-02 23:50:15,369 - INFO - Epoch 840/1000, train loss: 0.000201849, valid loss: 0.000232343
+2024-09-02 23:50:15,559 - INFO - Epoch 850/1000, train loss: 0.000198564, valid loss: 0.000230890
+2024-09-02 23:50:15,744 - INFO - Epoch 860/1000, train loss: 0.000195017, valid loss: 0.000231029
+2024-09-02 23:50:15,924 - INFO - Epoch 870/1000, train loss: 0.000192761, valid loss: 0.000232749
+2024-09-02 23:50:16,100 - INFO - Epoch 880/1000, train loss: 0.000191076, valid loss: 0.000235126
+2024-09-02 23:50:16,282 - INFO - Epoch 890/1000, train loss: 0.000187929, valid loss: 0.000237114
+2024-09-02 23:50:16,491 - INFO - Epoch 900/1000, train loss: 0.000183122, valid loss: 0.000238150
+2024-09-02 23:50:16,675 - INFO - Epoch 910/1000, train loss: 0.000171540, valid loss: 0.000233344
+2024-09-02 23:50:16,861 - INFO - Epoch 920/1000, train loss: 0.000162177, valid loss: 0.000217616
+2024-09-02 23:50:17,038 - INFO - Epoch 930/1000, train loss: 0.000155211, valid loss: 0.000198172
+2024-09-02 23:50:17,222 - INFO - Epoch 940/1000, train loss: 0.000151472, valid loss: 0.000188032
+2024-09-02 23:50:17,422 - INFO - Epoch 950/1000, train loss: 0.000148112, valid loss: 0.000184110
+2024-09-02 23:50:17,605 - INFO - Epoch 960/1000, train loss: 0.000143852, valid loss: 0.000175318
+2024-09-02 23:50:17,793 - INFO - Epoch 970/1000, train loss: 0.000140532, valid loss: 0.000170680
+2024-09-02 23:50:17,977 - INFO - Epoch 980/1000, train loss: 0.000136428, valid loss: 0.000168456
+2024-09-02 23:50:18,223 - INFO - Epoch 990/1000, train loss: 0.000132074, valid loss: 0.000165964
+2024-09-02 23:50:18,431 - INFO - Epoch 1000/1000, train loss: 0.000128273, valid loss: 0.000162620
+2024-09-02 23:50:18,637 - INFO - Epoch 1010/1000, train loss: 0.000125499, valid loss: 0.000158316
+2024-09-02 23:50:18,814 - INFO - Epoch 1020/1000, train loss: 0.000123159, valid loss: 0.000152923
+2024-09-02 23:50:19,005 - INFO - Epoch 1030/1000, train loss: 0.000120966, valid loss: 0.000146833
+2024-09-02 23:50:19,183 - INFO - Epoch 1040/1000, train loss: 0.000119031, valid loss: 0.000141511
+2024-09-02 23:50:19,362 - INFO - Epoch 1050/1000, train loss: 0.000116800, valid loss: 0.000135749
+2024-09-02 23:50:19,640 - INFO - Epoch 1060/1000, train loss: 0.000113843, valid loss: 0.000130052
+2024-09-02 23:50:19,831 - INFO - Epoch 1070/1000, train loss: 0.000112270, valid loss: 0.000128033
+2024-09-02 23:50:20,014 - INFO - Epoch 1080/1000, train loss: 0.000109554, valid loss: 0.000125101
+2024-09-02 23:50:20,197 - INFO - Epoch 1090/1000, train loss: 0.000106150, valid loss: 0.000122208
+2024-09-02 23:50:20,391 - INFO - Epoch 1100/1000, train loss: 0.000103767, valid loss: 0.000120011
+2024-09-02 23:50:20,595 - INFO - Epoch 1110/1000, train loss: 0.000101639, valid loss: 0.000117794
+2024-09-02 23:50:20,783 - INFO - Epoch 1120/1000, train loss: 0.000098849, valid loss: 0.000116462
+2024-09-02 23:50:20,977 - INFO - Epoch 1130/1000, train loss: 0.000096950, valid loss: 0.000117108
+2024-09-02 23:50:21,155 - INFO - Epoch 1140/1000, train loss: 0.000095583, valid loss: 0.000117161
+2024-09-02 23:50:21,328 - INFO - Epoch 1150/1000, train loss: 0.000094716, valid loss: 0.000117071
+2024-09-02 23:50:21,515 - INFO - Epoch 1160/1000, train loss: 0.000094231, valid loss: 0.000116660
+2024-09-02 23:50:21,704 - INFO - Epoch 1170/1000, train loss: 0.000093455, valid loss: 0.000115506
+2024-09-02 23:50:21,897 - INFO - Epoch 1180/1000, train loss: 0.000092514, valid loss: 0.000114209
+2024-09-02 23:50:22,084 - INFO - Epoch 1190/1000, train loss: 0.000091219, valid loss: 0.000112557
+2024-09-02 23:50:22,291 - INFO - Epoch 1200/1000, train loss: 0.000087528, valid loss: 0.000108092
+2024-09-02 23:50:22,495 - INFO - Epoch 1210/1000, train loss: 0.000084160, valid loss: 0.000104688
+2024-09-02 23:50:22,703 - INFO - Epoch 1220/1000, train loss: 0.000079079, valid loss: 0.000101186
+2024-09-02 23:50:22,882 - INFO - Epoch 1230/1000, train loss: 0.000076444, valid loss: 0.000099377
+2024-09-02 23:50:23,066 - INFO - Epoch 1240/1000, train loss: 0.000072652, valid loss: 0.000095449
+2024-09-02 23:50:23,252 - INFO - Epoch 1250/1000, train loss: 0.000069897, valid loss: 0.000091709
+2024-09-02 23:50:23,449 - INFO - Epoch 1260/1000, train loss: 0.000068607, valid loss: 0.000089288
+2024-09-02 23:50:23,636 - INFO - Epoch 1270/1000, train loss: 0.000068379, valid loss: 0.000088856
+2024-09-02 23:50:23,845 - INFO - Epoch 1280/1000, train loss: 0.000068135, valid loss: 0.000088261
+2024-09-02 23:50:24,032 - INFO - Epoch 1290/1000, train loss: 0.000067790, valid loss: 0.000087077
+2024-09-02 23:50:24,223 - INFO - Epoch 1300/1000, train loss: 0.000067390, valid loss: 0.000085198
+2024-09-02 23:50:24,415 - INFO - Epoch 1310/1000, train loss: 0.000067096, valid loss: 0.000083805
+2024-09-02 23:50:24,615 - INFO - Epoch 1320/1000, train loss: 0.000066498, valid loss: 0.000082609
+2024-09-02 23:50:24,804 - INFO - Epoch 1330/1000, train loss: 0.000065547, valid loss: 0.000080835
+2024-09-02 23:50:24,988 - INFO - Epoch 1340/1000, train loss: 0.000063839, valid loss: 0.000078320
+2024-09-02 23:50:25,172 - INFO - Epoch 1350/1000, train loss: 0.000061596, valid loss: 0.000075718
+2024-09-02 23:50:25,354 - INFO - Epoch 1360/1000, train loss: 0.000059658, valid loss: 0.000073610
+2024-09-02 23:50:25,555 - INFO - Epoch 1370/1000, train loss: 0.000057928, valid loss: 0.000071576
+2024-09-02 23:50:25,746 - INFO - Epoch 1380/1000, train loss: 0.000056289, valid loss: 0.000069182
+2024-09-02 23:50:25,929 - INFO - Epoch 1390/1000, train loss: 0.000054631, valid loss: 0.000067081
+2024-09-02 23:50:26,113 - INFO - Epoch 1400/1000, train loss: 0.000053708, valid loss: 0.000065860
+2024-09-02 23:50:26,292 - INFO - Epoch 1410/1000, train loss: 0.000053402, valid loss: 0.000065369
+2024-09-02 23:50:26,490 - INFO - Epoch 1420/1000, train loss: 0.000053153, valid loss: 0.000064834
+2024-09-02 23:50:26,693 - INFO - Epoch 1430/1000, train loss: 0.000052899, valid loss: 0.000064238
+2024-09-02 23:50:26,878 - INFO - Epoch 1440/1000, train loss: 0.000052563, valid loss: 0.000063294
+2024-09-02 23:50:27,053 - INFO - Epoch 1450/1000, train loss: 0.000052110, valid loss: 0.000061775
+2024-09-02 23:50:27,235 - INFO - Epoch 1460/1000, train loss: 0.000051855, valid loss: 0.000060982
+2024-09-02 23:50:27,415 - INFO - Epoch 1470/1000, train loss: 0.000051478, valid loss: 0.000059961
+2024-09-02 23:50:27,606 - INFO - Epoch 1480/1000, train loss: 0.000051223, valid loss: 0.000059133
+2024-09-02 23:50:27,796 - INFO - Epoch 1490/1000, train loss: 0.000050881, valid loss: 0.000058764
+2024-09-02 23:50:27,972 - INFO - Epoch 1500/1000, train loss: 0.000050390, valid loss: 0.000058516
+2024-09-02 23:50:28,160 - INFO - Epoch 1510/1000, train loss: 0.000049684, valid loss: 0.000058402
+2024-09-02 23:50:28,348 - INFO - Epoch 1520/1000, train loss: 0.000049127, valid loss: 0.000058140
+2024-09-02 23:50:28,540 - INFO - Epoch 1530/1000, train loss: 0.000048136, valid loss: 0.000057407
+2024-09-02 23:50:28,734 - INFO - Epoch 1540/1000, train loss: 0.000047517, valid loss: 0.000056682
+2024-09-02 23:50:28,956 - INFO - Epoch 1550/1000, train loss: 0.000046823, valid loss: 0.000055470
+2024-09-02 23:50:29,135 - INFO - Epoch 1560/1000, train loss: 0.000045675, valid loss: 0.000053073
+2024-09-02 23:50:29,322 - INFO - Epoch 1570/1000, train loss: 0.000044853, valid loss: 0.000051449
+2024-09-02 23:50:29,518 - INFO - Epoch 1580/1000, train loss: 0.000044417, valid loss: 0.000050927
+2024-09-02 23:50:29,709 - INFO - Epoch 1590/1000, train loss: 0.000044048, valid loss: 0.000050843
+2024-09-02 23:50:29,890 - INFO - Epoch 1600/1000, train loss: 0.000043900, valid loss: 0.000051067
+2024-09-02 23:50:30,071 - INFO - Epoch 1610/1000, train loss: 0.000043831, valid loss: 0.000051075
+2024-09-02 23:50:30,262 - INFO - Epoch 1620/1000, train loss: 0.000043692, valid loss: 0.000051033
+2024-09-02 23:50:30,453 - INFO - Epoch 1630/1000, train loss: 0.000043576, valid loss: 0.000050978
+2024-09-02 23:50:30,641 - INFO - Epoch 1640/1000, train loss: 0.000043400, valid loss: 0.000050860
+2024-09-02 23:50:30,835 - INFO - Epoch 1650/1000, train loss: 0.000043304, valid loss: 0.000050808
+2024-09-02 23:50:31,012 - INFO - Epoch 1660/1000, train loss: 0.000043085, valid loss: 0.000050722
+2024-09-02 23:50:31,194 - INFO - Epoch 1670/1000, train loss: 0.000042787, valid loss: 0.000050623
+2024-09-02 23:50:31,373 - INFO - Epoch 1680/1000, train loss: 0.000042418, valid loss: 0.000050587
+2024-09-02 23:50:31,566 - INFO - Epoch 1690/1000, train loss: 0.000042229, valid loss: 0.000050403
+2024-09-02 23:50:31,756 - INFO - Epoch 1700/1000, train loss: 0.000042075, valid loss: 0.000050184
+2024-09-02 23:50:31,938 - INFO - Epoch 1710/1000, train loss: 0.000041716, valid loss: 0.000049747
+2024-09-02 23:50:32,129 - INFO - Epoch 1720/1000, train loss: 0.000041367, valid loss: 0.000049538
+2024-09-02 23:50:32,338 - INFO - Epoch 1730/1000, train loss: 0.000040570, valid loss: 0.000049131
+2024-09-02 23:50:32,538 - INFO - Epoch 1740/1000, train loss: 0.000039505, valid loss: 0.000048159
+2024-09-02 23:50:32,732 - INFO - Epoch 1750/1000, train loss: 0.000038525, valid loss: 0.000046814
+2024-09-02 23:50:32,929 - INFO - Epoch 1760/1000, train loss: 0.000037749, valid loss: 0.000045471
+2024-09-02 23:50:33,110 - INFO - Epoch 1770/1000, train loss: 0.000037105, valid loss: 0.000044556
+2024-09-02 23:50:33,290 - INFO - Epoch 1780/1000, train loss: 0.000036734, valid loss: 0.000044019
+2024-09-02 23:50:33,482 - INFO - Epoch 1790/1000, train loss: 0.000036282, valid loss: 0.000043650
+2024-09-02 23:50:33,666 - INFO - Epoch 1800/1000, train loss: 0.000036178, valid loss: 0.000043573
+2024-09-02 23:50:33,841 - INFO - Epoch 1810/1000, train loss: 0.000036127, valid loss: 0.000043522
+2024-09-02 23:50:33,853 - INFO - training time elapsed: 34.437543s
+2024-09-02 23:50:34,441 - INFO - program time elapsed: 41.479621s
+2024-09-02 23:51:14,593 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:51:14,593 - INFO - initialize data points...
+2024-09-02 23:51:19,827 - INFO - load saved model...
+2024-09-02 23:51:20,374 - INFO - start testing...
+2024-09-02 23:52:21,126 - INFO - testing time elapsed: 60.751567s
+2024-09-02 23:52:21,126 - INFO - program time elapsed: 66.534328s
+2024-09-02 23:53:00,341 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:53:00,341 - INFO - initialize data points...
+2024-09-02 23:53:07,082 - INFO - Number of parameters: 3061
+2024-09-02 23:53:07,106 - INFO - start training...
+2024-09-02 23:53:07,124 - INFO - Epoch 0/1000, train loss: 3.647654533, valid loss: 3.406295300
+2024-09-02 23:53:07,323 - INFO - Epoch 10/1000, train loss: 0.735693097, valid loss: 0.458721638
+2024-09-02 23:53:07,517 - INFO - Epoch 20/1000, train loss: 0.655787587, valid loss: 0.395240903
+2024-09-02 23:53:07,702 - INFO - Epoch 30/1000, train loss: 0.597644746, valid loss: 0.389452398
+2024-09-02 23:53:07,870 - INFO - Epoch 40/1000, train loss: 0.474271953, valid loss: 0.328327686
+2024-09-02 23:53:08,049 - INFO - Epoch 50/1000, train loss: 0.311199069, valid loss: 0.239025727
+2024-09-02 23:53:08,220 - INFO - Epoch 60/1000, train loss: 0.213251859, valid loss: 0.194904298
+2024-09-02 23:53:08,400 - INFO - Epoch 70/1000, train loss: 0.092934132, valid loss: 0.079944521
+2024-09-02 23:53:08,585 - INFO - Epoch 80/1000, train loss: 0.061305679, valid loss: 0.058586210
+2024-09-02 23:53:08,765 - INFO - Epoch 90/1000, train loss: 0.022819333, valid loss: 0.022033401
+2024-09-02 23:53:08,950 - INFO - Epoch 100/1000, train loss: 0.011210276, valid loss: 0.010688256
+2024-09-02 23:53:09,134 - INFO - Epoch 110/1000, train loss: 0.009887292, valid loss: 0.009336804
+2024-09-02 23:53:09,309 - INFO - Epoch 120/1000, train loss: 0.007915514, valid loss: 0.006902301
+2024-09-02 23:53:09,505 - INFO - Epoch 130/1000, train loss: 0.005231280, valid loss: 0.004191305
+2024-09-02 23:53:09,690 - INFO - Epoch 140/1000, train loss: 0.004181633, valid loss: 0.003571495
+2024-09-02 23:53:09,881 - INFO - Epoch 150/1000, train loss: 0.002734285, valid loss: 0.002557846
+2024-09-02 23:53:10,055 - INFO - Epoch 160/1000, train loss: 0.002601571, valid loss: 0.002436451
+2024-09-02 23:53:10,233 - INFO - Epoch 170/1000, train loss: 0.002427016, valid loss: 0.002223829
+2024-09-02 23:53:10,404 - INFO - Epoch 180/1000, train loss: 0.001420119, valid loss: 0.001289166
+2024-09-02 23:53:10,598 - INFO - Epoch 190/1000, train loss: 0.001036153, valid loss: 0.000953231
+2024-09-02 23:53:10,788 - INFO - Epoch 200/1000, train loss: 0.000970210, valid loss: 0.000877886
+2024-09-02 23:53:10,976 - INFO - Epoch 210/1000, train loss: 0.000942894, valid loss: 0.000842654
+2024-09-02 23:53:11,155 - INFO - Epoch 220/1000, train loss: 0.000898885, valid loss: 0.000792375
+2024-09-02 23:53:11,334 - INFO - Epoch 230/1000, train loss: 0.000803388, valid loss: 0.000706147
+2024-09-02 23:53:11,538 - INFO - Epoch 240/1000, train loss: 0.000724308, valid loss: 0.000638693
+2024-09-02 23:53:11,727 - INFO - Epoch 250/1000, train loss: 0.000563135, valid loss: 0.000497842
+2024-09-02 23:53:11,907 - INFO - Epoch 260/1000, train loss: 0.000490228, valid loss: 0.000440486
+2024-09-02 23:53:12,096 - INFO - Epoch 270/1000, train loss: 0.000470619, valid loss: 0.000426689
+2024-09-02 23:53:12,275 - INFO - Epoch 280/1000, train loss: 0.000461786, valid loss: 0.000416896
+2024-09-02 23:53:12,465 - INFO - Epoch 290/1000, train loss: 0.000452841, valid loss: 0.000406991
+2024-09-02 23:53:12,645 - INFO - Epoch 300/1000, train loss: 0.000440046, valid loss: 0.000393650
+2024-09-02 23:53:12,828 - INFO - Epoch 310/1000, train loss: 0.000393187, valid loss: 0.000347759
+2024-09-02 23:53:13,007 - INFO - Epoch 320/1000, train loss: 0.000315040, valid loss: 0.000274356
+2024-09-02 23:53:13,185 - INFO - Epoch 330/1000, train loss: 0.000272633, valid loss: 0.000243244
+2024-09-02 23:53:13,366 - INFO - Epoch 340/1000, train loss: 0.000265149, valid loss: 0.000239264
+2024-09-02 23:53:13,569 - INFO - Epoch 350/1000, train loss: 0.000259680, valid loss: 0.000237584
+2024-09-02 23:53:13,760 - INFO - Epoch 360/1000, train loss: 0.000243414, valid loss: 0.000225154
+2024-09-02 23:53:13,941 - INFO - Epoch 370/1000, train loss: 0.000223997, valid loss: 0.000206352
+2024-09-02 23:53:14,119 - INFO - Epoch 380/1000, train loss: 0.000206575, valid loss: 0.000189290
+2024-09-02 23:53:14,317 - INFO - Epoch 390/1000, train loss: 0.000202862, valid loss: 0.000184605
+2024-09-02 23:53:14,519 - INFO - Epoch 400/1000, train loss: 0.000197405, valid loss: 0.000177078
+2024-09-02 23:53:14,705 - INFO - Epoch 410/1000, train loss: 0.000187420, valid loss: 0.000164993
+2024-09-02 23:53:14,901 - INFO - Epoch 420/1000, train loss: 0.000160693, valid loss: 0.000138865
+2024-09-02 23:53:15,078 - INFO - Epoch 430/1000, train loss: 0.000154130, valid loss: 0.000133202
+2024-09-02 23:53:15,260 - INFO - Epoch 440/1000, train loss: 0.000151890, valid loss: 0.000131400
+2024-09-02 23:53:15,440 - INFO - Epoch 450/1000, train loss: 0.000150885, valid loss: 0.000130455
+2024-09-02 23:53:15,635 - INFO - Epoch 460/1000, train loss: 0.000148730, valid loss: 0.000128806
+2024-09-02 23:53:15,818 - INFO - Epoch 470/1000, train loss: 0.000139927, valid loss: 0.000124439
+2024-09-02 23:53:16,007 - INFO - Epoch 480/1000, train loss: 0.000121416, valid loss: 0.000111629
+2024-09-02 23:53:16,184 - INFO - Epoch 490/1000, train loss: 0.000104814, valid loss: 0.000096738
+2024-09-02 23:53:16,364 - INFO - Epoch 500/1000, train loss: 0.000100493, valid loss: 0.000091527
+2024-09-02 23:53:16,553 - INFO - Epoch 510/1000, train loss: 0.000098391, valid loss: 0.000088346
+2024-09-02 23:53:16,741 - INFO - Epoch 520/1000, train loss: 0.000096123, valid loss: 0.000084867
+2024-09-02 23:53:16,928 - INFO - Epoch 530/1000, train loss: 0.000093283, valid loss: 0.000082027
+2024-09-02 23:53:17,112 - INFO - Epoch 540/1000, train loss: 0.000089882, valid loss: 0.000079866
+2024-09-02 23:53:17,297 - INFO - Epoch 550/1000, train loss: 0.000086077, valid loss: 0.000078195
+2024-09-02 23:53:17,489 - INFO - Epoch 560/1000, train loss: 0.000083407, valid loss: 0.000077480
+2024-09-02 23:53:17,674 - INFO - Epoch 570/1000, train loss: 0.000079896, valid loss: 0.000076591
+2024-09-02 23:53:17,853 - INFO - Epoch 580/1000, train loss: 0.000077277, valid loss: 0.000075625
+2024-09-02 23:53:18,040 - INFO - Epoch 590/1000, train loss: 0.000075758, valid loss: 0.000074142
+2024-09-02 23:53:18,214 - INFO - Epoch 600/1000, train loss: 0.000071724, valid loss: 0.000069034
+2024-09-02 23:53:18,399 - INFO - Epoch 610/1000, train loss: 0.000065517, valid loss: 0.000060448
+2024-09-02 23:53:18,617 - INFO - Epoch 620/1000, train loss: 0.000063488, valid loss: 0.000058038
+2024-09-02 23:53:18,808 - INFO - Epoch 630/1000, train loss: 0.000063031, valid loss: 0.000057349
+2024-09-02 23:53:19,002 - INFO - Epoch 640/1000, train loss: 0.000062641, valid loss: 0.000056776
+2024-09-02 23:53:19,187 - INFO - Epoch 650/1000, train loss: 0.000061605, valid loss: 0.000055497
+2024-09-02 23:53:19,372 - INFO - Epoch 660/1000, train loss: 0.000060372, valid loss: 0.000054691
+2024-09-02 23:53:19,645 - INFO - Epoch 670/1000, train loss: 0.000058476, valid loss: 0.000053881
+2024-09-02 23:53:19,843 - INFO - Epoch 680/1000, train loss: 0.000057085, valid loss: 0.000053296
+2024-09-02 23:53:20,024 - INFO - Epoch 690/1000, train loss: 0.000056057, valid loss: 0.000052594
+2024-09-02 23:53:20,198 - INFO - Epoch 700/1000, train loss: 0.000055382, valid loss: 0.000051791
+2024-09-02 23:53:20,383 - INFO - Epoch 710/1000, train loss: 0.000055167, valid loss: 0.000051422
+2024-09-02 23:53:20,585 - INFO - Epoch 720/1000, train loss: 0.000054961, valid loss: 0.000051167
+2024-09-02 23:53:20,802 - INFO - Epoch 730/1000, train loss: 0.000054684, valid loss: 0.000050924
+2024-09-02 23:53:20,989 - INFO - Epoch 740/1000, train loss: 0.000053793, valid loss: 0.000050560
+2024-09-02 23:53:21,214 - INFO - Epoch 750/1000, train loss: 0.000049824, valid loss: 0.000048320
+2024-09-02 23:53:21,423 - INFO - Epoch 760/1000, train loss: 0.000042224, valid loss: 0.000041871
+2024-09-02 23:53:21,601 - INFO - Epoch 770/1000, train loss: 0.000037851, valid loss: 0.000037686
+2024-09-02 23:53:21,792 - INFO - Epoch 780/1000, train loss: 0.000035776, valid loss: 0.000034895
+2024-09-02 23:53:21,978 - INFO - Epoch 790/1000, train loss: 0.000034926, valid loss: 0.000033788
+2024-09-02 23:53:22,165 - INFO - Epoch 800/1000, train loss: 0.000034463, valid loss: 0.000033368
+2024-09-02 23:53:22,343 - INFO - Epoch 810/1000, train loss: 0.000033972, valid loss: 0.000032984
+2024-09-02 23:53:22,535 - INFO - Epoch 820/1000, train loss: 0.000033388, valid loss: 0.000032572
+2024-09-02 23:53:22,724 - INFO - Epoch 830/1000, train loss: 0.000032975, valid loss: 0.000032251
+2024-09-02 23:53:22,909 - INFO - Epoch 840/1000, train loss: 0.000032226, valid loss: 0.000031538
+2024-09-02 23:53:23,096 - INFO - Epoch 850/1000, train loss: 0.000031930, valid loss: 0.000031109
+2024-09-02 23:53:23,276 - INFO - Epoch 860/1000, train loss: 0.000031700, valid loss: 0.000030695
+2024-09-02 23:53:23,462 - INFO - Epoch 870/1000, train loss: 0.000031529, valid loss: 0.000030360
+2024-09-02 23:53:23,649 - INFO - Epoch 880/1000, train loss: 0.000031293, valid loss: 0.000030046
+2024-09-02 23:53:23,839 - INFO - Epoch 890/1000, train loss: 0.000030567, valid loss: 0.000029511
+2024-09-02 23:53:24,020 - INFO - Epoch 900/1000, train loss: 0.000030071, valid loss: 0.000029255
+2024-09-02 23:53:24,199 - INFO - Epoch 910/1000, train loss: 0.000028648, valid loss: 0.000028523
+2024-09-02 23:53:24,380 - INFO - Epoch 920/1000, train loss: 0.000026071, valid loss: 0.000027024
+2024-09-02 23:53:24,600 - INFO - Epoch 930/1000, train loss: 0.000024289, valid loss: 0.000025320
+2024-09-02 23:53:24,794 - INFO - Epoch 940/1000, train loss: 0.000022764, valid loss: 0.000023249
+2024-09-02 23:53:24,984 - INFO - Epoch 950/1000, train loss: 0.000021675, valid loss: 0.000022007
+2024-09-02 23:53:25,171 - INFO - Epoch 960/1000, train loss: 0.000020804, valid loss: 0.000020920
+2024-09-02 23:53:25,350 - INFO - Epoch 970/1000, train loss: 0.000020018, valid loss: 0.000019961
+2024-09-02 23:53:25,545 - INFO - Epoch 980/1000, train loss: 0.000019696, valid loss: 0.000019612
+2024-09-02 23:53:25,731 - INFO - Epoch 990/1000, train loss: 0.000019380, valid loss: 0.000019276
+2024-09-02 23:53:25,919 - INFO - Epoch 1000/1000, train loss: 0.000019070, valid loss: 0.000019013
+2024-09-02 23:53:26,100 - INFO - Epoch 1010/1000, train loss: 0.000018717, valid loss: 0.000018753
+2024-09-02 23:53:26,279 - INFO - Epoch 1020/1000, train loss: 0.000018429, valid loss: 0.000018561
+2024-09-02 23:53:26,461 - INFO - Epoch 1030/1000, train loss: 0.000018252, valid loss: 0.000018401
+2024-09-02 23:53:26,659 - INFO - Epoch 1040/1000, train loss: 0.000018210, valid loss: 0.000018349
+2024-09-02 23:53:26,903 - INFO - Epoch 1050/1000, train loss: 0.000018061, valid loss: 0.000018164
+2024-09-02 23:53:27,091 - INFO - Epoch 1060/1000, train loss: 0.000017933, valid loss: 0.000018037
+2024-09-02 23:53:27,275 - INFO - Epoch 1070/1000, train loss: 0.000017776, valid loss: 0.000017902
+2024-09-02 23:53:27,471 - INFO - Epoch 1080/1000, train loss: 0.000017441, valid loss: 0.000017655
+2024-09-02 23:53:27,667 - INFO - Epoch 1090/1000, train loss: 0.000016952, valid loss: 0.000017339
+2024-09-02 23:53:27,849 - INFO - Epoch 1100/1000, train loss: 0.000015675, valid loss: 0.000016524
+2024-09-02 23:53:28,045 - INFO - Epoch 1110/1000, train loss: 0.000014515, valid loss: 0.000015619
+2024-09-02 23:53:28,219 - INFO - Epoch 1120/1000, train loss: 0.000013939, valid loss: 0.000015039
+2024-09-02 23:53:28,397 - INFO - Epoch 1130/1000, train loss: 0.000013487, valid loss: 0.000014464
+2024-09-02 23:53:28,592 - INFO - Epoch 1140/1000, train loss: 0.000013022, valid loss: 0.000013790
+2024-09-02 23:53:28,794 - INFO - Epoch 1150/1000, train loss: 0.000012578, valid loss: 0.000013192
+2024-09-02 23:53:28,980 - INFO - Epoch 1160/1000, train loss: 0.000012319, valid loss: 0.000012916
+2024-09-02 23:53:29,166 - INFO - Epoch 1170/1000, train loss: 0.000012056, valid loss: 0.000012671
+2024-09-02 23:53:29,346 - INFO - Epoch 1180/1000, train loss: 0.000011929, valid loss: 0.000012562
+2024-09-02 23:53:29,526 - INFO - Epoch 1190/1000, train loss: 0.000011851, valid loss: 0.000012486
+2024-09-02 23:53:29,730 - INFO - Epoch 1200/1000, train loss: 0.000011768, valid loss: 0.000012400
+2024-09-02 23:53:29,987 - INFO - Epoch 1210/1000, train loss: 0.000011664, valid loss: 0.000012292
+2024-09-02 23:53:30,190 - INFO - Epoch 1220/1000, train loss: 0.000011501, valid loss: 0.000012120
+2024-09-02 23:53:30,377 - INFO - Epoch 1230/1000, train loss: 0.000011409, valid loss: 0.000012026
+2024-09-02 23:53:30,566 - INFO - Epoch 1240/1000, train loss: 0.000011242, valid loss: 0.000011850
+2024-09-02 23:53:30,757 - INFO - Epoch 1250/1000, train loss: 0.000011050, valid loss: 0.000011631
+2024-09-02 23:53:30,944 - INFO - Epoch 1260/1000, train loss: 0.000010705, valid loss: 0.000011193
+2024-09-02 23:53:31,128 - INFO - Epoch 1270/1000, train loss: 0.000010193, valid loss: 0.000010647
+2024-09-02 23:53:31,319 - INFO - Epoch 1280/1000, train loss: 0.000009290, valid loss: 0.000009797
+2024-09-02 23:53:31,512 - INFO - Epoch 1290/1000, train loss: 0.000008474, valid loss: 0.000008971
+2024-09-02 23:53:31,704 - INFO - Epoch 1300/1000, train loss: 0.000007877, valid loss: 0.000008335
+2024-09-02 23:53:31,885 - INFO - Epoch 1310/1000, train loss: 0.000007746, valid loss: 0.000008184
+2024-09-02 23:53:32,072 - INFO - Epoch 1320/1000, train loss: 0.000007652, valid loss: 0.000008054
+2024-09-02 23:53:32,257 - INFO - Epoch 1330/1000, train loss: 0.000007524, valid loss: 0.000007862
+2024-09-02 23:53:32,452 - INFO - Epoch 1340/1000, train loss: 0.000007367, valid loss: 0.000007623
+2024-09-02 23:53:32,633 - INFO - Epoch 1350/1000, train loss: 0.000007245, valid loss: 0.000007432
+2024-09-02 23:53:32,816 - INFO - Epoch 1360/1000, train loss: 0.000007155, valid loss: 0.000007274
+2024-09-02 23:53:33,000 - INFO - Epoch 1370/1000, train loss: 0.000007100, valid loss: 0.000007188
+2024-09-02 23:53:33,180 - INFO - Epoch 1380/1000, train loss: 0.000007064, valid loss: 0.000007145
+2024-09-02 23:53:33,361 - INFO - Epoch 1390/1000, train loss: 0.000007038, valid loss: 0.000007128
+2024-09-02 23:53:33,551 - INFO - Epoch 1400/1000, train loss: 0.000007005, valid loss: 0.000007121
+2024-09-02 23:53:33,745 - INFO - Epoch 1410/1000, train loss: 0.000006988, valid loss: 0.000007120
+2024-09-02 23:53:33,923 - INFO - Epoch 1420/1000, train loss: 0.000006960, valid loss: 0.000007110
+2024-09-02 23:53:34,107 - INFO - Epoch 1430/1000, train loss: 0.000006946, valid loss: 0.000007091
+2024-09-02 23:53:34,173 - INFO - training time elapsed: 27.066807s
+2024-09-02 23:53:34,757 - INFO - program time elapsed: 34.416310s
+2024-09-02 23:53:55,283 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:53:55,284 - INFO - initialize data points...
+2024-09-02 23:54:00,449 - INFO - load saved model...
+2024-09-02 23:54:01,009 - INFO - start testing...
+2024-09-02 23:55:00,485 - INFO - testing time elapsed: 59.476283s
+2024-09-02 23:55:00,485 - INFO - program time elapsed: 65.202704s
+2024-09-02 23:55:41,523 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:55:41,523 - INFO - initialize data points...
+2024-09-02 23:55:48,156 - INFO - Number of parameters: 3061
+2024-09-02 23:55:48,176 - INFO - start training...
+2024-09-02 23:55:48,200 - INFO - Epoch 0/1000, train loss: 1.250834346, valid loss: 1.014795184
+2024-09-02 23:55:48,389 - INFO - Epoch 10/1000, train loss: 0.661677957, valid loss: 0.454071343
+2024-09-02 23:55:48,586 - INFO - Epoch 20/1000, train loss: 0.582048655, valid loss: 0.425767064
+2024-09-02 23:55:48,775 - INFO - Epoch 30/1000, train loss: 0.496459097, valid loss: 0.408236891
+2024-09-02 23:55:48,947 - INFO - Epoch 40/1000, train loss: 0.473912120, valid loss: 0.373460531
+2024-09-02 23:55:49,125 - INFO - Epoch 50/1000, train loss: 0.404998273, valid loss: 0.362205774
+2024-09-02 23:55:49,300 - INFO - Epoch 60/1000, train loss: 0.313240647, valid loss: 0.276313752
+2024-09-02 23:55:49,485 - INFO - Epoch 70/1000, train loss: 0.224644244, valid loss: 0.184714973
+2024-09-02 23:55:49,751 - INFO - Epoch 80/1000, train loss: 0.164540961, valid loss: 0.145736098
+2024-09-02 23:55:49,924 - INFO - Epoch 90/1000, train loss: 0.107377782, valid loss: 0.101102434
+2024-09-02 23:55:50,099 - INFO - Epoch 100/1000, train loss: 0.066287711, valid loss: 0.063477390
+2024-09-02 23:55:50,276 - INFO - Epoch 110/1000, train loss: 0.057500318, valid loss: 0.052840296
+2024-09-02 23:55:50,462 - INFO - Epoch 120/1000, train loss: 0.046552483, valid loss: 0.038927086
+2024-09-02 23:55:50,638 - INFO - Epoch 130/1000, train loss: 0.033950511, valid loss: 0.027183279
+2024-09-02 23:55:50,817 - INFO - Epoch 140/1000, train loss: 0.022313783, valid loss: 0.018150292
+2024-09-02 23:55:51,008 - INFO - Epoch 150/1000, train loss: 0.017530603, valid loss: 0.012893026
+2024-09-02 23:55:51,186 - INFO - Epoch 160/1000, train loss: 0.012283485, valid loss: 0.008738588
+2024-09-02 23:55:51,364 - INFO - Epoch 170/1000, train loss: 0.010956829, valid loss: 0.008231105
+2024-09-02 23:55:51,548 - INFO - Epoch 180/1000, train loss: 0.007392454, valid loss: 0.006000462
+2024-09-02 23:55:51,731 - INFO - Epoch 190/1000, train loss: 0.006497186, valid loss: 0.005148588
+2024-09-02 23:55:51,914 - INFO - Epoch 200/1000, train loss: 0.005662109, valid loss: 0.004656890
+2024-09-02 23:55:52,096 - INFO - Epoch 210/1000, train loss: 0.004317670, valid loss: 0.003688405
+2024-09-02 23:55:52,283 - INFO - Epoch 220/1000, train loss: 0.003915980, valid loss: 0.003239785
+2024-09-02 23:55:52,472 - INFO - Epoch 230/1000, train loss: 0.002742468, valid loss: 0.002246153
+2024-09-02 23:55:52,662 - INFO - Epoch 240/1000, train loss: 0.002168623, valid loss: 0.001804227
+2024-09-02 23:55:52,835 - INFO - Epoch 250/1000, train loss: 0.002070687, valid loss: 0.001711491
+2024-09-02 23:55:53,019 - INFO - Epoch 260/1000, train loss: 0.001721808, valid loss: 0.001460642
+2024-09-02 23:55:53,202 - INFO - Epoch 270/1000, train loss: 0.001393954, valid loss: 0.001272410
+2024-09-02 23:55:53,381 - INFO - Epoch 280/1000, train loss: 0.001249579, valid loss: 0.001132407
+2024-09-02 23:55:53,582 - INFO - Epoch 290/1000, train loss: 0.000976285, valid loss: 0.000890005
+2024-09-02 23:55:53,770 - INFO - Epoch 300/1000, train loss: 0.000962853, valid loss: 0.000874882
+2024-09-02 23:55:53,959 - INFO - Epoch 310/1000, train loss: 0.000957735, valid loss: 0.000869581
+2024-09-02 23:55:54,143 - INFO - Epoch 320/1000, train loss: 0.000952163, valid loss: 0.000864896
+2024-09-02 23:55:54,336 - INFO - Epoch 330/1000, train loss: 0.000928509, valid loss: 0.000847261
+2024-09-02 23:55:54,533 - INFO - Epoch 340/1000, train loss: 0.000855465, valid loss: 0.000794637
+2024-09-02 23:55:54,720 - INFO - Epoch 350/1000, train loss: 0.000785856, valid loss: 0.000745045
+2024-09-02 23:55:54,906 - INFO - Epoch 360/1000, train loss: 0.000768045, valid loss: 0.000734853
+2024-09-02 23:55:55,084 - INFO - Epoch 370/1000, train loss: 0.000733815, valid loss: 0.000717550
+2024-09-02 23:55:55,270 - INFO - Epoch 380/1000, train loss: 0.000695910, valid loss: 0.000687473
+2024-09-02 23:55:55,459 - INFO - Epoch 390/1000, train loss: 0.000676074, valid loss: 0.000675197
+2024-09-02 23:55:55,649 - INFO - Epoch 400/1000, train loss: 0.000633714, valid loss: 0.000644105
+2024-09-02 23:55:55,840 - INFO - Epoch 410/1000, train loss: 0.000455087, valid loss: 0.000450726
+2024-09-02 23:55:56,030 - INFO - Epoch 420/1000, train loss: 0.000388103, valid loss: 0.000392939
+2024-09-02 23:55:56,245 - INFO - Epoch 430/1000, train loss: 0.000370013, valid loss: 0.000378127
+2024-09-02 23:55:56,434 - INFO - Epoch 440/1000, train loss: 0.000361295, valid loss: 0.000372239
+2024-09-02 23:55:56,622 - INFO - Epoch 450/1000, train loss: 0.000357798, valid loss: 0.000367865
+2024-09-02 23:55:56,808 - INFO - Epoch 460/1000, train loss: 0.000349918, valid loss: 0.000356097
+2024-09-02 23:55:56,993 - INFO - Epoch 470/1000, train loss: 0.000342556, valid loss: 0.000345694
+2024-09-02 23:55:57,177 - INFO - Epoch 480/1000, train loss: 0.000332983, valid loss: 0.000334265
+2024-09-02 23:55:57,357 - INFO - Epoch 490/1000, train loss: 0.000323908, valid loss: 0.000326166
+2024-09-02 23:55:57,552 - INFO - Epoch 500/1000, train loss: 0.000320546, valid loss: 0.000323299
+2024-09-02 23:55:57,745 - INFO - Epoch 510/1000, train loss: 0.000317267, valid loss: 0.000319270
+2024-09-02 23:55:57,920 - INFO - Epoch 520/1000, train loss: 0.000315693, valid loss: 0.000316560
+2024-09-02 23:55:58,108 - INFO - Epoch 530/1000, train loss: 0.000315035, valid loss: 0.000315214
+2024-09-02 23:55:58,303 - INFO - Epoch 540/1000, train loss: 0.000313864, valid loss: 0.000313248
+2024-09-02 23:55:58,494 - INFO - Epoch 550/1000, train loss: 0.000309575, valid loss: 0.000309129
+2024-09-02 23:55:58,666 - INFO - Epoch 560/1000, train loss: 0.000300272, valid loss: 0.000302906
+2024-09-02 23:55:58,858 - INFO - Epoch 570/1000, train loss: 0.000285527, valid loss: 0.000294784
+2024-09-02 23:55:59,043 - INFO - Epoch 580/1000, train loss: 0.000281924, valid loss: 0.000293596
+2024-09-02 23:55:59,224 - INFO - Epoch 590/1000, train loss: 0.000281129, valid loss: 0.000293167
+2024-09-02 23:55:59,404 - INFO - Epoch 600/1000, train loss: 0.000280636, valid loss: 0.000292958
+2024-09-02 23:55:59,592 - INFO - Epoch 610/1000, train loss: 0.000280086, valid loss: 0.000292617
+2024-09-02 23:55:59,781 - INFO - Epoch 620/1000, train loss: 0.000279055, valid loss: 0.000291875
+2024-09-02 23:55:59,960 - INFO - Epoch 630/1000, train loss: 0.000276289, valid loss: 0.000288895
+2024-09-02 23:56:00,148 - INFO - Epoch 640/1000, train loss: 0.000269861, valid loss: 0.000280485
+2024-09-02 23:56:00,355 - INFO - Epoch 650/1000, train loss: 0.000261304, valid loss: 0.000269506
+2024-09-02 23:56:00,553 - INFO - Epoch 660/1000, train loss: 0.000246165, valid loss: 0.000248640
+2024-09-02 23:56:00,737 - INFO - Epoch 670/1000, train loss: 0.000228057, valid loss: 0.000226841
+2024-09-02 23:56:00,915 - INFO - Epoch 680/1000, train loss: 0.000222099, valid loss: 0.000220240
+2024-09-02 23:56:01,109 - INFO - Epoch 690/1000, train loss: 0.000218146, valid loss: 0.000217823
+2024-09-02 23:56:01,290 - INFO - Epoch 700/1000, train loss: 0.000217371, valid loss: 0.000217652
+2024-09-02 23:56:01,480 - INFO - Epoch 710/1000, train loss: 0.000216276, valid loss: 0.000216583
+2024-09-02 23:56:01,677 - INFO - Epoch 720/1000, train loss: 0.000214251, valid loss: 0.000214315
+2024-09-02 23:56:01,866 - INFO - Epoch 730/1000, train loss: 0.000207746, valid loss: 0.000207787
+2024-09-02 23:56:02,049 - INFO - Epoch 740/1000, train loss: 0.000186051, valid loss: 0.000190634
+2024-09-02 23:56:02,236 - INFO - Epoch 750/1000, train loss: 0.000169496, valid loss: 0.000175850
+2024-09-02 23:56:02,442 - INFO - Epoch 760/1000, train loss: 0.000164099, valid loss: 0.000171274
+2024-09-02 23:56:02,627 - INFO - Epoch 770/1000, train loss: 0.000156818, valid loss: 0.000166098
+2024-09-02 23:56:02,819 - INFO - Epoch 780/1000, train loss: 0.000150290, valid loss: 0.000162195
+2024-09-02 23:56:02,997 - INFO - Epoch 790/1000, train loss: 0.000148669, valid loss: 0.000160651
+2024-09-02 23:56:03,183 - INFO - Epoch 800/1000, train loss: 0.000147260, valid loss: 0.000158923
+2024-09-02 23:56:03,363 - INFO - Epoch 810/1000, train loss: 0.000144798, valid loss: 0.000156135
+2024-09-02 23:56:03,551 - INFO - Epoch 820/1000, train loss: 0.000138040, valid loss: 0.000152015
+2024-09-02 23:56:03,749 - INFO - Epoch 830/1000, train loss: 0.000132863, valid loss: 0.000146286
+2024-09-02 23:56:03,933 - INFO - Epoch 840/1000, train loss: 0.000128333, valid loss: 0.000141688
+2024-09-02 23:56:04,122 - INFO - Epoch 850/1000, train loss: 0.000124488, valid loss: 0.000136358
+2024-09-02 23:56:04,302 - INFO - Epoch 860/1000, train loss: 0.000119059, valid loss: 0.000129780
+2024-09-02 23:56:04,514 - INFO - Epoch 870/1000, train loss: 0.000115375, valid loss: 0.000126740
+2024-09-02 23:56:04,703 - INFO - Epoch 880/1000, train loss: 0.000113476, valid loss: 0.000125967
+2024-09-02 23:56:04,889 - INFO - Epoch 890/1000, train loss: 0.000110661, valid loss: 0.000123349
+2024-09-02 23:56:05,067 - INFO - Epoch 900/1000, train loss: 0.000107352, valid loss: 0.000119083
+2024-09-02 23:56:05,247 - INFO - Epoch 910/1000, train loss: 0.000103402, valid loss: 0.000113520
+2024-09-02 23:56:05,439 - INFO - Epoch 920/1000, train loss: 0.000100095, valid loss: 0.000109537
+2024-09-02 23:56:05,628 - INFO - Epoch 930/1000, train loss: 0.000093906, valid loss: 0.000103194
+2024-09-02 23:56:05,814 - INFO - Epoch 940/1000, train loss: 0.000084772, valid loss: 0.000094055
+2024-09-02 23:56:06,061 - INFO - Epoch 950/1000, train loss: 0.000077148, valid loss: 0.000086341
+2024-09-02 23:56:06,270 - INFO - Epoch 960/1000, train loss: 0.000072296, valid loss: 0.000080440
+2024-09-02 23:56:06,479 - INFO - Epoch 970/1000, train loss: 0.000067531, valid loss: 0.000075588
+2024-09-02 23:56:06,676 - INFO - Epoch 980/1000, train loss: 0.000064761, valid loss: 0.000073061
+2024-09-02 23:56:06,860 - INFO - Epoch 990/1000, train loss: 0.000062277, valid loss: 0.000071161
+2024-09-02 23:56:07,050 - INFO - Epoch 1000/1000, train loss: 0.000056875, valid loss: 0.000066153
+2024-09-02 23:56:07,227 - INFO - Epoch 1010/1000, train loss: 0.000053337, valid loss: 0.000061068
+2024-09-02 23:56:07,411 - INFO - Epoch 1020/1000, train loss: 0.000051774, valid loss: 0.000058600
+2024-09-02 23:56:07,646 - INFO - Epoch 1030/1000, train loss: 0.000051121, valid loss: 0.000057042
+2024-09-02 23:56:07,839 - INFO - Epoch 1040/1000, train loss: 0.000050689, valid loss: 0.000056138
+2024-09-02 23:56:08,022 - INFO - Epoch 1050/1000, train loss: 0.000049003, valid loss: 0.000053502
+2024-09-02 23:56:08,202 - INFO - Epoch 1060/1000, train loss: 0.000045793, valid loss: 0.000049132
+2024-09-02 23:56:08,375 - INFO - Epoch 1070/1000, train loss: 0.000043509, valid loss: 0.000046171
+2024-09-02 23:56:08,562 - INFO - Epoch 1080/1000, train loss: 0.000041736, valid loss: 0.000044129
+2024-09-02 23:56:08,754 - INFO - Epoch 1090/1000, train loss: 0.000040295, valid loss: 0.000042689
+2024-09-02 23:56:08,944 - INFO - Epoch 1100/1000, train loss: 0.000039485, valid loss: 0.000041773
+2024-09-02 23:56:09,121 - INFO - Epoch 1110/1000, train loss: 0.000038755, valid loss: 0.000040786
+2024-09-02 23:56:09,297 - INFO - Epoch 1120/1000, train loss: 0.000036899, valid loss: 0.000038244
+2024-09-02 23:56:09,491 - INFO - Epoch 1130/1000, train loss: 0.000036259, valid loss: 0.000037351
+2024-09-02 23:56:09,676 - INFO - Epoch 1140/1000, train loss: 0.000035033, valid loss: 0.000035793
+2024-09-02 23:56:09,870 - INFO - Epoch 1150/1000, train loss: 0.000033934, valid loss: 0.000034379
+2024-09-02 23:56:10,052 - INFO - Epoch 1160/1000, train loss: 0.000033643, valid loss: 0.000033982
+2024-09-02 23:56:10,231 - INFO - Epoch 1170/1000, train loss: 0.000033288, valid loss: 0.000033574
+2024-09-02 23:56:10,414 - INFO - Epoch 1180/1000, train loss: 0.000032731, valid loss: 0.000033027
+2024-09-02 23:56:10,606 - INFO - Epoch 1190/1000, train loss: 0.000031753, valid loss: 0.000032138
+2024-09-02 23:56:10,806 - INFO - Epoch 1200/1000, train loss: 0.000031014, valid loss: 0.000031378
+2024-09-02 23:56:10,997 - INFO - Epoch 1210/1000, train loss: 0.000030648, valid loss: 0.000030939
+2024-09-02 23:56:11,186 - INFO - Epoch 1220/1000, train loss: 0.000030238, valid loss: 0.000030372
+2024-09-02 23:56:11,411 - INFO - Epoch 1230/1000, train loss: 0.000029145, valid loss: 0.000029113
+2024-09-02 23:56:11,686 - INFO - Epoch 1240/1000, train loss: 0.000027771, valid loss: 0.000027968
+2024-09-02 23:56:11,908 - INFO - Epoch 1250/1000, train loss: 0.000025533, valid loss: 0.000026222
+2024-09-02 23:56:12,135 - INFO - Epoch 1260/1000, train loss: 0.000024803, valid loss: 0.000025645
+2024-09-02 23:56:12,350 - INFO - Epoch 1270/1000, train loss: 0.000024215, valid loss: 0.000024804
+2024-09-02 23:56:12,570 - INFO - Epoch 1280/1000, train loss: 0.000022397, valid loss: 0.000022612
+2024-09-02 23:56:12,776 - INFO - Epoch 1290/1000, train loss: 0.000021165, valid loss: 0.000021370
+2024-09-02 23:56:12,984 - INFO - Epoch 1300/1000, train loss: 0.000020017, valid loss: 0.000020391
+2024-09-02 23:56:13,186 - INFO - Epoch 1310/1000, train loss: 0.000019728, valid loss: 0.000020178
+2024-09-02 23:56:13,380 - INFO - Epoch 1320/1000, train loss: 0.000019580, valid loss: 0.000020036
+2024-09-02 23:56:13,587 - INFO - Epoch 1330/1000, train loss: 0.000019462, valid loss: 0.000019877
+2024-09-02 23:56:13,819 - INFO - Epoch 1340/1000, train loss: 0.000019377, valid loss: 0.000019709
+2024-09-02 23:56:14,008 - INFO - Epoch 1350/1000, train loss: 0.000019291, valid loss: 0.000019517
+2024-09-02 23:56:14,200 - INFO - Epoch 1360/1000, train loss: 0.000019132, valid loss: 0.000019301
+2024-09-02 23:56:14,431 - INFO - Epoch 1370/1000, train loss: 0.000018692, valid loss: 0.000018876
+2024-09-02 23:56:14,642 - INFO - Epoch 1380/1000, train loss: 0.000018183, valid loss: 0.000018503
+2024-09-02 23:56:14,866 - INFO - Epoch 1390/1000, train loss: 0.000017478, valid loss: 0.000018006
+2024-09-02 23:56:15,078 - INFO - Epoch 1400/1000, train loss: 0.000017131, valid loss: 0.000017670
+2024-09-02 23:56:15,267 - INFO - Epoch 1410/1000, train loss: 0.000016825, valid loss: 0.000017262
+2024-09-02 23:56:15,562 - INFO - Epoch 1420/1000, train loss: 0.000016592, valid loss: 0.000017006
+2024-09-02 23:56:15,808 - INFO - Epoch 1430/1000, train loss: 0.000016446, valid loss: 0.000016897
+2024-09-02 23:56:16,059 - INFO - Epoch 1440/1000, train loss: 0.000016376, valid loss: 0.000016822
+2024-09-02 23:56:16,292 - INFO - Epoch 1450/1000, train loss: 0.000016318, valid loss: 0.000016753
+2024-09-02 23:56:16,513 - INFO - Epoch 1460/1000, train loss: 0.000016245, valid loss: 0.000016650
+2024-09-02 23:56:16,713 - INFO - Epoch 1470/1000, train loss: 0.000016186, valid loss: 0.000016573
+2024-09-02 23:56:16,978 - INFO - Epoch 1480/1000, train loss: 0.000016092, valid loss: 0.000016428
+2024-09-02 23:56:17,164 - INFO - Epoch 1490/1000, train loss: 0.000015986, valid loss: 0.000016306
+2024-09-02 23:56:17,346 - INFO - Epoch 1500/1000, train loss: 0.000015923, valid loss: 0.000016230
+2024-09-02 23:56:17,546 - INFO - Epoch 1510/1000, train loss: 0.000015857, valid loss: 0.000016165
+2024-09-02 23:56:17,729 - INFO - Epoch 1520/1000, train loss: 0.000015787, valid loss: 0.000016115
+2024-09-02 23:56:17,912 - INFO - Epoch 1530/1000, train loss: 0.000015710, valid loss: 0.000016065
+2024-09-02 23:56:18,101 - INFO - Epoch 1540/1000, train loss: 0.000015634, valid loss: 0.000016008
+2024-09-02 23:56:18,291 - INFO - Epoch 1550/1000, train loss: 0.000015496, valid loss: 0.000015914
+2024-09-02 23:56:18,488 - INFO - Epoch 1560/1000, train loss: 0.000015309, valid loss: 0.000015687
+2024-09-02 23:56:18,704 - INFO - Epoch 1570/1000, train loss: 0.000015091, valid loss: 0.000015415
+2024-09-02 23:56:18,898 - INFO - Epoch 1580/1000, train loss: 0.000014936, valid loss: 0.000015186
+2024-09-02 23:56:19,090 - INFO - Epoch 1590/1000, train loss: 0.000014771, valid loss: 0.000014948
+2024-09-02 23:56:19,282 - INFO - Epoch 1600/1000, train loss: 0.000014581, valid loss: 0.000014689
+2024-09-02 23:56:19,482 - INFO - Epoch 1610/1000, train loss: 0.000014408, valid loss: 0.000014489
+2024-09-02 23:56:19,747 - INFO - Epoch 1620/1000, train loss: 0.000014021, valid loss: 0.000014187
+2024-09-02 23:56:19,935 - INFO - Epoch 1630/1000, train loss: 0.000013724, valid loss: 0.000013987
+2024-09-02 23:56:20,120 - INFO - Epoch 1640/1000, train loss: 0.000013631, valid loss: 0.000013936
+2024-09-02 23:56:20,306 - INFO - Epoch 1650/1000, train loss: 0.000013571, valid loss: 0.000013905
+2024-09-02 23:56:20,386 - INFO - training time elapsed: 32.210136s
+2024-09-02 23:56:20,956 - INFO - program time elapsed: 39.433716s
+2024-09-02 23:56:31,876 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:56:31,876 - INFO - initialize data points...
+2024-09-02 23:56:37,414 - INFO - load saved model...
+2024-09-02 23:56:37,980 - INFO - start testing...
+2024-09-02 23:57:38,103 - INFO - testing time elapsed: 60.122347s
+2024-09-02 23:57:38,103 - INFO - program time elapsed: 66.227696s
+2024-09-02 23:59:25,760 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-02 23:59:25,760 - INFO - initialize data points...
+2024-09-02 23:59:35,598 - INFO - Number of parameters: 3061
+2024-09-02 23:59:35,616 - INFO - start training...
+2024-09-02 23:59:35,641 - INFO - Epoch 0/1000, train loss: 1.093284011, valid loss: 0.736511230
+2024-09-02 23:59:35,825 - INFO - Epoch 10/1000, train loss: 0.639200926, valid loss: 0.397645473
+2024-09-02 23:59:35,997 - INFO - Epoch 20/1000, train loss: 0.620102525, valid loss: 0.385470808
+2024-09-02 23:59:36,168 - INFO - Epoch 30/1000, train loss: 0.599816203, valid loss: 0.379356980
+2024-09-02 23:59:36,349 - INFO - Epoch 40/1000, train loss: 0.548202753, valid loss: 0.363556147
+2024-09-02 23:59:36,532 - INFO - Epoch 50/1000, train loss: 0.468525887, valid loss: 0.329783589
+2024-09-02 23:59:36,722 - INFO - Epoch 60/1000, train loss: 0.303523988, valid loss: 0.271674961
+2024-09-02 23:59:36,902 - INFO - Epoch 70/1000, train loss: 0.152831256, valid loss: 0.109833732
+2024-09-02 23:59:37,084 - INFO - Epoch 80/1000, train loss: 0.089827888, valid loss: 0.071560882
+2024-09-02 23:59:37,255 - INFO - Epoch 90/1000, train loss: 0.036653727, valid loss: 0.029004501
+2024-09-02 23:59:37,429 - INFO - Epoch 100/1000, train loss: 0.024390280, valid loss: 0.020125832
+2024-09-02 23:59:37,620 - INFO - Epoch 110/1000, train loss: 0.020293448, valid loss: 0.018026039
+2024-09-02 23:59:37,800 - INFO - Epoch 120/1000, train loss: 0.010860296, valid loss: 0.010295548
+2024-09-02 23:59:37,974 - INFO - Epoch 130/1000, train loss: 0.006963677, valid loss: 0.006273559
+2024-09-02 23:59:38,159 - INFO - Epoch 140/1000, train loss: 0.003830361, valid loss: 0.003125991
+2024-09-02 23:59:38,343 - INFO - Epoch 150/1000, train loss: 0.001720364, valid loss: 0.001486526
+2024-09-02 23:59:38,529 - INFO - Epoch 160/1000, train loss: 0.001516769, valid loss: 0.001370505
+2024-09-02 23:59:38,712 - INFO - Epoch 170/1000, train loss: 0.001271571, valid loss: 0.001212088
+2024-09-02 23:59:38,898 - INFO - Epoch 180/1000, train loss: 0.001060437, valid loss: 0.000994502
+2024-09-02 23:59:39,112 - INFO - Epoch 190/1000, train loss: 0.000915206, valid loss: 0.000847642
+2024-09-02 23:59:39,290 - INFO - Epoch 200/1000, train loss: 0.000801751, valid loss: 0.000740637
+2024-09-02 23:59:39,477 - INFO - Epoch 210/1000, train loss: 0.000611233, valid loss: 0.000539318
+2024-09-02 23:59:39,659 - INFO - Epoch 220/1000, train loss: 0.000591936, valid loss: 0.000512431
+2024-09-02 23:59:39,843 - INFO - Epoch 230/1000, train loss: 0.000580392, valid loss: 0.000502771
+2024-09-02 23:59:40,026 - INFO - Epoch 240/1000, train loss: 0.000507958, valid loss: 0.000447600
+2024-09-02 23:59:40,203 - INFO - Epoch 250/1000, train loss: 0.000384005, valid loss: 0.000353451
+2024-09-02 23:59:40,381 - INFO - Epoch 260/1000, train loss: 0.000373053, valid loss: 0.000341215
+2024-09-02 23:59:40,573 - INFO - Epoch 270/1000, train loss: 0.000369443, valid loss: 0.000336696
+2024-09-02 23:59:40,788 - INFO - Epoch 280/1000, train loss: 0.000366708, valid loss: 0.000333526
+2024-09-02 23:59:40,974 - INFO - Epoch 290/1000, train loss: 0.000361408, valid loss: 0.000328529
+2024-09-02 23:59:41,168 - INFO - Epoch 300/1000, train loss: 0.000336265, valid loss: 0.000308562
+2024-09-02 23:59:41,352 - INFO - Epoch 310/1000, train loss: 0.000291948, valid loss: 0.000267099
+2024-09-02 23:59:41,550 - INFO - Epoch 320/1000, train loss: 0.000263046, valid loss: 0.000236577
+2024-09-02 23:59:41,741 - INFO - Epoch 330/1000, train loss: 0.000258229, valid loss: 0.000232695
+2024-09-02 23:59:41,917 - INFO - Epoch 340/1000, train loss: 0.000256680, valid loss: 0.000232867
+2024-09-02 23:59:42,099 - INFO - Epoch 350/1000, train loss: 0.000255618, valid loss: 0.000233423
+2024-09-02 23:59:42,276 - INFO - Epoch 360/1000, train loss: 0.000253098, valid loss: 0.000234557
+2024-09-02 23:59:42,476 - INFO - Epoch 370/1000, train loss: 0.000244638, valid loss: 0.000234315
+2024-09-02 23:59:42,664 - INFO - Epoch 380/1000, train loss: 0.000227772, valid loss: 0.000225248
+2024-09-02 23:59:42,850 - INFO - Epoch 390/1000, train loss: 0.000206238, valid loss: 0.000206431
+2024-09-02 23:59:43,038 - INFO - Epoch 400/1000, train loss: 0.000187360, valid loss: 0.000187489
+2024-09-02 23:59:43,230 - INFO - Epoch 410/1000, train loss: 0.000172811, valid loss: 0.000170067
+2024-09-02 23:59:43,405 - INFO - Epoch 420/1000, train loss: 0.000169010, valid loss: 0.000166797
+2024-09-02 23:59:43,606 - INFO - Epoch 430/1000, train loss: 0.000166136, valid loss: 0.000162634
+2024-09-02 23:59:43,793 - INFO - Epoch 440/1000, train loss: 0.000163360, valid loss: 0.000157662
+2024-09-02 23:59:43,980 - INFO - Epoch 450/1000, train loss: 0.000159307, valid loss: 0.000149113
+2024-09-02 23:59:44,161 - INFO - Epoch 460/1000, train loss: 0.000155966, valid loss: 0.000140275
+2024-09-02 23:59:44,338 - INFO - Epoch 470/1000, train loss: 0.000155467, valid loss: 0.000139170
+2024-09-02 23:59:44,523 - INFO - Epoch 480/1000, train loss: 0.000155152, valid loss: 0.000139032
+2024-09-02 23:59:44,712 - INFO - Epoch 490/1000, train loss: 0.000154145, valid loss: 0.000139230
+2024-09-02 23:59:44,897 - INFO - Epoch 500/1000, train loss: 0.000151520, valid loss: 0.000139260
+2024-09-02 23:59:45,077 - INFO - Epoch 510/1000, train loss: 0.000146251, valid loss: 0.000136523
+2024-09-02 23:59:45,267 - INFO - Epoch 520/1000, train loss: 0.000131215, valid loss: 0.000119539
+2024-09-02 23:59:45,451 - INFO - Epoch 530/1000, train loss: 0.000110028, valid loss: 0.000095850
+2024-09-02 23:59:45,637 - INFO - Epoch 540/1000, train loss: 0.000088259, valid loss: 0.000075509
+2024-09-02 23:59:45,824 - INFO - Epoch 550/1000, train loss: 0.000085742, valid loss: 0.000073734
+2024-09-02 23:59:46,011 - INFO - Epoch 560/1000, train loss: 0.000084360, valid loss: 0.000072978
+2024-09-02 23:59:46,202 - INFO - Epoch 570/1000, train loss: 0.000075738, valid loss: 0.000066301
+2024-09-02 23:59:46,376 - INFO - Epoch 580/1000, train loss: 0.000054430, valid loss: 0.000046471
+2024-09-02 23:59:46,568 - INFO - Epoch 590/1000, train loss: 0.000051835, valid loss: 0.000044830
+2024-09-02 23:59:46,764 - INFO - Epoch 600/1000, train loss: 0.000050889, valid loss: 0.000044248
+2024-09-02 23:59:46,948 - INFO - Epoch 610/1000, train loss: 0.000049867, valid loss: 0.000043318
+2024-09-02 23:59:47,120 - INFO - Epoch 620/1000, train loss: 0.000049434, valid loss: 0.000042618
+2024-09-02 23:59:47,309 - INFO - Epoch 630/1000, train loss: 0.000048983, valid loss: 0.000041715
+2024-09-02 23:59:47,502 - INFO - Epoch 640/1000, train loss: 0.000048115, valid loss: 0.000040104
+2024-09-02 23:59:47,687 - INFO - Epoch 650/1000, train loss: 0.000046532, valid loss: 0.000038446
+2024-09-02 23:59:47,868 - INFO - Epoch 660/1000, train loss: 0.000044761, valid loss: 0.000037772
+2024-09-02 23:59:48,049 - INFO - Epoch 670/1000, train loss: 0.000043825, valid loss: 0.000037454
+2024-09-02 23:59:48,232 - INFO - Epoch 680/1000, train loss: 0.000042548, valid loss: 0.000036802
+2024-09-02 23:59:48,398 - INFO - Epoch 690/1000, train loss: 0.000040740, valid loss: 0.000035952
+2024-09-02 23:59:48,590 - INFO - Epoch 700/1000, train loss: 0.000037868, valid loss: 0.000033999
+2024-09-02 23:59:48,801 - INFO - Epoch 710/1000, train loss: 0.000034881, valid loss: 0.000031760
+2024-09-02 23:59:48,985 - INFO - Epoch 720/1000, train loss: 0.000031523, valid loss: 0.000029268
+2024-09-02 23:59:49,188 - INFO - Epoch 730/1000, train loss: 0.000028928, valid loss: 0.000027059
+2024-09-02 23:59:49,378 - INFO - Epoch 740/1000, train loss: 0.000025993, valid loss: 0.000024238
+2024-09-02 23:59:49,568 - INFO - Epoch 750/1000, train loss: 0.000023684, valid loss: 0.000021976
+2024-09-02 23:59:49,841 - INFO - Epoch 760/1000, train loss: 0.000021832, valid loss: 0.000020455
+2024-09-02 23:59:50,032 - INFO - Epoch 770/1000, train loss: 0.000020378, valid loss: 0.000019372
+2024-09-02 23:59:50,221 - INFO - Epoch 780/1000, train loss: 0.000019720, valid loss: 0.000018619
+2024-09-02 23:59:50,404 - INFO - Epoch 790/1000, train loss: 0.000019556, valid loss: 0.000018407
+2024-09-02 23:59:50,592 - INFO - Epoch 800/1000, train loss: 0.000019434, valid loss: 0.000018259
+2024-09-02 23:59:50,784 - INFO - Epoch 810/1000, train loss: 0.000019227, valid loss: 0.000017993
+2024-09-02 23:59:50,963 - INFO - Epoch 820/1000, train loss: 0.000018856, valid loss: 0.000017569
+2024-09-02 23:59:51,142 - INFO - Epoch 830/1000, train loss: 0.000018246, valid loss: 0.000016860
+2024-09-02 23:59:51,339 - INFO - Epoch 840/1000, train loss: 0.000017893, valid loss: 0.000016471
+2024-09-02 23:59:51,596 - INFO - Epoch 850/1000, train loss: 0.000017738, valid loss: 0.000016283
+2024-09-02 23:59:51,795 - INFO - Epoch 860/1000, train loss: 0.000017575, valid loss: 0.000016119
+2024-09-02 23:59:51,984 - INFO - Epoch 870/1000, train loss: 0.000017279, valid loss: 0.000015851
+2024-09-02 23:59:52,166 - INFO - Epoch 880/1000, train loss: 0.000017009, valid loss: 0.000015672
+2024-09-02 23:59:52,344 - INFO - Epoch 890/1000, train loss: 0.000016856, valid loss: 0.000015530
+2024-09-02 23:59:52,541 - INFO - Epoch 900/1000, train loss: 0.000016670, valid loss: 0.000015368
+2024-09-02 23:59:52,740 - INFO - Epoch 910/1000, train loss: 0.000016507, valid loss: 0.000015265
+2024-09-02 23:59:52,919 - INFO - Epoch 920/1000, train loss: 0.000016420, valid loss: 0.000015246
+2024-09-02 23:59:53,109 - INFO - Epoch 930/1000, train loss: 0.000016318, valid loss: 0.000015209
+2024-09-02 23:59:53,287 - INFO - Epoch 940/1000, train loss: 0.000016282, valid loss: 0.000015177
+2024-09-02 23:59:53,477 - INFO - Epoch 950/1000, train loss: 0.000016220, valid loss: 0.000015124
+2024-09-02 23:59:53,664 - INFO - Epoch 960/1000, train loss: 0.000016148, valid loss: 0.000014997
+2024-09-02 23:59:53,849 - INFO - Epoch 970/1000, train loss: 0.000015973, valid loss: 0.000014594
+2024-09-02 23:59:54,031 - INFO - Epoch 980/1000, train loss: 0.000015753, valid loss: 0.000014117
+2024-09-02 23:59:54,213 - INFO - Epoch 990/1000, train loss: 0.000015386, valid loss: 0.000013560
+2024-09-02 23:59:54,393 - INFO - Epoch 1000/1000, train loss: 0.000014929, valid loss: 0.000013269
+2024-09-02 23:59:54,582 - INFO - Epoch 1010/1000, train loss: 0.000014479, valid loss: 0.000013226
+2024-09-02 23:59:54,775 - INFO - Epoch 1020/1000, train loss: 0.000014323, valid loss: 0.000013317
+2024-09-02 23:59:54,960 - INFO - Epoch 1030/1000, train loss: 0.000014277, valid loss: 0.000013326
+2024-09-02 23:59:55,075 - INFO - training time elapsed: 19.458634s
+2024-09-02 23:59:55,618 - INFO - program time elapsed: 29.858595s

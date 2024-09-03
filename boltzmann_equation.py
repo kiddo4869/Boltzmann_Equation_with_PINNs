@@ -20,6 +20,7 @@ from pde.pde import *
 
 def main(args: argparse.ArgumentParser):
     random.seed(args.seed)
+    np.random.seed(args.seed)
     start = time.perf_counter()
 
     initialize_logging(args)
@@ -44,26 +45,38 @@ def main(args: argparse.ArgumentParser):
     t_range = np.array([t_min, t_max])
 
     # Grids
-    q_arr = np.linspace(q_min, q_max, args.grid_size, dtype=np.float64)
-    p_arr = np.linspace(p_min, p_max, args.grid_size, dtype=np.float64)
-    t_arr = np.linspace(t_min, t_max, args.grid_size, dtype=np.float64)
+    q_arr = np.linspace(q_min, q_max, args.N_q, dtype=np.float32)
+    p_arr = np.linspace(p_min, p_max, args.N_p, dtype=np.float32)
+    t_arr = np.linspace(t_min, t_max, args.N_t, dtype=np.float32)
     pv, qv, tv = np.meshgrid(p_arr, q_arr, t_arr, indexing="ij")
-    
+    print(f"pv shape: {pv.shape}")
+    print(f"qv shape: {qv.shape}")
+    print(f"tv shape: {tv.shape}")
+
     # Exact solution
-    f_exact = np.array([[prob_den(args, q, p, 0.0) for q in q_arr] for p in p_arr])
-    h_exact = np.array([[hamiltonian(args, q, p, 0.0) for q in q_arr] for p in p_arr])
+    if args.case_idx == 2:
+        f_exact = np.array([[prob_den(args, q + 0.5, p, t_arr[0]) for q in q_arr] for p in p_arr])  
+    else:
+        f_exact = np.array([[prob_den(args, q, p, t_arr[0]) for q in q_arr] for p in p_arr])
+    h_exact = np.array([[hamiltonian(args, q, p, t_arr[0]) for q in q_arr] for p in p_arr])
+    
     h_exact_over_time = np.array([[[hamiltonian(args, q, p, t) for q in q_arr] for p in p_arr] for t in t_arr])
+    h_exact_over_time = np.transpose(h_exact_over_time, (1, 2, 0))
 
     plot_init_solution(args, q_arr, p_arr, f_exact, "Initial Probability Density")
     plot_init_solution(args, q_arr, p_arr, h_exact, "Initial Hamiltonian H'")
 
     path = os.path.join(args.checkpoint, "state_dict_model.pth")
 
+    # Data processing
+    train_inputs, train_labels = preprocess_data(args, qv, pv, tv, f_exact, h_exact_over_time,
+                                                    ub, lb, t_range)
+
+    if args.hamiltonian == "input":
+        args.h_min_max = [train_inputs[0][:, 3].min(), train_inputs[0][:, 3].max()]
+
     if args.phase == "train":
 
-        # Data processing
-        train_inputs, train_labels = preprocess_data(args, qv, pv, tv, f_exact, h_exact_over_time,
-                                                     ub, lb, t_range)
         val_inputs, val_labels = preprocess_data(args, qv, pv, tv, f_exact, h_exact_over_time,
                                                  ub, lb, t_range)
 
@@ -76,13 +89,6 @@ def main(args: argparse.ArgumentParser):
         train_labels = convert_data(args, train_labels)
         val_inputs = convert_data(args, val_inputs)
         val_labels = convert_data(args, val_labels)
-
-        X_flatten = torch.from_numpy(qv.reshape(-1, 1)).to(args.device)
-        Y_flatten = torch.from_numpy(pv.reshape(-1, 1)).to(args.device)
-        T_flatten = torch.from_numpy(tv.reshape(-1, 1)).to(args.device)
-
-        # Print shapes
-        #log_shapes(train_ic_pts, train_init_phi, train_col_pts, val_ic_pts, val_init_phi, val_col_pts, X_flatten, Y_flatten, T_flatten)
 
         # Model creation
         args.pinn = True
@@ -124,10 +130,10 @@ def main(args: argparse.ArgumentParser):
         logging.info("load saved model...")
 
         # loading model
-        train_inputs = [torch.empty(0) for _ in range(3 if args.hamiltonian else 2)]
-        train_labels = [torch.empty(0) for _ in range(2 if args.hamiltonian else 1)]
-        val_inputs = [torch.empty(0) for _ in range(3 if args.hamiltonian else 2)]
-        val_labels = [torch.empty(0) for _ in range(2 if args.hamiltonian else 1)]
+        train_inputs = [torch.empty(0) for _ in range(3 if args.hamiltonian == "output" else 2)]
+        train_labels = [torch.empty(0) for _ in range(2 if args.hamiltonian == "output" else 1)]
+        val_inputs = [torch.empty(0) for _ in range(3 if args.hamiltonian == "output" else 2)]
+        val_labels = [torch.empty(0) for _ in range(2 if args.hamiltonian == "output" else 1)]
         model = PINN(args, train_inputs, train_labels, val_inputs, val_labels)
         model.net.load_state_dict(torch.load(path))
         model.net.eval()
@@ -144,34 +150,28 @@ def main(args: argparse.ArgumentParser):
         spacing = (q_max - q_min) / args.grid_size
 
         if args.debug:  
-            t_arr = np.linspace(0, 50, 6)
+            t_arr = np.linspace(0, 100, 6)
         else:
             t_arr = np.linspace(0, 100, 21)
         for i, t in enumerate(t_arr):
             if i % args.ds_freq == 0:# and i != 0:
                 if args.dynamic_scaling:
-                    # method 1: multiply original grid by a factor of ds_ratio (different spacing)
-                    #q_arr = q_arr * args.ds_ratio
-                    # method 2: extend the grid with the same spacing
-                    # (q_max-q_min)/args.grid_size: original spacing
-                    #q_arr = np.arange(q_arr[0]*args.ds_ratio, q_arr[-1]*args.ds_ratio, (q_max-q_min)/args.grid_size)
-                    # method 3: extend the grid with the same spacing
                     q_arr = np.arange(q_arr[0]-spacing*args.ds_grid_add, q_arr[-1]+spacing*(args.ds_grid_add+1), spacing)
 
             sol_files.append(plot_solution(args, q_arr, p_arr, t, prob_den, model, output="f"))
             dis_files.append(plot_q_p_distributions(args, q_arr, p_arr, t, model))
-            if args.hamiltonian:
+            if args.hamiltonian == "output":
                 ham_files.append(plot_solution(args, q_arr, p_arr, t, hamiltonian, model, output="h"))
 
         if args.dynamic_scaling:
             save_gif_PIL(os.path.join(args.checkpoint, "solutions_ds.gif"), sol_files, fps=5, loop=0)
             save_gif_PIL(os.path.join(args.checkpoint, "q_p_distributions_ds.gif"), dis_files, fps=5, loop=0)
-            if args.hamiltonian:
+            if args.hamiltonian == "output":
                 save_gif_PIL(os.path.join(args.checkpoint, "hamiltonian_ds.gif"), ham_files, fps=5, loop=0)
         else:
             save_gif_PIL(os.path.join(args.checkpoint, "solutions.gif"), sol_files, fps=5, loop=0)
             save_gif_PIL(os.path.join(args.checkpoint, "q_p_distributions.gif"), dis_files, fps=5, loop=0)
-            if args.hamiltonian:
+            if args.hamiltonian == "output":
                 save_gif_PIL(os.path.join(args.checkpoint, "hamiltonian.gif"), ham_files, fps=5, loop=0)
 
         testing_end = time.perf_counter()
@@ -223,31 +223,34 @@ def log_shapes(train_ic_pts, train_init_phi, train_col_pts, val_ic_pts, val_init
 
 def compute_loss(model, inputs, labels, loss_type="IC"):
 
-    q_trial = inputs[:, 0].reshape(-1, 1)
-    p_trial = inputs[:, 1].reshape(-1, 1)
-    t_trial = inputs[:, 2].reshape(-1, 1)
-
-    print(f"q_trial shape: {q_trial.shape}")
-    print(f"p_trial shape: {p_trial.shape}")
-    print(f"t_trial shape: {t_trial.shape}")
-    print(f"labels shape: {labels.shape}")
+    q = inputs[:, 0].reshape(-1, 1)
+    p = inputs[:, 1].reshape(-1, 1)
+    t = inputs[:, 2].reshape(-1, 1)
+    
+    print("q shape: ", q.shape)
+    print("p shape: ", p.shape)
+    print("t shape: ", t.shape)
+    if args.hamiltonian == "input":
+        h = inputs[:, 3].reshape(-1, 1)
+        print("h shape: ", h.shape)
+    print("labels shape: ", labels.shape)
 
     if loss_type == "IC":
-        loss = model.loss_IC(q_trial, p_trial, t_trial, labels).item()
+        loss = model.loss_IC(q, p, t, h, labels).item()
     elif loss_type == "BC":
-        loss = model.loss_BC(q_trial, p_trial, t_trial, labels).item()
+        loss = model.loss_BC(q, p, t, h, labels).item()
     elif loss_type == "PDE":
-        loss = model.loss_PDE(q_trial, p_trial, t_trial).item()
+        loss = model.loss_PDE(q, p, t, h).item()
     else:
         raise ValueError("Invalid loss type")
-
+    
     print(f"{loss_type} loss: {loss}")
     return loss
 
 def trial_test(args, inputs_list, labels_list, model):
 
     IC_loss = compute_loss(model, inputs_list[0], labels_list[0], "IC")
-    BC_loss = compute_loss(model, inputs_list[1], labels_list[1], "BC") if args.hamiltonian else 0.0
+    BC_loss = compute_loss(model, inputs_list[1], labels_list[1], "BC") if args.hamiltonian == "output" else 0.0
     PDE_loss = compute_loss(model, inputs_list[-1], np.empty(0), "PDE")
 
     # sum of the loss with weight
@@ -264,6 +267,9 @@ if __name__=="__main__":
     parser = argparse.ArgumentParser(description="Physics Informed Neural Networks")
     # Physical Conditions
     parser.add_argument("--grid_size", type=int, default=100)
+    parser.add_argument("--N_q", type=int, default=100)
+    parser.add_argument("--N_p", type=int, default=100)
+    parser.add_argument("--N_t", type=int, default=100)
     parser.add_argument("--T", type=float, default=1.7e-07)
     parser.add_argument("--w0", type=float, default=1e5)
     parser.add_argument("--k", type=float, default=sc.physical_constants['Boltzmann constant in Hz/K'][0])
@@ -295,9 +301,9 @@ if __name__=="__main__":
     parser.add_argument("--log_sol", action="store_true")
 
     # PINNs parameters
-    parser.add_argument("--layers", type=json.loads, default=[3,20,20,20,20,20,20,1])
+    parser.add_argument("--layers", type=json.loads, default=[3,20,20,20,20,20,20,20,20,1])
     parser.add_argument("--noise_level", type=float, default=0.0)
-    parser.add_argument("--hamiltonian", action="store_true")
+    parser.add_argument("--hamiltonian", type=str, default=None)
 
     # Training parameters
     parser.add_argument("--IC_weight", type=float, default=1.0)
@@ -320,6 +326,8 @@ if __name__=="__main__":
     parser.add_argument("--ds_ratio", type=float, default=1.05)
     parser.add_argument("--ds_grid_add", type=int, default=3)
 
+    parser.add_argument("--case_idx", type=int, default=0)
+
     args = parser.parse_args()
 
     if args.debug:
@@ -337,8 +345,10 @@ if __name__=="__main__":
         args.q_min_max=[-1, 1]
         args.p_min_max=[-1, 1]
 
-    if args.hamiltonian:
-        args.layers[-1] = 2
+    if args.hamiltonian == "input":
+        args.layers[0] += 1
+    elif args.hamiltonian == "output":
+        args.layers[-1] += 1
 
     # Device setup
     args.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

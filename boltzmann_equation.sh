@@ -1,16 +1,19 @@
 #! bash
 
 # Debugging
-#python boltzmann_equation.py --name debug --debug --phase test --optimizer l-bfgs --hamiltonian # --dynamic_scaling # --fermi_scaling
+#python boltzmann_equation.py --name debug --debug --phase test --optimizer l-bfgs --hamiltonian input \
+#                             --N_initial 200 --N_boundary 200 --N_collocation 100 \
+#                             --N_initial_val 200 --N_boundary_val 200 --N_collocation_val 100 \
+#                             --IC_weight 1.0 --BC_weight 1.0 --PDE_weight 0.2 --learning_rate 1.0 --epochs 1000
 
 # Adam Optimizer
-#python boltzmann_equation.py --name adam_h --phase train --optimizer adam --log_loss \
-#                             --N_initial 150 --N_boundary 150 --N_collocation 600 \
-#                             --N_initial_val 150 --N_boundary_val 150 --N_collocation_val 600 \
-#                             --IC_weight 0.1 --BC_weight 0.1 --PDE_weight 0.25 --learning_rate 0.01 --epochs 5000
+#python boltzmann_equation.py --name adam_II --phase train --optimizer adam --log_loss --hamiltonian --case_idx 2 \
+#                             --N_initial 5000 --N_boundary 5000 --N_collocation 5000 \
+#                             --N_initial_val 150 --N_boundary_val 150 --N_collocation_val 3000 \
+#                             --IC_weight 0.45 --BC_weight 0.35 --PDE_weight 0.1 --learning_rate 0.01 --epochs 1000
 
 # L-BFGS Optimizer
-python boltzmann_equation.py --name l-bfgs --phase test --optimizer l-bfgs --log_loss \
-                             --N_initial 300 --N_boundary 300 --N_collocation 6000 \
+python boltzmann_equation.py --name l-bfgs_new_II_longer --phase test --optimizer l-bfgs --log_loss --hamiltonian input --case_idx 2 \
+                             --N_initial 1000 --N_boundary 1000 --N_collocation 8000 \
                              --N_initial_val 150 --N_boundary_val 150 --N_collocation_val 3000 \
-                             --IC_weight 0.1 --BC_weight 0.1 --PDE_weight 0.15 --learning_rate 0.01 --epochs 2000
+                             --IC_weight 0.5 --BC_weight 1.0 --PDE_weight 0.5 --learning_rate 0.01 --epochs 1000
