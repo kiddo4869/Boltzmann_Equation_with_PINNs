@@ -58,41 +58,50 @@ def preprocess_data(args,
                     Y: np.array,
                     T: np.array,
                     phi: np.array,
-                    ham: np.array,
                     ub: np.array,
                     lb: np.array,
-                    t_range: np.array) -> Tuple[np.array, np.array, np.array, np.array]:
+                    t_range: np.array,
+                    valid=False) -> Tuple[np.array, np.array, np.array, np.array]:
 
     # Get initial points
     initial_points = get_initial_points([X, Y, T])
     initial_phi = phi.reshape(-1, 1)
 
     # Sample random points in initial condition
-    idx = np.random.choice(initial_points.shape[0], args.N_initial, replace=False)
+    idx = np.random.choice(initial_points.shape[0], args.N_initial if not valid else args.N_initial_val, replace=False)
     sampled_initial_points = select_points(idx, initial_points)
     if args.hamiltonian == "input":
         sampled_initial_points = add_hamiltonian(args, sampled_initial_points)
-    sampled_initial_phi = select_points(idx, initial_phi)
 
+    sampled_initial_phi = select_points(idx, initial_phi)
+    
     # Get interior points
+    """
     boundary_points = get_boundary_points([X, Y, T])
     boundary_ham = get_boundary_points([ham])
     
     # Sample random points in boundary condition
-    idx = np.random.choice(boundary_points.shape[0], args.N_boundary, replace=False)
+    idx = np.random.choice(boundary_points.shape[0], args.N_boundary if not valid else args.N_boundary_val, replace=False)
     sampled_interior_points = select_points(idx, boundary_points)
     sampled_interior_ham = select_points(idx, boundary_ham)
-    
+    """
+    sampled_interior_points = select_collocation_points(args.N_boundary if not valid else args.N_boundary_val, ub, lb, t_range)
+    sampled_interior_ham = find_hamiltonian_seperately(args, sampled_interior_points[:, 0], sampled_interior_points[:, 1], sampled_interior_points[:, 2])
+
     # Sample collocation points in the domain
-    sampled_collocation_points = select_collocation_points(args.N_collocation, ub, lb, t_range)
+    sampled_collocation_points = select_collocation_points(args.N_collocation if not valid else args.N_collocation_val, ub, lb, t_range)
     if args.hamiltonian == "input":
         sampled_collocation_points = add_hamiltonian(args, sampled_collocation_points)
+
+    print(sampled_initial_points.shape, sampled_initial_phi.shape)
+    print(sampled_interior_points.shape, sampled_interior_ham.shape)
+    print(sampled_collocation_points.shape)
+    print("-" * 20)
 
     if args.hamiltonian == "output":
         return [sampled_initial_points, sampled_interior_points, sampled_collocation_points], [sampled_initial_phi, sampled_interior_ham]
     else:
         return [sampled_initial_points, sampled_collocation_points], [sampled_initial_phi]
-        
 
 def create_inputs(q_arr: np.array, p_arr: np.array, t: float):
     pv, qv = np.meshgrid(p_arr, q_arr, indexing="ij")

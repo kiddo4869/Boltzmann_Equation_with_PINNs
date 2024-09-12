@@ -1,0 +1,687 @@
+2024-09-07 10:38:06,119 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 10:38:06,119 - INFO - initialize data points...
+2024-09-07 10:38:13,255 - INFO - load saved model...
+2024-09-07 10:38:14,771 - INFO - start testing...
+2024-09-07 10:38:27,361 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 10:38:27,361 - INFO - initialize data points...
+2024-09-07 10:38:34,223 - INFO - Number of parameters: 3061
+2024-09-07 10:38:34,269 - INFO - start training...
+2024-09-07 10:38:34,300 - INFO - Epoch 0/2000, train loss: 0.133669719, valid loss: 0.161513001
+2024-09-07 10:38:34,694 - INFO - Epoch 10/2000, train loss: 0.124255225, valid loss: 0.152732193
+2024-09-07 10:38:35,062 - INFO - Epoch 20/2000, train loss: 0.087239631, valid loss: 0.112653255
+2024-09-07 10:38:35,466 - INFO - Epoch 30/2000, train loss: 0.078720346, valid loss: 0.098839656
+2024-09-07 10:38:35,858 - INFO - Epoch 40/2000, train loss: 0.069159403, valid loss: 0.088542148
+2024-09-07 10:38:36,285 - INFO - Epoch 50/2000, train loss: 0.031792644, valid loss: 0.047333382
+2024-09-07 10:38:36,680 - INFO - Epoch 60/2000, train loss: 0.013097055, valid loss: 0.015907671
+2024-09-07 10:38:37,087 - INFO - Epoch 70/2000, train loss: 0.004748764, valid loss: 0.004706046
+2024-09-07 10:38:37,490 - INFO - Epoch 80/2000, train loss: 0.003310524, valid loss: 0.002758278
+2024-09-07 10:38:37,954 - INFO - Epoch 90/2000, train loss: 0.001561735, valid loss: 0.001587377
+2024-09-07 10:38:38,428 - INFO - Epoch 100/2000, train loss: 0.001149297, valid loss: 0.001118737
+2024-09-07 10:38:38,843 - INFO - Epoch 110/2000, train loss: 0.000934184, valid loss: 0.000891495
+2024-09-07 10:38:39,327 - INFO - Epoch 120/2000, train loss: 0.000746026, valid loss: 0.000729895
+2024-09-07 10:38:39,790 - INFO - Epoch 130/2000, train loss: 0.000514317, valid loss: 0.000522669
+2024-09-07 10:38:40,313 - INFO - Epoch 140/2000, train loss: 0.000381837, valid loss: 0.000402197
+2024-09-07 10:38:40,810 - INFO - Epoch 150/2000, train loss: 0.000361773, valid loss: 0.000389701
+2024-09-07 10:38:41,340 - INFO - Epoch 160/2000, train loss: 0.000355343, valid loss: 0.000392164
+2024-09-07 10:38:41,825 - INFO - Epoch 170/2000, train loss: 0.000322843, valid loss: 0.000375411
+2024-09-07 10:38:42,275 - INFO - Epoch 180/2000, train loss: 0.000268492, valid loss: 0.000315945
+2024-09-07 10:38:42,674 - INFO - Epoch 190/2000, train loss: 0.000251426, valid loss: 0.000286626
+2024-09-07 10:38:43,087 - INFO - Epoch 200/2000, train loss: 0.000245032, valid loss: 0.000274964
+2024-09-07 10:38:43,508 - INFO - Epoch 210/2000, train loss: 0.000242481, valid loss: 0.000270574
+2024-09-07 10:38:43,987 - INFO - Epoch 220/2000, train loss: 0.000236288, valid loss: 0.000263184
+2024-09-07 10:38:44,481 - INFO - Epoch 230/2000, train loss: 0.000205754, valid loss: 0.000233081
+2024-09-07 10:38:44,904 - INFO - Epoch 240/2000, train loss: 0.000177999, valid loss: 0.000209166
+2024-09-07 10:38:45,332 - INFO - Epoch 250/2000, train loss: 0.000151793, valid loss: 0.000186979
+2024-09-07 10:38:45,722 - INFO - Epoch 260/2000, train loss: 0.000140997, valid loss: 0.000176978
+2024-09-07 10:38:46,124 - INFO - Epoch 270/2000, train loss: 0.000140204, valid loss: 0.000176076
+2024-09-07 10:38:46,540 - INFO - Epoch 280/2000, train loss: 0.000139885, valid loss: 0.000175731
+2024-09-07 10:38:46,956 - INFO - Epoch 290/2000, train loss: 0.000139380, valid loss: 0.000175171
+2024-09-07 10:38:47,340 - INFO - Epoch 300/2000, train loss: 0.000138330, valid loss: 0.000173948
+2024-09-07 10:38:47,718 - INFO - Epoch 310/2000, train loss: 0.000132980, valid loss: 0.000167587
+2024-09-07 10:38:48,121 - INFO - Epoch 320/2000, train loss: 0.000129246, valid loss: 0.000160266
+2024-09-07 10:38:48,558 - INFO - Epoch 330/2000, train loss: 0.000127345, valid loss: 0.000155913
+2024-09-07 10:38:49,037 - INFO - Epoch 340/2000, train loss: 0.000122107, valid loss: 0.000143555
+2024-09-07 10:38:49,571 - INFO - Epoch 350/2000, train loss: 0.000117692, valid loss: 0.000133046
+2024-09-07 10:38:50,123 - INFO - Epoch 360/2000, train loss: 0.000114913, valid loss: 0.000127740
+2024-09-07 10:38:50,542 - INFO - Epoch 370/2000, train loss: 0.000113365, valid loss: 0.000126537
+2024-09-07 10:38:50,958 - INFO - Epoch 380/2000, train loss: 0.000112198, valid loss: 0.000126342
+2024-09-07 10:38:51,388 - INFO - Epoch 390/2000, train loss: 0.000111006, valid loss: 0.000125510
+2024-09-07 10:38:51,816 - INFO - Epoch 400/2000, train loss: 0.000110134, valid loss: 0.000123413
+2024-09-07 10:38:52,232 - INFO - Epoch 410/2000, train loss: 0.000109752, valid loss: 0.000122151
+2024-09-07 10:38:52,627 - INFO - Epoch 420/2000, train loss: 0.000109555, valid loss: 0.000120908
+2024-09-07 10:38:53,036 - INFO - Epoch 430/2000, train loss: 0.000109455, valid loss: 0.000120126
+2024-09-07 10:38:53,457 - INFO - Epoch 440/2000, train loss: 0.000109352, valid loss: 0.000119345
+2024-09-07 10:38:53,856 - INFO - Epoch 450/2000, train loss: 0.000109212, valid loss: 0.000118653
+2024-09-07 10:38:54,283 - INFO - Epoch 460/2000, train loss: 0.000108939, valid loss: 0.000118113
+2024-09-07 10:38:54,710 - INFO - Epoch 470/2000, train loss: 0.000108557, valid loss: 0.000117931
+2024-09-07 10:38:55,122 - INFO - Epoch 480/2000, train loss: 0.000108059, valid loss: 0.000117728
+2024-09-07 10:38:55,543 - INFO - Epoch 490/2000, train loss: 0.000107278, valid loss: 0.000117549
+2024-09-07 10:38:55,940 - INFO - Epoch 500/2000, train loss: 0.000106091, valid loss: 0.000116223
+2024-09-07 10:38:56,357 - INFO - Epoch 510/2000, train loss: 0.000105592, valid loss: 0.000115577
+2024-09-07 10:38:56,827 - INFO - Epoch 520/2000, train loss: 0.000105289, valid loss: 0.000115243
+2024-09-07 10:38:57,340 - INFO - Epoch 530/2000, train loss: 0.000104799, valid loss: 0.000115037
+2024-09-07 10:38:57,761 - INFO - Epoch 540/2000, train loss: 0.000104120, valid loss: 0.000114865
+2024-09-07 10:38:58,175 - INFO - Epoch 550/2000, train loss: 0.000095402, valid loss: 0.000114023
+2024-09-07 10:38:58,562 - INFO - Epoch 560/2000, train loss: 0.000089179, valid loss: 0.000109188
+2024-09-07 10:38:58,989 - INFO - Epoch 570/2000, train loss: 0.000082015, valid loss: 0.000100956
+2024-09-07 10:38:59,396 - INFO - Epoch 580/2000, train loss: 0.000080378, valid loss: 0.000099278
+2024-09-07 10:38:59,962 - INFO - Epoch 590/2000, train loss: 0.000079767, valid loss: 0.000098466
+2024-09-07 10:39:01,006 - INFO - Epoch 600/2000, train loss: 0.000077859, valid loss: 0.000095546
+2024-09-07 10:39:01,669 - INFO - Epoch 610/2000, train loss: 0.000075706, valid loss: 0.000092297
+2024-09-07 10:39:02,186 - INFO - Epoch 620/2000, train loss: 0.000073986, valid loss: 0.000088318
+2024-09-07 10:39:02,678 - INFO - Epoch 630/2000, train loss: 0.000072283, valid loss: 0.000083782
+2024-09-07 10:39:03,226 - INFO - Epoch 640/2000, train loss: 0.000071771, valid loss: 0.000081584
+2024-09-07 10:39:03,684 - INFO - Epoch 650/2000, train loss: 0.000071601, valid loss: 0.000080653
+2024-09-07 10:39:04,155 - INFO - Epoch 660/2000, train loss: 0.000071532, valid loss: 0.000080425
+2024-09-07 10:39:04,598 - INFO - Epoch 670/2000, train loss: 0.000071474, valid loss: 0.000080616
+2024-09-07 10:39:05,088 - INFO - Epoch 680/2000, train loss: 0.000071419, valid loss: 0.000080787
+2024-09-07 10:39:05,562 - INFO - Epoch 690/2000, train loss: 0.000071332, valid loss: 0.000080897
+2024-09-07 10:39:05,977 - INFO - Epoch 700/2000, train loss: 0.000071191, valid loss: 0.000080972
+2024-09-07 10:39:06,364 - INFO - Epoch 710/2000, train loss: 0.000071155, valid loss: 0.000080869
+2024-09-07 10:39:06,750 - INFO - Epoch 720/2000, train loss: 0.000071091, valid loss: 0.000080564
+2024-09-07 10:39:07,178 - INFO - Epoch 730/2000, train loss: 0.000071059, valid loss: 0.000080225
+2024-09-07 10:39:07,286 - INFO - training time elapsed: 33.016159s
+2024-09-07 10:39:07,969 - INFO - program time elapsed: 40.608192s
+2024-09-07 10:39:27,357 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 10:39:27,357 - INFO - initialize data points...
+2024-09-07 10:39:32,884 - INFO - load saved model...
+2024-09-07 10:39:33,577 - INFO - start testing...
+2024-09-07 10:40:44,958 - INFO - testing time elapsed: 71.380582s
+2024-09-07 10:40:44,958 - INFO - program time elapsed: 77.601718s
+2024-09-07 10:45:50,198 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 10:45:50,198 - INFO - initialize data points...
+2024-09-07 10:45:55,880 - INFO - load saved model...
+2024-09-07 10:46:20,806 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 10:46:20,807 - INFO - initialize data points...
+2024-09-07 10:46:26,523 - INFO - load saved model...
+2024-09-07 10:46:37,952 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 10:46:37,952 - INFO - initialize data points...
+2024-09-07 10:46:43,511 - INFO - load saved model...
+2024-09-07 10:46:58,338 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 10:46:58,338 - INFO - initialize data points...
+2024-09-07 10:47:03,678 - INFO - load saved model...
+2024-09-07 10:47:13,640 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 10:47:13,640 - INFO - initialize data points...
+2024-09-07 10:47:19,068 - INFO - load saved model...
+2024-09-07 10:47:33,372 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 10:47:33,372 - INFO - initialize data points...
+2024-09-07 10:47:38,700 - INFO - load saved model...
+2024-09-07 10:52:12,364 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 10:52:12,365 - INFO - initialize data points...
+2024-09-07 10:52:20,264 - INFO - Number of parameters: 3061
+2024-09-07 10:52:20,306 - INFO - start training...
+2024-09-07 10:52:20,330 - INFO - Epoch 0/2000, train loss: 0.042643402, valid loss: 0.046766631
+2024-09-07 10:52:20,684 - INFO - Epoch 10/2000, train loss: 0.032284725, valid loss: 0.038125467
+2024-09-07 10:52:21,028 - INFO - Epoch 20/2000, train loss: 0.030656524, valid loss: 0.035299994
+2024-09-07 10:52:21,400 - INFO - Epoch 30/2000, train loss: 0.029286582, valid loss: 0.032900434
+2024-09-07 10:52:21,837 - INFO - Epoch 40/2000, train loss: 0.028901389, valid loss: 0.032893330
+2024-09-07 10:52:22,399 - INFO - Epoch 50/2000, train loss: 0.028188298, valid loss: 0.032090783
+2024-09-07 10:52:22,748 - INFO - Epoch 60/2000, train loss: 0.026956715, valid loss: 0.029784922
+2024-09-07 10:52:23,249 - INFO - Epoch 70/2000, train loss: 0.025345415, valid loss: 0.026973309
+2024-09-07 10:52:23,715 - INFO - Epoch 80/2000, train loss: 0.022291670, valid loss: 0.023196116
+2024-09-07 10:52:24,100 - INFO - Epoch 90/2000, train loss: 0.016219977, valid loss: 0.013887092
+2024-09-07 10:52:24,464 - INFO - Epoch 100/2000, train loss: 0.010908002, valid loss: 0.009812277
+2024-09-07 10:52:24,927 - INFO - Epoch 110/2000, train loss: 0.008639863, valid loss: 0.009021401
+2024-09-07 10:52:25,281 - INFO - Epoch 120/2000, train loss: 0.004909688, valid loss: 0.006629835
+2024-09-07 10:52:25,651 - INFO - Epoch 130/2000, train loss: 0.003271247, valid loss: 0.004505350
+2024-09-07 10:52:26,358 - INFO - Epoch 140/2000, train loss: 0.002143044, valid loss: 0.003132041
+2024-09-07 10:52:26,762 - INFO - Epoch 150/2000, train loss: 0.001090222, valid loss: 0.001076968
+2024-09-07 10:52:27,126 - INFO - Epoch 160/2000, train loss: 0.000825236, valid loss: 0.000778032
+2024-09-07 10:52:27,473 - INFO - Epoch 170/2000, train loss: 0.000793434, valid loss: 0.000782192
+2024-09-07 10:52:27,819 - INFO - Epoch 180/2000, train loss: 0.000613818, valid loss: 0.000692397
+2024-09-07 10:52:28,195 - INFO - Epoch 190/2000, train loss: 0.000392822, valid loss: 0.000422061
+2024-09-07 10:52:28,533 - INFO - Epoch 200/2000, train loss: 0.000309342, valid loss: 0.000276678
+2024-09-07 10:52:28,886 - INFO - Epoch 210/2000, train loss: 0.000244006, valid loss: 0.000237238
+2024-09-07 10:52:29,234 - INFO - Epoch 220/2000, train loss: 0.000179525, valid loss: 0.000190336
+2024-09-07 10:52:29,585 - INFO - Epoch 230/2000, train loss: 0.000163483, valid loss: 0.000174212
+2024-09-07 10:52:29,955 - INFO - Epoch 240/2000, train loss: 0.000145781, valid loss: 0.000156045
+2024-09-07 10:52:30,321 - INFO - Epoch 250/2000, train loss: 0.000120224, valid loss: 0.000128555
+2024-09-07 10:52:30,664 - INFO - Epoch 260/2000, train loss: 0.000110542, valid loss: 0.000113245
+2024-09-07 10:52:31,009 - INFO - Epoch 270/2000, train loss: 0.000107246, valid loss: 0.000103880
+2024-09-07 10:52:31,362 - INFO - Epoch 280/2000, train loss: 0.000105795, valid loss: 0.000099442
+2024-09-07 10:52:31,695 - INFO - Epoch 290/2000, train loss: 0.000104032, valid loss: 0.000096732
+2024-09-07 10:52:32,038 - INFO - Epoch 300/2000, train loss: 0.000098921, valid loss: 0.000095681
+2024-09-07 10:52:32,398 - INFO - Epoch 310/2000, train loss: 0.000088980, valid loss: 0.000095740
+2024-09-07 10:52:32,729 - INFO - Epoch 320/2000, train loss: 0.000071410, valid loss: 0.000091671
+2024-09-07 10:52:33,081 - INFO - Epoch 330/2000, train loss: 0.000065313, valid loss: 0.000086870
+2024-09-07 10:52:33,430 - INFO - Epoch 340/2000, train loss: 0.000064242, valid loss: 0.000083954
+2024-09-07 10:52:33,763 - INFO - Epoch 350/2000, train loss: 0.000062005, valid loss: 0.000080900
+2024-09-07 10:52:34,118 - INFO - Epoch 360/2000, train loss: 0.000054938, valid loss: 0.000076643
+2024-09-07 10:52:34,466 - INFO - Epoch 370/2000, train loss: 0.000053369, valid loss: 0.000075433
+2024-09-07 10:52:34,818 - INFO - Epoch 380/2000, train loss: 0.000052116, valid loss: 0.000074302
+2024-09-07 10:52:35,197 - INFO - Epoch 390/2000, train loss: 0.000049459, valid loss: 0.000069283
+2024-09-07 10:52:35,522 - INFO - Epoch 400/2000, train loss: 0.000046023, valid loss: 0.000061822
+2024-09-07 10:52:35,854 - INFO - Epoch 410/2000, train loss: 0.000044067, valid loss: 0.000060034
+2024-09-07 10:52:36,211 - INFO - Epoch 420/2000, train loss: 0.000042590, valid loss: 0.000058910
+2024-09-07 10:52:36,566 - INFO - Epoch 430/2000, train loss: 0.000041077, valid loss: 0.000057909
+2024-09-07 10:52:36,902 - INFO - Epoch 440/2000, train loss: 0.000040689, valid loss: 0.000057692
+2024-09-07 10:52:37,252 - INFO - Epoch 450/2000, train loss: 0.000040534, valid loss: 0.000057470
+2024-09-07 10:52:37,584 - INFO - Epoch 460/2000, train loss: 0.000040041, valid loss: 0.000056865
+2024-09-07 10:52:37,936 - INFO - Epoch 470/2000, train loss: 0.000039768, valid loss: 0.000057008
+2024-09-07 10:52:38,268 - INFO - Epoch 480/2000, train loss: 0.000039372, valid loss: 0.000056845
+2024-09-07 10:52:38,607 - INFO - Epoch 490/2000, train loss: 0.000039272, valid loss: 0.000056584
+2024-09-07 10:52:38,958 - INFO - Epoch 500/2000, train loss: 0.000039195, valid loss: 0.000056331
+2024-09-07 10:52:39,294 - INFO - Epoch 510/2000, train loss: 0.000038898, valid loss: 0.000055671
+2024-09-07 10:52:39,631 - INFO - Epoch 520/2000, train loss: 0.000037832, valid loss: 0.000054589
+2024-09-07 10:52:40,017 - INFO - Epoch 530/2000, train loss: 0.000036307, valid loss: 0.000053931
+2024-09-07 10:52:40,427 - INFO - Epoch 540/2000, train loss: 0.000034590, valid loss: 0.000054477
+2024-09-07 10:52:40,830 - INFO - Epoch 550/2000, train loss: 0.000033815, valid loss: 0.000054751
+2024-09-07 10:52:41,244 - INFO - Epoch 560/2000, train loss: 0.000033500, valid loss: 0.000055163
+2024-09-07 10:52:41,645 - INFO - Epoch 570/2000, train loss: 0.000032998, valid loss: 0.000055319
+2024-09-07 10:52:42,175 - INFO - Epoch 580/2000, train loss: 0.000032316, valid loss: 0.000056064
+2024-09-07 10:52:42,587 - INFO - Epoch 590/2000, train loss: 0.000031797, valid loss: 0.000056746
+2024-09-07 10:52:43,003 - INFO - Epoch 600/2000, train loss: 0.000031414, valid loss: 0.000057220
+2024-09-07 10:52:43,412 - INFO - Epoch 610/2000, train loss: 0.000031324, valid loss: 0.000057128
+2024-09-07 10:52:43,808 - INFO - Epoch 620/2000, train loss: 0.000031280, valid loss: 0.000057051
+2024-09-07 10:52:44,222 - INFO - Epoch 630/2000, train loss: 0.000031255, valid loss: 0.000056984
+2024-09-07 10:52:44,286 - INFO - training time elapsed: 23.979342s
+2024-09-07 10:52:44,908 - INFO - program time elapsed: 32.544102s
+2024-09-07 10:52:54,271 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 10:52:54,271 - INFO - initialize data points...
+2024-09-07 10:52:59,670 - INFO - load saved model...
+2024-09-07 10:53:00,331 - INFO - start testing...
+2024-09-07 10:53:59,208 - INFO - testing time elapsed: 58.876962s
+2024-09-07 10:53:59,209 - INFO - program time elapsed: 64.937860s
+2024-09-07 10:54:57,979 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 10:54:57,979 - INFO - initialize data points...
+2024-09-07 10:55:05,079 - INFO - Number of parameters: 3061
+2024-09-07 10:55:05,130 - INFO - start training...
+2024-09-07 10:55:05,160 - INFO - Epoch 0/2000, train loss: 0.190985873, valid loss: 0.221769124
+2024-09-07 10:55:05,882 - INFO - Epoch 10/2000, train loss: 0.129448146, valid loss: 0.156902343
+2024-09-07 10:55:06,298 - INFO - Epoch 20/2000, train loss: 0.099503130, valid loss: 0.124578334
+2024-09-07 10:55:06,825 - INFO - Epoch 30/2000, train loss: 0.091616526, valid loss: 0.115987673
+2024-09-07 10:55:07,233 - INFO - Epoch 40/2000, train loss: 0.077493735, valid loss: 0.095757537
+2024-09-07 10:55:07,634 - INFO - Epoch 50/2000, train loss: 0.059613250, valid loss: 0.074169420
+2024-09-07 10:55:07,994 - INFO - Epoch 60/2000, train loss: 0.028882105, valid loss: 0.026360773
+2024-09-07 10:55:08,346 - INFO - Epoch 70/2000, train loss: 0.009253325, valid loss: 0.008524963
+2024-09-07 10:55:08,707 - INFO - Epoch 80/2000, train loss: 0.008264706, valid loss: 0.007830188
+2024-09-07 10:55:09,066 - INFO - Epoch 90/2000, train loss: 0.004333812, valid loss: 0.004556800
+2024-09-07 10:55:09,439 - INFO - Epoch 100/2000, train loss: 0.001369821, valid loss: 0.001492836
+2024-09-07 10:55:09,794 - INFO - Epoch 110/2000, train loss: 0.000719801, valid loss: 0.001188359
+2024-09-07 10:55:10,150 - INFO - Epoch 120/2000, train loss: 0.000625154, valid loss: 0.001229001
+2024-09-07 10:55:10,489 - INFO - Epoch 130/2000, train loss: 0.000505123, valid loss: 0.000854749
+2024-09-07 10:55:10,823 - INFO - Epoch 140/2000, train loss: 0.000329377, valid loss: 0.000556507
+2024-09-07 10:55:11,185 - INFO - Epoch 150/2000, train loss: 0.000311580, valid loss: 0.000497028
+2024-09-07 10:55:11,528 - INFO - Epoch 160/2000, train loss: 0.000234710, valid loss: 0.000306710
+2024-09-07 10:55:11,867 - INFO - Epoch 170/2000, train loss: 0.000208783, valid loss: 0.000273445
+2024-09-07 10:55:12,319 - INFO - Epoch 180/2000, train loss: 0.000196561, valid loss: 0.000293768
+2024-09-07 10:55:12,658 - INFO - Epoch 190/2000, train loss: 0.000194024, valid loss: 0.000305953
+2024-09-07 10:55:13,024 - INFO - Epoch 200/2000, train loss: 0.000190662, valid loss: 0.000308034
+2024-09-07 10:55:13,371 - INFO - Epoch 210/2000, train loss: 0.000180326, valid loss: 0.000289507
+2024-09-07 10:55:13,721 - INFO - Epoch 220/2000, train loss: 0.000151865, valid loss: 0.000224529
+2024-09-07 10:55:14,075 - INFO - Epoch 230/2000, train loss: 0.000127579, valid loss: 0.000167752
+2024-09-07 10:55:14,461 - INFO - Epoch 240/2000, train loss: 0.000106131, valid loss: 0.000146861
+2024-09-07 10:55:14,816 - INFO - Epoch 250/2000, train loss: 0.000094864, valid loss: 0.000131047
+2024-09-07 10:55:15,183 - INFO - Epoch 260/2000, train loss: 0.000085802, valid loss: 0.000118874
+2024-09-07 10:55:15,544 - INFO - Epoch 270/2000, train loss: 0.000084143, valid loss: 0.000116607
+2024-09-07 10:55:15,895 - INFO - Epoch 280/2000, train loss: 0.000083479, valid loss: 0.000115416
+2024-09-07 10:55:16,315 - INFO - Epoch 290/2000, train loss: 0.000082455, valid loss: 0.000113391
+2024-09-07 10:55:16,815 - INFO - Epoch 300/2000, train loss: 0.000081049, valid loss: 0.000111005
+2024-09-07 10:55:17,288 - INFO - Epoch 310/2000, train loss: 0.000078366, valid loss: 0.000106562
+2024-09-07 10:55:17,670 - INFO - Epoch 320/2000, train loss: 0.000076769, valid loss: 0.000104471
+2024-09-07 10:55:18,211 - INFO - Epoch 330/2000, train loss: 0.000076259, valid loss: 0.000103980
+2024-09-07 10:55:18,698 - INFO - Epoch 340/2000, train loss: 0.000075016, valid loss: 0.000102831
+2024-09-07 10:55:19,096 - INFO - Epoch 350/2000, train loss: 0.000070565, valid loss: 0.000097127
+2024-09-07 10:55:19,445 - INFO - Epoch 360/2000, train loss: 0.000064772, valid loss: 0.000090835
+2024-09-07 10:55:19,800 - INFO - Epoch 370/2000, train loss: 0.000063960, valid loss: 0.000090520
+2024-09-07 10:55:20,191 - INFO - Epoch 380/2000, train loss: 0.000063723, valid loss: 0.000090443
+2024-09-07 10:55:20,533 - INFO - Epoch 390/2000, train loss: 0.000063437, valid loss: 0.000089982
+2024-09-07 10:55:21,145 - INFO - Epoch 400/2000, train loss: 0.000062883, valid loss: 0.000088620
+2024-09-07 10:55:21,498 - INFO - Epoch 410/2000, train loss: 0.000061495, valid loss: 0.000084408
+2024-09-07 10:55:21,847 - INFO - Epoch 420/2000, train loss: 0.000058893, valid loss: 0.000075606
+2024-09-07 10:55:22,370 - INFO - Epoch 430/2000, train loss: 0.000055875, valid loss: 0.000069473
+2024-09-07 10:55:22,726 - INFO - Epoch 440/2000, train loss: 0.000054322, valid loss: 0.000066632
+2024-09-07 10:55:23,321 - INFO - Epoch 450/2000, train loss: 0.000053635, valid loss: 0.000064681
+2024-09-07 10:55:23,766 - INFO - Epoch 460/2000, train loss: 0.000053555, valid loss: 0.000064272
+2024-09-07 10:55:24,384 - INFO - Epoch 470/2000, train loss: 0.000053483, valid loss: 0.000063897
+2024-09-07 10:55:24,789 - INFO - Epoch 480/2000, train loss: 0.000053361, valid loss: 0.000063232
+2024-09-07 10:55:25,305 - INFO - Epoch 490/2000, train loss: 0.000053209, valid loss: 0.000062580
+2024-09-07 10:55:25,710 - INFO - Epoch 500/2000, train loss: 0.000052625, valid loss: 0.000060949
+2024-09-07 10:55:26,164 - INFO - Epoch 510/2000, train loss: 0.000051950, valid loss: 0.000059423
+2024-09-07 10:55:27,083 - INFO - Epoch 520/2000, train loss: 0.000050877, valid loss: 0.000056346
+2024-09-07 10:55:27,950 - INFO - Epoch 530/2000, train loss: 0.000050416, valid loss: 0.000055751
+2024-09-07 10:55:28,573 - INFO - Epoch 540/2000, train loss: 0.000050263, valid loss: 0.000055604
+2024-09-07 10:55:29,160 - INFO - Epoch 550/2000, train loss: 0.000050218, valid loss: 0.000055594
+2024-09-07 10:55:29,657 - INFO - Epoch 560/2000, train loss: 0.000050187, valid loss: 0.000055584
+2024-09-07 10:55:30,085 - INFO - training time elapsed: 24.955071s
+2024-09-07 10:55:30,918 - INFO - program time elapsed: 32.939433s
+2024-09-07 10:59:23,841 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 10:59:23,842 - INFO - initialize data points...
+2024-09-07 11:00:55,364 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 11:00:55,364 - INFO - initialize data points...
+2024-09-07 11:01:00,833 - INFO - load saved model...
+2024-09-07 11:01:29,479 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 11:01:29,480 - INFO - initialize data points...
+2024-09-07 11:01:34,853 - INFO - load saved model...
+2024-09-07 11:01:53,769 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 11:01:53,769 - INFO - initialize data points...
+2024-09-07 11:02:00,367 - INFO - load saved model...
+2024-09-07 11:02:35,246 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 11:02:35,246 - INFO - initialize data points...
+2024-09-07 11:02:40,382 - INFO - load saved model...
+2024-09-07 11:13:45,455 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 11:13:45,455 - INFO - initialize data points...
+2024-09-07 11:13:51,784 - INFO - Number of parameters: 3061
+2024-09-07 11:15:16,728 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 11:15:16,728 - INFO - initialize data points...
+2024-09-07 11:15:23,151 - INFO - Number of parameters: 3061
+2024-09-07 11:15:35,682 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 11:15:35,682 - INFO - initialize data points...
+2024-09-07 11:15:42,026 - INFO - Number of parameters: 3061
+2024-09-07 11:15:53,733 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 11:15:53,733 - INFO - initialize data points...
+2024-09-07 11:16:00,305 - INFO - Number of parameters: 3061
+2024-09-07 11:16:00,346 - INFO - start training...
+2024-09-07 11:16:00,373 - INFO - Epoch 0/2000, train loss: 0.197375879, valid loss: 0.228879467
+2024-09-07 11:16:00,759 - INFO - Epoch 10/2000, train loss: 0.112899937, valid loss: 0.139322788
+2024-09-07 11:16:01,137 - INFO - Epoch 20/2000, train loss: 0.102468908, valid loss: 0.128177628
+2024-09-07 11:16:01,500 - INFO - Epoch 30/2000, train loss: 0.091950119, valid loss: 0.115249678
+2024-09-07 11:16:01,876 - INFO - Epoch 40/2000, train loss: 0.071211144, valid loss: 0.097114079
+2024-09-07 11:16:02,255 - INFO - Epoch 50/2000, train loss: 0.036361907, valid loss: 0.049681380
+2024-09-07 11:16:02,628 - INFO - Epoch 60/2000, train loss: 0.008180012, valid loss: 0.009191285
+2024-09-07 11:16:03,010 - INFO - Epoch 70/2000, train loss: 0.003434773, valid loss: 0.003213509
+2024-09-07 11:16:03,457 - INFO - Epoch 80/2000, train loss: 0.002048509, valid loss: 0.001810785
+2024-09-07 11:16:03,863 - INFO - Epoch 90/2000, train loss: 0.001105693, valid loss: 0.001005875
+2024-09-07 11:16:04,296 - INFO - Epoch 100/2000, train loss: 0.000692265, valid loss: 0.000657670
+2024-09-07 11:16:04,678 - INFO - Epoch 110/2000, train loss: 0.000280244, valid loss: 0.000264074
+2024-09-07 11:16:05,180 - INFO - Epoch 120/2000, train loss: 0.000268011, valid loss: 0.000258938
+2024-09-07 11:16:05,628 - INFO - Epoch 130/2000, train loss: 0.000236140, valid loss: 0.000233249
+2024-09-07 11:16:06,043 - INFO - Epoch 140/2000, train loss: 0.000177037, valid loss: 0.000202835
+2024-09-07 11:16:06,469 - INFO - Epoch 150/2000, train loss: 0.000173126, valid loss: 0.000199575
+2024-09-07 11:16:06,872 - INFO - Epoch 160/2000, train loss: 0.000169742, valid loss: 0.000184320
+2024-09-07 11:16:07,302 - INFO - Epoch 170/2000, train loss: 0.000159481, valid loss: 0.000171916
+2024-09-07 11:16:07,688 - INFO - Epoch 180/2000, train loss: 0.000141576, valid loss: 0.000174335
+2024-09-07 11:16:08,096 - INFO - Epoch 190/2000, train loss: 0.000135185, valid loss: 0.000173387
+2024-09-07 11:16:08,491 - INFO - Epoch 200/2000, train loss: 0.000131720, valid loss: 0.000164367
+2024-09-07 11:16:08,917 - INFO - Epoch 210/2000, train loss: 0.000126871, valid loss: 0.000144869
+2024-09-07 11:16:09,457 - INFO - Epoch 220/2000, train loss: 0.000123722, valid loss: 0.000132322
+2024-09-07 11:16:11,988 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 11:16:11,988 - INFO - initialize data points...
+2024-09-07 11:16:18,992 - INFO - Number of parameters: 3061
+2024-09-07 11:16:19,028 - INFO - start training...
+2024-09-07 11:16:19,051 - INFO - Epoch 0/2000, train loss: 0.135399133, valid loss: 0.163289964
+2024-09-07 11:16:19,377 - INFO - Epoch 10/2000, train loss: 0.127363533, valid loss: 0.155308917
+2024-09-07 11:16:19,680 - INFO - Epoch 20/2000, train loss: 0.101844281, valid loss: 0.128219619
+2024-09-07 11:16:20,003 - INFO - Epoch 30/2000, train loss: 0.087772451, valid loss: 0.113542154
+2024-09-07 11:16:20,333 - INFO - Epoch 40/2000, train loss: 0.062564731, valid loss: 0.070519455
+2024-09-07 11:16:20,652 - INFO - Epoch 50/2000, train loss: 0.037007928, valid loss: 0.033461545
+2024-09-07 11:16:20,988 - INFO - Epoch 60/2000, train loss: 0.007555427, valid loss: 0.005945398
+2024-09-07 11:16:21,316 - INFO - Epoch 70/2000, train loss: 0.002534616, valid loss: 0.003038173
+2024-09-07 11:16:21,630 - INFO - Epoch 80/2000, train loss: 0.001458554, valid loss: 0.002606555
+2024-09-07 11:16:21,954 - INFO - Epoch 90/2000, train loss: 0.001435514, valid loss: 0.002477848
+2024-09-07 11:16:22,278 - INFO - Epoch 100/2000, train loss: 0.001368851, valid loss: 0.002265173
+2024-09-07 11:16:22,589 - INFO - Epoch 110/2000, train loss: 0.000792488, valid loss: 0.001081602
+2024-09-07 11:16:22,925 - INFO - Epoch 120/2000, train loss: 0.000541398, valid loss: 0.000661719
+2024-09-07 11:16:23,268 - INFO - Epoch 130/2000, train loss: 0.000473060, valid loss: 0.000514418
+2024-09-07 11:16:23,584 - INFO - Epoch 140/2000, train loss: 0.000342927, valid loss: 0.000331954
+2024-09-07 11:16:23,938 - INFO - Epoch 150/2000, train loss: 0.000327556, valid loss: 0.000328695
+2024-09-07 11:16:24,253 - INFO - Epoch 160/2000, train loss: 0.000304046, valid loss: 0.000329083
+2024-09-07 11:16:24,574 - INFO - Epoch 170/2000, train loss: 0.000245776, valid loss: 0.000316246
+2024-09-07 11:16:24,887 - INFO - Epoch 180/2000, train loss: 0.000205540, valid loss: 0.000286498
+2024-09-07 11:16:25,226 - INFO - Epoch 190/2000, train loss: 0.000193272, valid loss: 0.000278859
+2024-09-07 11:16:25,542 - INFO - Epoch 200/2000, train loss: 0.000182986, valid loss: 0.000269663
+2024-09-07 11:16:25,860 - INFO - Epoch 210/2000, train loss: 0.000161108, valid loss: 0.000228830
+2024-09-07 11:16:26,185 - INFO - Epoch 220/2000, train loss: 0.000144628, valid loss: 0.000192781
+2024-09-07 11:16:26,521 - INFO - Epoch 230/2000, train loss: 0.000142535, valid loss: 0.000190713
+2024-09-07 11:16:26,843 - INFO - Epoch 240/2000, train loss: 0.000141737, valid loss: 0.000192449
+2024-09-07 11:16:27,178 - INFO - Epoch 250/2000, train loss: 0.000139995, valid loss: 0.000193423
+2024-09-07 11:16:27,508 - INFO - Epoch 260/2000, train loss: 0.000132589, valid loss: 0.000184378
+2024-09-07 11:16:27,833 - INFO - Epoch 270/2000, train loss: 0.000127062, valid loss: 0.000173360
+2024-09-07 11:16:28,178 - INFO - Epoch 280/2000, train loss: 0.000117769, valid loss: 0.000156726
+2024-09-07 11:16:28,517 - INFO - Epoch 290/2000, train loss: 0.000112170, valid loss: 0.000147012
+2024-09-07 11:16:28,831 - INFO - Epoch 300/2000, train loss: 0.000106650, valid loss: 0.000138719
+2024-09-07 11:16:29,173 - INFO - Epoch 310/2000, train loss: 0.000099698, valid loss: 0.000125627
+2024-09-07 11:16:29,501 - INFO - Epoch 320/2000, train loss: 0.000090909, valid loss: 0.000108631
+2024-09-07 11:16:29,900 - INFO - Epoch 330/2000, train loss: 0.000086238, valid loss: 0.000101478
+2024-09-07 11:16:30,235 - INFO - Epoch 340/2000, train loss: 0.000079646, valid loss: 0.000092825
+2024-09-07 11:16:30,565 - INFO - Epoch 350/2000, train loss: 0.000071577, valid loss: 0.000085084
+2024-09-07 11:16:30,883 - INFO - Epoch 360/2000, train loss: 0.000069510, valid loss: 0.000083915
+2024-09-07 11:16:31,252 - INFO - Epoch 370/2000, train loss: 0.000067430, valid loss: 0.000080609
+2024-09-07 11:16:31,604 - INFO - Epoch 380/2000, train loss: 0.000066415, valid loss: 0.000077741
+2024-09-07 11:16:31,966 - INFO - Epoch 390/2000, train loss: 0.000066060, valid loss: 0.000076453
+2024-09-07 11:16:32,353 - INFO - Epoch 400/2000, train loss: 0.000065742, valid loss: 0.000075483
+2024-09-07 11:16:32,739 - INFO - Epoch 410/2000, train loss: 0.000065455, valid loss: 0.000075196
+2024-09-07 11:16:33,141 - INFO - Epoch 420/2000, train loss: 0.000064710, valid loss: 0.000074856
+2024-09-07 11:16:33,522 - INFO - Epoch 430/2000, train loss: 0.000062959, valid loss: 0.000072481
+2024-09-07 11:16:33,966 - INFO - Epoch 440/2000, train loss: 0.000061456, valid loss: 0.000070694
+2024-09-07 11:16:34,357 - INFO - Epoch 450/2000, train loss: 0.000060294, valid loss: 0.000069749
+2024-09-07 11:16:34,741 - INFO - Epoch 460/2000, train loss: 0.000059628, valid loss: 0.000069200
+2024-09-07 11:16:35,268 - INFO - Epoch 470/2000, train loss: 0.000059184, valid loss: 0.000068940
+2024-09-07 11:16:35,765 - INFO - Epoch 480/2000, train loss: 0.000058910, valid loss: 0.000069444
+2024-09-07 11:16:36,184 - INFO - Epoch 490/2000, train loss: 0.000058665, valid loss: 0.000070173
+2024-09-07 11:16:36,560 - INFO - Epoch 500/2000, train loss: 0.000058243, valid loss: 0.000070549
+2024-09-07 11:16:36,973 - INFO - Epoch 510/2000, train loss: 0.000057582, valid loss: 0.000070521
+2024-09-07 11:16:37,346 - INFO - Epoch 520/2000, train loss: 0.000056743, valid loss: 0.000068841
+2024-09-07 11:16:37,721 - INFO - Epoch 530/2000, train loss: 0.000056444, valid loss: 0.000067893
+2024-09-07 11:16:38,123 - INFO - Epoch 540/2000, train loss: 0.000056245, valid loss: 0.000067421
+2024-09-07 11:16:38,495 - INFO - Epoch 550/2000, train loss: 0.000055747, valid loss: 0.000066704
+2024-09-07 11:16:38,891 - INFO - Epoch 560/2000, train loss: 0.000055251, valid loss: 0.000066251
+2024-09-07 11:16:39,313 - INFO - Epoch 570/2000, train loss: 0.000054572, valid loss: 0.000065327
+2024-09-07 11:16:39,691 - INFO - Epoch 580/2000, train loss: 0.000053776, valid loss: 0.000063980
+2024-09-07 11:16:40,090 - INFO - Epoch 590/2000, train loss: 0.000053329, valid loss: 0.000062559
+2024-09-07 11:16:40,480 - INFO - Epoch 600/2000, train loss: 0.000052756, valid loss: 0.000060636
+2024-09-07 11:16:40,879 - INFO - Epoch 610/2000, train loss: 0.000051574, valid loss: 0.000058235
+2024-09-07 11:16:41,282 - INFO - Epoch 620/2000, train loss: 0.000050940, valid loss: 0.000057321
+2024-09-07 11:16:41,654 - INFO - Epoch 630/2000, train loss: 0.000049955, valid loss: 0.000055629
+2024-09-07 11:16:42,048 - INFO - Epoch 640/2000, train loss: 0.000049706, valid loss: 0.000055412
+2024-09-07 11:16:42,606 - INFO - Epoch 650/2000, train loss: 0.000049527, valid loss: 0.000055270
+2024-09-07 11:16:43,023 - INFO - Epoch 660/2000, train loss: 0.000049378, valid loss: 0.000055280
+2024-09-07 11:16:43,404 - INFO - Epoch 670/2000, train loss: 0.000049157, valid loss: 0.000054892
+2024-09-07 11:16:43,782 - INFO - Epoch 680/2000, train loss: 0.000048748, valid loss: 0.000054294
+2024-09-07 11:16:44,174 - INFO - Epoch 690/2000, train loss: 0.000048207, valid loss: 0.000053227
+2024-09-07 11:16:44,489 - INFO - Epoch 700/2000, train loss: 0.000047451, valid loss: 0.000052227
+2024-09-07 11:16:44,806 - INFO - Epoch 710/2000, train loss: 0.000046681, valid loss: 0.000051818
+2024-09-07 11:16:45,164 - INFO - Epoch 720/2000, train loss: 0.000045723, valid loss: 0.000049074
+2024-09-07 11:16:45,480 - INFO - Epoch 730/2000, train loss: 0.000045468, valid loss: 0.000049130
+2024-09-07 11:16:45,801 - INFO - Epoch 740/2000, train loss: 0.000045308, valid loss: 0.000049428
+2024-09-07 11:16:46,132 - INFO - Epoch 750/2000, train loss: 0.000045154, valid loss: 0.000049482
+2024-09-07 11:16:46,455 - INFO - Epoch 760/2000, train loss: 0.000044930, valid loss: 0.000049397
+2024-09-07 11:16:46,799 - INFO - Epoch 770/2000, train loss: 0.000044605, valid loss: 0.000049025
+2024-09-07 11:16:47,149 - INFO - Epoch 780/2000, train loss: 0.000044229, valid loss: 0.000048684
+2024-09-07 11:16:47,479 - INFO - Epoch 790/2000, train loss: 0.000043988, valid loss: 0.000048231
+2024-09-07 11:16:47,797 - INFO - Epoch 800/2000, train loss: 0.000043755, valid loss: 0.000047738
+2024-09-07 11:16:48,207 - INFO - Epoch 810/2000, train loss: 0.000043712, valid loss: 0.000047644
+2024-09-07 11:16:48,576 - INFO - Epoch 820/2000, train loss: 0.000043627, valid loss: 0.000047513
+2024-09-07 11:16:48,973 - INFO - Epoch 830/2000, train loss: 0.000043508, valid loss: 0.000047797
+2024-09-07 11:16:49,395 - INFO - Epoch 840/2000, train loss: 0.000043307, valid loss: 0.000047909
+2024-09-07 11:16:49,821 - INFO - Epoch 850/2000, train loss: 0.000042835, valid loss: 0.000047685
+2024-09-07 11:16:50,303 - INFO - Epoch 860/2000, train loss: 0.000042787, valid loss: 0.000047669
+2024-09-07 11:16:50,682 - INFO - Epoch 870/2000, train loss: 0.000042697, valid loss: 0.000047637
+2024-09-07 11:16:51,071 - INFO - Epoch 880/2000, train loss: 0.000042575, valid loss: 0.000047560
+2024-09-07 11:16:51,475 - INFO - Epoch 890/2000, train loss: 0.000042456, valid loss: 0.000047498
+2024-09-07 11:16:52,007 - INFO - Epoch 900/2000, train loss: 0.000042333, valid loss: 0.000047508
+2024-09-07 11:16:52,451 - INFO - Epoch 910/2000, train loss: 0.000042289, valid loss: 0.000047429
+2024-09-07 11:16:52,705 - INFO - training time elapsed: 33.676104s
+2024-09-07 11:16:53,340 - INFO - program time elapsed: 41.352510s
+2024-09-07 11:17:20,886 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 11:17:20,887 - INFO - initialize data points...
+2024-09-07 11:17:25,937 - INFO - load saved model...
+2024-09-07 11:18:15,331 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 11:18:15,331 - INFO - initialize data points...
+2024-09-07 11:18:21,969 - INFO - Number of parameters: 3061
+2024-09-07 11:20:05,494 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 11:20:05,495 - INFO - initialize data points...
+2024-09-07 11:20:12,346 - INFO - load saved model...
+2024-09-07 11:20:13,133 - INFO - start testing...
+2024-09-07 11:21:18,428 - INFO - testing time elapsed: 65.294858s
+2024-09-07 11:21:18,428 - INFO - program time elapsed: 72.934123s
+2024-09-07 11:22:53,483 - INFO - 
+--------------Physical Parameters--------------
+
+Temperature: 1.7e-07 K
+Trapping Frequency: 100000.0 Hz
+Boltzmann constant: 20836619120.0 Hz/K
+Mass of the atom: 1.4431609444805812e-25 kg
+Normalization Constant: 4.493077990280913 (no unit)
+2024-09-07 11:22:53,483 - INFO - initialize data points...
+2024-09-07 11:22:59,931 - INFO - Number of parameters: 3061
+2024-09-07 11:22:59,981 - INFO - start training...
+2024-09-07 11:23:00,029 - INFO - Epoch 0/2000, train loss: 0.496826947, valid loss: 0.360338897
+2024-09-07 11:23:00,713 - INFO - Epoch 10/2000, train loss: 0.463101625, valid loss: 0.335464537
+2024-09-07 11:23:01,161 - INFO - Epoch 20/2000, train loss: 0.400368541, valid loss: 0.279848576
+2024-09-07 11:23:01,537 - INFO - Epoch 30/2000, train loss: 0.310409248, valid loss: 0.222322375
+2024-09-07 11:23:01,973 - INFO - Epoch 40/2000, train loss: 0.086374678, valid loss: 0.057125717
+2024-09-07 11:23:02,360 - INFO - Epoch 50/2000, train loss: 0.027812218, valid loss: 0.024754636
+2024-09-07 11:23:02,790 - INFO - Epoch 60/2000, train loss: 0.008735128, valid loss: 0.007601424
+2024-09-07 11:23:03,190 - INFO - Epoch 70/2000, train loss: 0.005654849, valid loss: 0.004341588
+2024-09-07 11:23:03,580 - INFO - Epoch 80/2000, train loss: 0.003534477, valid loss: 0.002960734
+2024-09-07 11:23:03,985 - INFO - Epoch 90/2000, train loss: 0.002799536, valid loss: 0.002513184
+2024-09-07 11:23:04,378 - INFO - Epoch 100/2000, train loss: 0.001119366, valid loss: 0.000943967
+2024-09-07 11:23:04,775 - INFO - Epoch 110/2000, train loss: 0.000766661, valid loss: 0.000515736
+2024-09-07 11:23:05,179 - INFO - Epoch 120/2000, train loss: 0.000711068, valid loss: 0.000523889
+2024-09-07 11:23:05,571 - INFO - Epoch 130/2000, train loss: 0.000532411, valid loss: 0.000429868
+2024-09-07 11:23:05,958 - INFO - Epoch 140/2000, train loss: 0.000421563, valid loss: 0.000361205
+2024-09-07 11:23:06,347 - INFO - Epoch 150/2000, train loss: 0.000328732, valid loss: 0.000319041
+2024-09-07 11:23:06,744 - INFO - Epoch 160/2000, train loss: 0.000244879, valid loss: 0.000260150
+2024-09-07 11:23:07,148 - INFO - Epoch 170/2000, train loss: 0.000226746, valid loss: 0.000235595
+2024-09-07 11:23:07,528 - INFO - Epoch 180/2000, train loss: 0.000212475, valid loss: 0.000223750
+2024-09-07 11:23:07,934 - INFO - Epoch 190/2000, train loss: 0.000156743, valid loss: 0.000173533
+2024-09-07 11:23:08,340 - INFO - Epoch 200/2000, train loss: 0.000144281, valid loss: 0.000167429
+2024-09-07 11:23:08,746 - INFO - Epoch 210/2000, train loss: 0.000140401, valid loss: 0.000162727
+2024-09-07 11:23:09,161 - INFO - Epoch 220/2000, train loss: 0.000132825, valid loss: 0.000144230
+2024-09-07 11:23:09,543 - INFO - Epoch 230/2000, train loss: 0.000130644, valid loss: 0.000138575
+2024-09-07 11:23:09,938 - INFO - Epoch 240/2000, train loss: 0.000128777, valid loss: 0.000135971
+2024-09-07 11:23:10,336 - INFO - Epoch 250/2000, train loss: 0.000127636, valid loss: 0.000137545
+2024-09-07 11:23:10,747 - INFO - Epoch 260/2000, train loss: 0.000125020, valid loss: 0.000139534
+2024-09-07 11:23:11,156 - INFO - Epoch 270/2000, train loss: 0.000120452, valid loss: 0.000138707
+2024-09-07 11:23:11,546 - INFO - Epoch 280/2000, train loss: 0.000116399, valid loss: 0.000132320
+2024-09-07 11:23:11,977 - INFO - Epoch 290/2000, train loss: 0.000114098, valid loss: 0.000123237
+2024-09-07 11:23:12,492 - INFO - Epoch 300/2000, train loss: 0.000114034, valid loss: 0.000123008
+2024-09-07 11:23:12,908 - INFO - Epoch 310/2000, train loss: 0.000113310, valid loss: 0.000121656
+2024-09-07 11:23:13,312 - INFO - Epoch 320/2000, train loss: 0.000108459, valid loss: 0.000112339
+2024-09-07 11:23:13,708 - INFO - Epoch 330/2000, train loss: 0.000095947, valid loss: 0.000094378
+2024-09-07 11:23:14,125 - INFO - Epoch 340/2000, train loss: 0.000087677, valid loss: 0.000086529
+2024-09-07 11:23:14,516 - INFO - Epoch 350/2000, train loss: 0.000086142, valid loss: 0.000085126
+2024-09-07 11:23:15,011 - INFO - Epoch 360/2000, train loss: 0.000080676, valid loss: 0.000077618
+2024-09-07 11:23:15,409 - INFO - Epoch 370/2000, train loss: 0.000067219, valid loss: 0.000069213
+2024-09-07 11:23:15,796 - INFO - Epoch 380/2000, train loss: 0.000060368, valid loss: 0.000062596
+2024-09-07 11:23:16,214 - INFO - Epoch 390/2000, train loss: 0.000059284, valid loss: 0.000061710
+2024-09-07 11:23:16,614 - INFO - Epoch 400/2000, train loss: 0.000058354, valid loss: 0.000060742
+2024-09-07 11:23:17,034 - INFO - Epoch 410/2000, train loss: 0.000056051, valid loss: 0.000057872
+2024-09-07 11:23:17,437 - INFO - Epoch 420/2000, train loss: 0.000052340, valid loss: 0.000053494
+2024-09-07 11:23:17,856 - INFO - Epoch 430/2000, train loss: 0.000049364, valid loss: 0.000049223
+2024-09-07 11:23:18,266 - INFO - Epoch 440/2000, train loss: 0.000045036, valid loss: 0.000044314
+2024-09-07 11:23:18,655 - INFO - Epoch 450/2000, train loss: 0.000041957, valid loss: 0.000040442
+2024-09-07 11:23:19,059 - INFO - Epoch 460/2000, train loss: 0.000041353, valid loss: 0.000039853
+2024-09-07 11:23:19,453 - INFO - Epoch 470/2000, train loss: 0.000040934, valid loss: 0.000039378
+2024-09-07 11:23:19,843 - INFO - Epoch 480/2000, train loss: 0.000040596, valid loss: 0.000038858
+2024-09-07 11:23:20,250 - INFO - Epoch 490/2000, train loss: 0.000039843, valid loss: 0.000038110
+2024-09-07 11:23:20,645 - INFO - Epoch 500/2000, train loss: 0.000038748, valid loss: 0.000037887
+2024-09-07 11:23:21,136 - INFO - Epoch 510/2000, train loss: 0.000038229, valid loss: 0.000037491
+2024-09-07 11:23:21,597 - INFO - Epoch 520/2000, train loss: 0.000037462, valid loss: 0.000036526
+2024-09-07 11:23:22,076 - INFO - Epoch 530/2000, train loss: 0.000036682, valid loss: 0.000035211
+2024-09-07 11:23:22,595 - INFO - Epoch 540/2000, train loss: 0.000036324, valid loss: 0.000034569
+2024-09-07 11:23:23,068 - INFO - Epoch 550/2000, train loss: 0.000036109, valid loss: 0.000034235
+2024-09-07 11:23:23,542 - INFO - Epoch 560/2000, train loss: 0.000036047, valid loss: 0.000034149
+2024-09-07 11:23:24,012 - INFO - Epoch 570/2000, train loss: 0.000035978, valid loss: 0.000034077
+2024-09-07 11:23:24,475 - INFO - Epoch 580/2000, train loss: 0.000035625, valid loss: 0.000033759
+2024-09-07 11:23:24,970 - INFO - Epoch 590/2000, train loss: 0.000035252, valid loss: 0.000033405
+2024-09-07 11:23:25,603 - INFO - Epoch 600/2000, train loss: 0.000035081, valid loss: 0.000033293
+2024-09-07 11:23:26,152 - INFO - Epoch 610/2000, train loss: 0.000035032, valid loss: 0.000033279
+2024-09-07 11:23:26,697 - INFO - Epoch 620/2000, train loss: 0.000034907, valid loss: 0.000033251
+2024-09-07 11:23:27,266 - INFO - Epoch 630/2000, train loss: 0.000034677, valid loss: 0.000033137
+2024-09-07 11:23:27,815 - INFO - Epoch 640/2000, train loss: 0.000034201, valid loss: 0.000032980
+2024-09-07 11:23:28,387 - INFO - Epoch 650/2000, train loss: 0.000033156, valid loss: 0.000032494
+2024-09-07 11:23:28,940 - INFO - Epoch 660/2000, train loss: 0.000032749, valid loss: 0.000032317
+2024-09-07 11:23:29,479 - INFO - Epoch 670/2000, train loss: 0.000032559, valid loss: 0.000032198
+2024-09-07 11:23:30,032 - INFO - Epoch 680/2000, train loss: 0.000032502, valid loss: 0.000032152
+2024-09-07 11:23:30,554 - INFO - Epoch 690/2000, train loss: 0.000032370, valid loss: 0.000032011
+2024-09-07 11:23:31,122 - INFO - Epoch 700/2000, train loss: 0.000032039, valid loss: 0.000031580
+2024-09-07 11:23:31,676 - INFO - Epoch 710/2000, train loss: 0.000031803, valid loss: 0.000031240
+2024-09-07 11:23:32,220 - INFO - Epoch 720/2000, train loss: 0.000031735, valid loss: 0.000031022
+2024-09-07 11:23:32,801 - INFO - Epoch 730/2000, train loss: 0.000031697, valid loss: 0.000030868
+2024-09-07 11:23:33,368 - INFO - Epoch 740/2000, train loss: 0.000031539, valid loss: 0.000030703
+2024-09-07 11:23:33,927 - INFO - Epoch 750/2000, train loss: 0.000031210, valid loss: 0.000030767
+2024-09-07 11:23:34,566 - INFO - Epoch 760/2000, train loss: 0.000030945, valid loss: 0.000030582
+2024-09-07 11:23:35,119 - INFO - Epoch 770/2000, train loss: 0.000030657, valid loss: 0.000030374
+2024-09-07 11:23:35,667 - INFO - Epoch 780/2000, train loss: 0.000030506, valid loss: 0.000030155
+2024-09-07 11:23:36,152 - INFO - Epoch 790/2000, train loss: 0.000030384, valid loss: 0.000030004
+2024-09-07 11:23:36,580 - INFO - Epoch 800/2000, train loss: 0.000030285, valid loss: 0.000029923
+2024-09-07 11:23:37,015 - INFO - Epoch 810/2000, train loss: 0.000030168, valid loss: 0.000029794
+2024-09-07 11:23:37,448 - INFO - Epoch 820/2000, train loss: 0.000030060, valid loss: 0.000029684
+2024-09-07 11:23:37,901 - INFO - Epoch 830/2000, train loss: 0.000029968, valid loss: 0.000029609
+2024-09-07 11:23:38,348 - INFO - Epoch 840/2000, train loss: 0.000029847, valid loss: 0.000029456
+2024-09-07 11:23:38,768 - INFO - Epoch 850/2000, train loss: 0.000029718, valid loss: 0.000029276
+2024-09-07 11:23:39,199 - INFO - Epoch 860/2000, train loss: 0.000029531, valid loss: 0.000029021
+2024-09-07 11:23:39,624 - INFO - Epoch 870/2000, train loss: 0.000029384, valid loss: 0.000028822
+2024-09-07 11:23:40,120 - INFO - Epoch 880/2000, train loss: 0.000029227, valid loss: 0.000028643
+2024-09-07 11:23:40,540 - INFO - Epoch 890/2000, train loss: 0.000029148, valid loss: 0.000028546
+2024-09-07 11:23:40,977 - INFO - Epoch 900/2000, train loss: 0.000029100, valid loss: 0.000028476
+2024-09-07 11:23:41,396 - INFO - Epoch 910/2000, train loss: 0.000029075, valid loss: 0.000028442
+2024-09-07 11:23:41,512 - INFO - training time elapsed: 41.530322s
+2024-09-07 11:23:42,125 - INFO - program time elapsed: 48.642331s

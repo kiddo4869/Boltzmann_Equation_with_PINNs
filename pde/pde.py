@@ -20,18 +20,23 @@ def scale_back_fermi(args, scaled_q: float, scaled_p: float, scaled_t: float):
 
     return q, p, t
 
-def omega(args, t: float) -> float:
+def omega(args, scaled_t: float) -> float:
     if args.case_idx == 0:
         return 0.0
     elif args.case_idx == 1 or args.case_idx == 2:
         return args.w0
     elif args.case_idx == 3:
-        if type(t) == torch.Tensor:
-            return args.w0 * torch.sqrt(1 + t ** 2 / 10000)
+        if type(scaled_t) == torch.Tensor:
+            return args.w0 * torch.sqrt(1 + scaled_t ** 2 / 10000)
         else:
-            return args.w0 * np.sqrt(1 + t ** 2 / 10000)
+            return args.w0 * np.sqrt(1 + scaled_t ** 2 / 10000)
 
 def hamiltonian(args, scaled_q: float, scaled_p: float, scaled_t: float) -> float:
+
+    if args.case_idx == 2:
+        if scaled_t > 10:
+            scaled_q = scaled_q + 0.5
+
     if args.fermi_scaling:
         q, p, t = scale_back_fermi(args, scaled_q, scaled_p, scaled_t)
     else:
