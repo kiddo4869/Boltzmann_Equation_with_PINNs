@@ -55,30 +55,37 @@ def main(args: argparse.ArgumentParser):
 
     # Exact solution
     if args.case_idx == 2:
-        f_exact = np.array([[prob_den(args, q + 0.5, p, t_arr[0]) for q in q_arr] for p in p_arr])  
+        f_exact = np.array([[prob_den(args, q, p, t_arr[0]) for q in q_arr] for p in p_arr])  
     else:
         f_exact = np.array([[prob_den(args, q, p, t_arr[0]) for q in q_arr] for p in p_arr])
-    h_exact = np.array([[hamiltonian(args, q, p, t_arr[0]) for q in q_arr] for p in p_arr])
     
-    h_exact_over_time = np.array([[[hamiltonian(args, q, p, t) for q in q_arr] for p in p_arr] for t in t_arr])
-    h_exact_over_time = np.transpose(h_exact_over_time, (1, 2, 0))
+    #h_exact_over_time = np.array([[[hamiltonian(args, q, p, t) for q in q_arr] for p in p_arr] for t in t_arr])
+    #h_exact_over_time = np.transpose(h_exact_over_time, (1, 2, 0))
+    
+    plot_init_solution(args, q_arr, p_arr, f_exact, "Initial Probability Density", set_aspect=True)
+    h_exact = np.array([[hamiltonian(args, q, p, 0) for q in q_arr] for p in p_arr])
+    plot_init_solution(args, q_arr, p_arr, h_exact, "Initial Hamiltonian H", plot_hamiltonian=True, set_aspect=True)
 
-    plot_init_solution(args, q_arr, p_arr, f_exact, "Initial Probability Density")
-    plot_init_solution(args, q_arr, p_arr, h_exact, "Initial Hamiltonian H'")
+    """
+    for i in range(len(t_arr)):
+        h_exact = np.array([[hamiltonian(args, q, p, t_arr[i]) for q in q_arr] for p in p_arr])
+        plot_init_solution(args, q_arr, p_arr, h_exact, f"Hamiltonian H' {i}", plot_hamiltonian=True)
+    """
 
     path = os.path.join(args.checkpoint, "state_dict_model.pth")
 
     # Data processing
-    train_inputs, train_labels = preprocess_data(args, qv, pv, tv, f_exact, h_exact_over_time,
-                                                    ub, lb, t_range)
+    train_inputs, train_labels = preprocess_data(args, qv, pv, tv, f_exact,
+                                                 ub, lb, t_range)
 
     if args.hamiltonian == "input":
         args.h_min_max = [train_inputs[0][:, 3].min(), train_inputs[0][:, 3].max()]
+        print(f"hamiltonian min: {args.h_min_max[0]}, max: {args.h_min_max[1]}")
 
     if args.phase == "train":
 
-        val_inputs, val_labels = preprocess_data(args, qv, pv, tv, f_exact, h_exact_over_time,
-                                                 ub, lb, t_range)
+        val_inputs, val_labels = preprocess_data(args, qv, pv, tv, f_exact,
+                                                 ub, lb, t_range, valid=True)
 
         # Plotting data inputs
         plot_data_inputs(args, train_inputs, "Training Inputs")
@@ -103,7 +110,7 @@ def main(args: argparse.ArgumentParser):
         logging.info(f"Number of parameters: {num_of_params}")
 
         # Trial before training
-        trial_test(args, train_inputs, train_labels, model)
+        #trial_test(args, train_inputs, train_labels, model)
 
         print("start training...")
         logging.info("start training...")
@@ -137,7 +144,17 @@ def main(args: argparse.ArgumentParser):
         model = PINN(args, train_inputs, train_labels, val_inputs, val_labels)
         model.net.load_state_dict(torch.load(path))
         model.net.eval()
+        
+        """
+        q = torch.tensor([float("inf")]).reshape(-1, 1)
+        p = torch.tensor([0.0]).reshape(-1, 1)
+        t = torch.tensor([0.0]).reshape(-1, 1)
+        h = hamiltonian(args, q, p, t).reshape(-1, 1)
+        test_result = model(q, p, t, h)
+        print(test_result)
 
+        exit()
+        """
         print("start testing...")
         logging.info("start testing...")
         testing_start = time.perf_counter()
@@ -255,12 +272,12 @@ def trial_test(args, inputs_list, labels_list, model):
 
     # sum of the loss with weight
     sum_loss = model.IC_weight * IC_loss + model.BC_weight * BC_loss + model.PDE_weight * PDE_loss
-    print(f"sum of the loss with weight: {sum_loss}, type: {type(sum_loss)}")
 
     # total loss
     total_loss = model.compute_loss()[0].item()
-    print(f"total loss: {total_loss}, type: {type(total_loss)}")
 
+    print(f"sum of the loss with weight: {sum_loss}, type: {type(sum_loss)}")
+    print(f"total loss: {total_loss}, type: {type(total_loss)}")
     print(f"diff: {sum_loss - total_loss}, type: {type(sum_loss - total_loss)}")
 
 if __name__=="__main__":
@@ -301,7 +318,7 @@ if __name__=="__main__":
     parser.add_argument("--log_sol", action="store_true")
 
     # PINNs parameters
-    parser.add_argument("--layers", type=json.loads, default=[3,20,20,20,20,20,20,20,20,1])
+    parser.add_argument("--layers", type=json.loads, default=[3,10,20,50,80,50,20,10,1])
     parser.add_argument("--noise_level", type=float, default=0.0)
     parser.add_argument("--hamiltonian", type=str, default=None)
 

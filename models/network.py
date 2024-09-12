@@ -10,16 +10,17 @@ class PINN(nn.Module):
     def __init__(self, args, train_inputs, train_labels,
                              valid_inputs, valid_labels):
         super().__init__()
-
         self.args = args
         self.layers = np.array(args.layers)
         self.n_output = self.layers[-1]
         self.pinn = args.pinn
         self.device = args.device
-        self.IC_weight = args.IC_weight
-        self.BC_weight = args.BC_weight
-        self.PDE_weight = args.PDE_weight
+        self.IC_weight = float(args.IC_weight)
+        self.BC_weight = float(args.BC_weight)
+        self.PDE_weight = float(args.PDE_weight)
         self.activation = nn.Tanh()
+
+        self.valid = False
 
         # Inputs
         if args.hamiltonian == "input":
@@ -32,6 +33,10 @@ class PINN(nn.Module):
             self.valid_ic_pts, self.valid_bc_pts, self.valid_col_pts = valid_inputs
             self.train_ic_phi, self.train_bc_ham = train_labels
             self.valid_ic_phi, self.valid_bc_ham = valid_labels
+
+        if args.phase == "train":
+            self.train_w = torch.Tensor([omega(args, t) for t in self.train_col_pts[:, 2]]).reshape(-1, 1).to(self.device)
+            self.valid_w = torch.Tensor([omega(args, t) for t in self.valid_col_pts[:, 2]]).reshape(-1, 1).to(self.device)
 
         # loss function
         self.loss_function = nn.MSELoss(reduction="mean")
@@ -118,9 +123,15 @@ class PINN(nn.Module):
             h.requires_grad = True
 
         f = self.forward(q, p, t, h)
+        if self.args.hamiltonian == "output":
+            f, h = f[:, 0].reshape(-1, 1), f[:, 1].reshape(-1, 1)
     
         # Construct the PDE loss using torch.autograd (THIS IS THE KEY)
         f_q = autograd.grad(f, q,
+                            create_graph = True,
+                            grad_outputs = torch.ones_like(f).to(self.device),
+                            allow_unused = True)[0]
+        f_p = autograd.grad(f, p,
                             create_graph = True,
                             grad_outputs = torch.ones_like(f).to(self.device),
                             allow_unused = True)[0]
@@ -129,6 +140,14 @@ class PINN(nn.Module):
                             grad_outputs = torch.ones_like(f).to(self.device),
                             allow_unused = True)[0]
 
+        if self.valid:
+            LHS = - (self.valid_w / self.args.w0) * q * f_p + (p / (2 * np.pi * self.args.N0)) * f_q + f_t
+        else:
+            LHS = - (self.train_w / self.args.w0) * q * f_p + (p / (2 * np.pi * self.args.N0)) * f_q + f_t
+
+        loss = self.loss_function(LHS, torch.zeros(f.shape).to(self.device))
+
+        """
         if self.args.hamiltonian == "output":
             h_q = autograd.grad(h, q,
                                 create_graph = True,
@@ -139,17 +158,23 @@ class PINN(nn.Module):
                                 grad_outputs = torch.ones_like(h).to(self.device),
                                 allow_unused = True)[0]
 
-            LHS_1 = h_q - q * 0.0 / self.args.w0 ** 2
+            if self.valid:
+                LHS_1 = h_q - q * self.valid_w / (self.args.w0 ** 2)
+            else:
+                LHS_1 = h_q - q * self.train_w / (self.args.w0 ** 2)
+                
             LHS_2 = h_p - p
             loss1 = self.loss_function(LHS_1, torch.zeros(h.shape).to(self.device))
             loss2 = self.loss_function(LHS_2, torch.zeros(h.shape).to(self.device))
-
-        LHS = 2 * np.pi * self.args.N0 * f_t + p * f_q
-        loss = self.loss_function(LHS, torch.zeros(f.shape).to(self.device))
+        
+            loss += loss1 + loss2
+        """
 
         return loss
 
     def compute_loss(self, valid=False):
+        self.valid = valid
+
         ic_q, ic_p, ic_t, ic_h = self.get_inputs(self.train_ic_pts if not valid else self.valid_ic_pts)
         ic_label = self.train_ic_phi.reshape(-1, 1) if not valid else self.valid_ic_phi.reshape(-1, 1)
 
@@ -161,7 +186,6 @@ class PINN(nn.Module):
             col_q, col_p, col_t, col_h = self.get_inputs(self.train_col_pts if not valid else self.valid_col_pts)
 
         # Compute losses
-
         IC_loss = self.loss_IC(ic_q, ic_p, ic_t, ic_h, ic_label)
         BC_loss = self.loss_BC(bc_q, bc_p, bc_t, bc_h, bc_label) if self.args.hamiltonian == "output" else 0.0
         PDE_loss = self.loss_PDE(col_q, col_p, col_t, col_h) if self.pinn else 0.0
@@ -170,7 +194,6 @@ class PINN(nn.Module):
         return total_loss, IC_loss, BC_loss, PDE_loss
     
     def closure(self):
-
         self.optimizer.zero_grad()
         self.train_loss, self.train_ic_loss, self.train_bc_loss, self.train_pde_loss = self.compute_loss()
 
