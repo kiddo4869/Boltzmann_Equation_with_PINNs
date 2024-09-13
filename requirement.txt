@@ -1,0 +1,35 @@
+cffi @ file:///croot/cffi_1700254295673/work
+contourpy @ file:///work/perseverance-python-buildout/croot/contourpy_1701756524386/work
+cycler @ file:///tmp/build/80754af9/cycler_1637851556182/work
+filelock @ file:///work/perseverance-python-buildout/croot/filelock_1701733993137/work
+fonttools==4.25.0
+fsspec @ file:///work/perseverance-python-buildout/croot/fsspec_1701733420687/work
+Jinja2 @ file:///work/perseverance-python-buildout/croot/jinja2_1707343043683/work
+kiwisolver @ file:///work/perseverance-python-buildout/croot/kiwisolver_1698847502605/work
+MarkupSafe @ file:///work/perseverance-python-buildout/croot/markupsafe_1707342994941/work
+matplotlib @ file:///work/perseverance-python-buildout/croot/matplotlib-suite_1698863180732/work
+mkl-fft @ file:///work/perseverance-python-buildout/croot/mkl_fft_1698845673361/work
+mkl-random @ file:///work/perseverance-python-buildout/croot/mkl_random_1698845720894/work
+mkl-service==2.4.0
+mpmath @ file:///work/perseverance-python-buildout/croot/mpmath_1698864994882/work
+munkres==1.1.4
+networkx @ file:///work/perseverance-python-buildout/croot/networkx_1698865062738/work
+numpy @ file:///croot/numpy_and_numpy_base_1708638617955/work/dist/numpy-1.26.4-cp312-cp312-linux_x86_64.whl#sha256=1d700f51d8b4fa684d858c9e3b56b1656bc5c82b6b79ff08d4e3b491c430059f
+packaging @ file:///croot/packaging_1710807400464/work
+pillow @ file:///croot/pillow_1707233021655/work
+ply @ file:///work/perseverance-python-buildout/croot/ply_1698846188635/work
+pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+pyDOE==0.3.8
+pyparsing @ file:///work/perseverance-python-buildout/croot/pyparsing_1698847881454/work
+PyQt5==5.15.10
+PyQt5-sip @ file:///work/perseverance-python-buildout/croot/pyqt-split_1698847927472/work/pyqt_sip
+python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
+scipy==1.14.0
+setuptools==68.2.2
+sip @ file:///work/perseverance-python-buildout/croot/sip_1698846977033/work
+six @ file:///tmp/build/80754af9/six_1644875935023/work
+sympy @ file:///croot/sympy_1701397643339/work
+torch @ file:///croot/pytorch-select_1707782759820/work
+tornado @ file:///work/perseverance-python-buildout/croot/tornado_1698866362018/work
+typing_extensions @ file:///croot/typing_extensions_1705619912070/work
+wheel==0.41.2

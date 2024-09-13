@@ -141,9 +141,9 @@ class PINN(nn.Module):
                             allow_unused = True)[0]
 
         if self.valid:
-            LHS = - (self.valid_w / self.args.w0) * q * f_p + (p / (2 * np.pi * self.args.N0)) * f_q + f_t
+            LHS = - ((self.valid_w / self.args.w0) ** 2) * q * f_p + p * f_q + 2 * np.pi * self.args.N0 * f_t 
         else:
-            LHS = - (self.train_w / self.args.w0) * q * f_p + (p / (2 * np.pi * self.args.N0)) * f_q + f_t
+            LHS = - ((self.train_w / self.args.w0) ** 2) * q * f_p + p * f_q + 2 * np.pi * self.args.N0 * f_t
 
         loss = self.loss_function(LHS, torch.zeros(f.shape).to(self.device))
 
@@ -159,9 +159,9 @@ class PINN(nn.Module):
                                 allow_unused = True)[0]
 
             if self.valid:
-                LHS_1 = h_q - q * self.valid_w / (self.args.w0 ** 2)
+                LHS_1 = h_q - q * (self.valid_w / self.args.w0) ** 2
             else:
-                LHS_1 = h_q - q * self.train_w / (self.args.w0 ** 2)
+                LHS_1 = h_q - q * (self.train_w / self.args.w0) ** 2
                 
             LHS_2 = h_p - p
             loss1 = self.loss_function(LHS_1, torch.zeros(h.shape).to(self.device))

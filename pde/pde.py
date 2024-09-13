@@ -33,9 +33,11 @@ def omega(args, scaled_t: float) -> float:
 
 def hamiltonian(args, scaled_q: float, scaled_p: float, scaled_t: float) -> float:
 
+    """
     if args.case_idx == 2:
         if scaled_t > 10:
             scaled_q = scaled_q + 0.5
+    """
 
     if args.fermi_scaling:
         q, p, t = scale_back_fermi(args, scaled_q, scaled_p, scaled_t)
@@ -44,6 +46,7 @@ def hamiltonian(args, scaled_q: float, scaled_p: float, scaled_t: float) -> floa
 
     w = omega(args, scaled_t)
     h = p ** 2 / (2 * args.m) + 0.5 * args.m * w ** 2 * q ** 2
+    #h = 0.5 * args.m * w ** 2 * q ** 2
     return h / (args.k * args.T)
 
 def prob_den(args, scaled_q: float, scaled_p: float, scaled_t: float) -> float:

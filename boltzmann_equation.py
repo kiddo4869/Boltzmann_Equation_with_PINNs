@@ -55,7 +55,7 @@ def main(args: argparse.ArgumentParser):
 
     # Exact solution
     if args.case_idx == 2:
-        f_exact = np.array([[prob_den(args, q, p, t_arr[0]) for q in q_arr] for p in p_arr])  
+        f_exact = np.array([[prob_den(args, q+0.5, p, t_arr[0]) for q in q_arr] for p in p_arr])  
     else:
         f_exact = np.array([[prob_den(args, q, p, t_arr[0]) for q in q_arr] for p in p_arr])
     
@@ -64,7 +64,7 @@ def main(args: argparse.ArgumentParser):
     
     plot_init_solution(args, q_arr, p_arr, f_exact, "Initial Probability Density", set_aspect=True)
     h_exact = np.array([[hamiltonian(args, q, p, 0) for q in q_arr] for p in p_arr])
-    plot_init_solution(args, q_arr, p_arr, h_exact, "Initial Hamiltonian H", plot_hamiltonian=True, set_aspect=True)
+    plot_init_solution(args, q_arr, p_arr, h_exact, "Initial Hamiltonian H'", plot_hamiltonian=True, set_aspect=True)
 
     """
     for i in range(len(t_arr)):
@@ -169,7 +169,8 @@ def main(args: argparse.ArgumentParser):
         if args.debug:  
             t_arr = np.linspace(0, 100, 6)
         else:
-            t_arr = np.linspace(0, 100, 21)
+            t_arr = np.linspace(0, 500, 101)
+            #t_arr = np.linspace(0, 500, 101)
         for i, t in enumerate(t_arr):
             if i % args.ds_freq == 0:# and i != 0:
                 if args.dynamic_scaling:
@@ -296,7 +297,7 @@ if __name__=="__main__":
     # Data Sampling
     parser.add_argument("--q_min_max", type=json.loads, default=[-5, 5])
     parser.add_argument("--p_min_max", type=json.loads, default=[-5, 5])
-    parser.add_argument("--t_min_max", type=json.loads, default=[0, 50])
+    parser.add_argument("--t_min_max", type=json.loads, default=[0, 500])
     parser.add_argument("--N_initial", type=int, default=200, help="Number of training data")
     parser.add_argument("--N_boundary", type=int, default=100, help="Number of training boundary points")
     parser.add_argument("--N_collocation", type=int, default=600, help="Number of training collocation points")
@@ -318,7 +319,7 @@ if __name__=="__main__":
     parser.add_argument("--log_sol", action="store_true")
 
     # PINNs parameters
-    parser.add_argument("--layers", type=json.loads, default=[3,10,20,50,80,50,20,10,1])
+    parser.add_argument("--layers", type=json.loads, default=[3,20,20,20,20,20,20,20,20,1])
     parser.add_argument("--noise_level", type=float, default=0.0)
     parser.add_argument("--hamiltonian", type=str, default=None)
 

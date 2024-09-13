@@ -1,19 +1,19 @@
-BC_weight: 1.0
-IC_weight: 1.0
+BC_weight: 0.0
+IC_weight: 0.5
 N0: 4.493077990280913
-N_boundary: 1000
-N_boundary_val: 150
-N_collocation: 5000
-N_collocation_val: 3000
-N_initial: 500
-N_initial_val: 150
+N_boundary: 100
+N_boundary_val: 650
+N_collocation: 50000
+N_collocation_val: 650
+N_initial: 2500
+N_initial_val: 650
 N_p: 100
 N_q: 100
 N_t: 100
-PDE_weight: 1.0
+PDE_weight: 0.5
 T: 1.7e-07
 case_idx: 0
-checkpoint: ./checkpoints/l-bfgs_new
+checkpoint: ./checkpoints/l-bfgs_new_II_2_debug
 checkpoint_path: ./checkpoints
 debug: False
 device: cpu
@@ -22,13 +22,13 @@ ds_grid_add: 3
 ds_ratio: 1.05
 dynamic_scaling: False
 early_stopping: False
-epochs: 1000
+epochs: 5000
 fermi_scaling: False
 grid_size: 100
 hamiltonian: input
 history_size: 100
 k: 20836619120.0
-layers: [4, 20, 20, 20, 20, 20, 20, 20, 20, 1]
+layers: [4, 20, 20, 20, 20, 20, 1]
 learning_rate: 0.01
 log_freq: 10
 log_loss: True
@@ -36,7 +36,7 @@ log_path: ./logs
 log_sol: False
 m: 1.4431609444805812e-25
 model_path: ./models
-name: l-bfgs_new
+name: l-bfgs_new_II_2_debug
 noise_level: 0.0
 optimizer: l-bfgs
 output_path: ./outputs
@@ -47,7 +47,7 @@ pinn: False
 q_min_max: [-5, 5]
 save_freq: 1000
 seed: 0
-t_min_max: [0, 10]
-tolerance_change: 1e-09
-tolerance_grad: 1e-05
+t_min_max: [0, 50]
+tolerance_change: 1e-08
+tolerance_grad: 1e-08
 w0: 100000.0
